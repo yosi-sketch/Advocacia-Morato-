@@ -36,61 +36,64 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#08090c",
+  themeColor: "#0a0908",
   colorScheme: "dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.rodrigocorrea.adv.br"),
-  title: "Rodrigo Corrêa Advocacia Criminal · Plantão 24h · Caxambu - MG & Tribunais",
+  metadataBase: new URL("https://www.daianapaiva.adv.br"),
+  title: "Daiana Paiva · Advocacia Especializada · Agronegócio, Família & INSS · Raul Soares - MG",
   description:
-    "⚖️ Dr. Rodrigo Gomes Corrêa — Advocacia Criminal de Alta Complexidade e Plantão 24h. Prisões em flagrante, custódia, habeas corpus, tribunal do júri e recursos em tribunais superiores (TJMG, STJ e STF). Nota máxima 5,0 ★ no Google (27 avaliações). Sede em Caxambu - MG e atendimento em todo o Brasil.",
+    "⚖️ Dra. Daiana Paiva (OAB/MG 211.743) — Advocacia Especializada com a autoridade única de quem é Advogada e Engenheira Agrônoma. Direito do Agronegócio e Ambiental, Família e Sucessões, e Benefícios Previdenciários (INSS). Nota máxima 5,0 ★ no Google (22 avaliações). Sede em Raul Soares - MG e atendimento em todo o Brasil.",
   keywords: [
-    "Rodrigo Corrêa Advocacia Criminal",
-    "Dr Rodrigo Corrêa",
-    "Dr Rodrigo Gomes Corrêa",
-    "Advogado Criminalista Caxambu",
-    "Advogado Criminalista MG",
-    "Plantão Criminal 24 Horas",
-    "Audiência de Custódia Caxambu",
-    "Prisão em Flagrante MG",
-    "Habeas Corpus TJMG",
-    "Habeas Corpus STJ STF",
-    "Tribunal do Júri MG",
-    "Defesa Criminal Especializada",
-    "Advocacia Criminal Caxambu MG",
+    "Daiana Paiva Advocacia Especializada",
+    "Dra Daiana Paiva",
+    "Daiana Paiva Advogada",
+    "OAB MG 211.743",
+    "Advogada e Agronoma",
+    "Direito do Agronegocio Raul Soares",
+    "Direito Ambiental MG",
+    "Regularizacao Fundiaria MG",
+    "Contratos Rurais e Arrendamento",
+    "Advogada Direito de Familia Raul Soares",
+    "Inventario e Partilha de Bens Raul Soares",
+    "Planejamento Sucessorio Familiar e Rural",
+    "Aposentadoria Rural INSS",
+    "Advogada Previdenciario Raul Soares",
+    "Beneficios INSS Raul Soares MG",
+    "Advocacia Especializada Raul Soares",
   ],
-  authors: [{ name: "Rodrigo Corrêa Advocacia Criminal" }],
-  creator: "Rodrigo Corrêa Advocacia Criminal",
-  publisher: "Rodrigo Corrêa Advocacia Criminal",
+  authors: [{ name: "Daiana Paiva Advocacia Especializada" }],
+  creator: "Daiana Paiva Advocacia Especializada",
+  publisher: "Daiana Paiva Advocacia Especializada",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=9", sizes: "any" },
-      { url: "/favicon-32x32.png?v=9", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=9", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=9", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico?v=10", sizes: "any" },
+      { url: "/favicon-32x32.png?v=10", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=10", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=10", type: "image/png", sizes: "192x192" },
     ],
-    shortcut: "/favicon.ico?v=9",
-    apple: [{ url: "/apple-icon.png?v=9", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=10",
+    apple: [{ url: "/apple-icon.png?v=10", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.rodrigocorrea.adv.br",
-    title: "Rodrigo Corrêa Advocacia Criminal · Plantão 24h · Caxambu - MG",
+    url: "https://www.daianapaiva.adv.br",
+    title: "Daiana Paiva · Advocacia Especializada · Agronegócio, Família & INSS",
     description:
-      "⚖️ Advocacia Criminal com rigor técnico, prontidão 24 horas, ética e atendimento humanizado. Nota máxima 5,0 ★ no Google (27 avaliações). R. Maj. Penha, 299 - Sala 101 - Centro, Caxambu - MG e atendimento em todo o Brasil.",
-    siteName: "Rodrigo Corrêa Advocacia Criminal",
+      "⚖️ Advocacia com rigor técnico, atendimento humanizado e a autoridade única de quem é advogada e agrônoma. 5,0 ★ no Google (22 avaliações). R. José de Oliveira, 40 - Raul Soares, MG e atendimento em todo o Brasil.",
+    siteName: "Daiana Paiva Advocacia Especializada",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 512,
-        alt: "Rodrigo Corrêa Advocacia Criminal",
+        height: 341,
+        alt: "Daiana Paiva Advocacia Especializada",
       },
     ],
   },
@@ -104,44 +107,42 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Rodrigo Corrêa Advocacia Criminal",
-    alternateName: "Dr. Rodrigo Gomes Corrêa — Advocacia Criminal",
-    legalName: "Rodrigo Corrêa Advocacia Criminal",
-    telephone: "+55-35-99275-5472",
-    email: "contato@rodrigocorrea.adv.br",
-    url: "https://www.rodrigocorrea.adv.br",
-    image: "https://www.rodrigocorrea.adv.br/logo.png",
+    name: "Daiana Paiva - Advocacia Especializada",
+    alternateName: "Dra. Daiana Paiva — Advogada & Engenheira Agrônoma",
+    legalName: "Daiana Paiva Advocacia Especializada",
+    telephone: "+55-31-98258-2001",
+    email: "contato@daianapaiva.adv.br",
+    url: "https://www.daianapaiva.adv.br",
+    image: "https://www.daianapaiva.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Maj. Penha, 299 - Sala 101 - Centro",
-      addressLocality: "Caxambu",
+      streetAddress: "R. José de Oliveira, 40",
+      addressLocality: "Raul Soares",
       addressRegion: "MG",
-      postalCode: "37440-000",
+      postalCode: "35350-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -21.9774,
-      longitude: -44.9332,
+      latitude: -20.1031,
+      longitude: -42.4533,
     },
     priceRange: "$$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "27",
+      reviewCount: "22",
     },
     areaServed: [
-      "Caxambu",
-      "Baependi",
-      "São Lourenço",
-      "Cruzília",
-      "Pouso Alto",
-      "Itamonte",
-      "Itanhandu",
-      "Passa Quatro",
-      "Varginha",
-      "Pouso Alegre",
-      "Sul de Minas",
+      "Raul Soares",
+      "Rio Casca",
+      "São Pedro dos Ferros",
+      "Ponte Nova",
+      "Caratinga",
+      "Viçosa",
+      "Manhuaçu",
+      "Zona da Mata",
+      "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
     ],
@@ -154,17 +155,14 @@ export default function RootLayout({
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
-          "Sunday",
         ],
-        opens: "00:00",
-        closes: "23:59",
+        opens: "08:00",
+        closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/rodrigocorrea_adv/",
-      "https://linktr.ee/rodrigocorrea_adv",
-      "https://wa.me/5535992755472",
+      "https://www.instagram.com/dra_daiana_paiva/",
+      "https://wa.me/5531982582001",
     ],
   };
 
@@ -174,18 +172,18 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=9" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=9" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=9" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=9" />
-        <link rel="shortcut icon" href="/favicon.ico?v=9" />
-        <meta name="theme-color" content="#08090c" />
+        <link rel="icon" href="/favicon.ico?v=10" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=10" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=10" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=10" />
+        <link rel="shortcut icon" href="/favicon.ico?v=10" />
+        <meta name="theme-color" content="#0a0908" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#08090c] font-sans text-[#f8f9fa] antialiased selection:bg-[#c59b27] selection:text-[#08090c]">
+      <body className="min-h-screen overflow-x-clip bg-[#0a0908] font-sans text-[#fbf8f5] antialiased selection:bg-[#ce9568] selection:text-[#0a0908]">
         {children}
       </body>
     </html>
