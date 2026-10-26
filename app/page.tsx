@@ -7,9 +7,9 @@ import {
   ArrowRight,
   ArrowUpRight,
   Award,
+  Building2,
   CheckCircle2,
   Clock,
-  FileCheck2,
   HeartHandshake,
   Mail,
   MapPin,
@@ -19,39 +19,35 @@ import {
   Sparkles,
   Star,
   Users,
-  Wheat,
-  Sprout,
-  Home as HomeIcon,
   ShieldCheck,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531982582001";
-const PHONE_DISPLAY = "(31) 98258-2001";
-const EMAIL_CONTACT = "contato@daianapaiva.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/dra_daiana_paiva/";
-const INSTAGRAM_HANDLE = "@dra_daiana_paiva";
-const LAWYER_NAME = "Dra. Daiana Paiva";
-const LAWYER_TITLE = "Advogada (OAB/MG 211.743) & Engenheira Agrônoma";
+const WHATSAPP_NUMBER = "5533998733957";
+const PHONE_DISPLAY = "(33) 99873-3957";
+const EMAIL_CONTACT = "contato@carvalhoeperigolo.adv.br";
+const INSTAGRAM_URL = "https://instagram.com/carvalhoeperigolo/";
+const INSTAGRAM_HANDLE = "@carvalhoeperigolo";
+const FIRM_NAME = "Carvalho & Perígolo Advogados";
 
-const ADDRESS_TEXT = "R. José de Oliveira, 40 - Raul Soares, MG, 35350-000";
+const ADDRESS_TEXT = "Av. Gov. Valadares, 151 - Centro, Simonésia - MG, 36930-000";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Daiana+Paiva+Advocacia+Especializada+R+Jose+de+Oliveira+40+Raul+Soares+MG";
+  "https://www.google.com/maps/search/?api=1&query=Carvalho+%26+Per%C3%ADgolo+Advogados+Av+Gov+Valadares+151+Simonesia+MG";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Daiana+Paiva+%E2%80%94+Advocacia+Especializada%0ARaul+Soares+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Carvalho+%26+Per%C3%ADgolo+Advogados%0ASimon%C3%A9sia+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
-const LOGO_SRC = "/logo.png";
+const LOGO_HORIZONTAL_SRC = "/logo-horizontal.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/daiana-paiva.jpg";
-const FOTO_SOBRE_SRC = "/sobre.jpg";
+const FOTO_MONICA_SRC = "/dra-monica.jpg";
+const FOTO_ISAAC_SRC = "/dr-isaac.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Daiana Paiva! Gostaria de consultar sobre atendimento jurídico especializado.";
+    "Olá! Gostaria de consultar sobre atendimento jurídico na Carvalho & Perígolo Advogados.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -161,223 +157,216 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-agronegocio-contratos-rurais",
-    title: "Direito do Agronegócio & Contratos Rurais",
-    icon: Wheat,
-    tag: "Produtores Rurais · Arrendamento & Parceria · Crédito Rural",
+    id: "direito-notarial-registral-imobiliario",
+    title: "Direito Notarial, Registral & Regularização Imobiliária",
+    icon: Building2,
+    tag: "Usucapião Extrajudicial · Regularização de Imóveis · Escrituras & Registros",
     summary:
-      "Assessoria jurídica estratégica para produtores e pecuaristas com a autoridade de quem é advogada e agrônoma. Contratos rurais blindados, renegociação de dívidas agrícolas e segurança patrimonial da terra.",
+      "Segurança jurídica definitiva para o seu patrimônio imobiliário rural e urbano. Regularização fundiária, usucapião direto em cartório, retificação de área, escrituras públicas e adjudicação compulsória.",
     details:
-      "O setor rural possui particularidades técnicas, sazonais e de crédito que apenas quem domina a agronomia e o direito consegue compreender a fundo. A Dra. Daiana Paiva elabora e revisa contratos agrários de alto nível (arrendamento, parceria, comodato, compra e venda de lavouras e fazendas), atua na renegociação de financiamentos agrícolas e protege o produtor rural contra cobranças abusivas e perdas de propriedade.",
+      "Com sólida pós-graduação e especialização pela FGV e pela FADILESTE em Direito Notarial e Registral, os sócios fundadores Dra. Mônica Perígolo e Dr. Isaac Carvalho dominam a fundo os trâmites dos Cartórios de Registro de Imóveis e de Notas. Transformamos a posse irregular em propriedade titulada com matrícula e registro definitivo, agregando valor e garantindo tranquilidade jurídica aos proprietários.",
     topics: [
-      "Elaboração e revisão de Contratos de Arrendamento Rural e Parceria Agrícola em estrita conformidade com o Estatuto da Terra",
-      "Contratos de compra e venda de imóveis rurais, penhor agrícola, alienação fiduciária e garantias da safra",
-      "Defesa e renegociação de Cédulas de Produto Rural (CPR), Cédulas de Crédito Rural (CCR) e dívidas bancárias do agro",
-      "Planejamento jurídico para sucessão de propriedades produtivas e continuidade do negócio familiar no campo",
-      "Auditoria jurídica e documental prévia em aquisições de propriedades rurais (Due Diligence fundiária)",
-      "Atuação preventiva em conflitos entre vizinhos confinantes, passagem forçada e servidões rurais",
+      "Usucapião Extrajudicial direto em Cartório de Registro de Imóveis (célere, sem necessidade de processo judicial)",
+      "Usucapião Judicial para imóveis rurais e urbanos com histórico documental complexo",
+      "Retificação administrativa e judicial de áreas, metragens e inserção de confrontações perimetrais",
+      "Regularização de loteamentos, desmembramentos, certidões e cancelamento de gravames/hipotecas",
+      "Adjudicação Compulsória Extrajudicial para contratos particulares de gaveta com quitação comprovada",
+      "Due Diligence imobiliária e auditoria registral preventiva na compra e venda de fazendas e imóveis",
     ],
     whatsAppText:
-      "Olá, Dra. Daiana Paiva! Gostaria de consultar sobre assessoria jurídica para o Agronegócio e Contratos Rurais.",
+      "Olá! Gostaria de consultar a Carvalho & Perígolo Advogados sobre Regularização de Imóvel, Usucapião ou Direito Notarial e Registral.",
   },
   {
-    id: "direito-ambiental-rural",
-    title: "Direito Ambiental Rural & Regularização",
-    icon: Sprout,
-    tag: "Defesa em Autos de Infração · IEF & IBAMA · Desembargo & CAR",
-    summary:
-      "Descomplico o Direito Ambiental: defesas técnicas em autos de infração do IEF, IBAMA, SEMAD e Polícia Militar de Meio Ambiente, termos de compromisso (TAC), desembargo de áreas produtivas e regularização do CAR.",
-    details:
-      "Uma autuação ambiental indevida ou desproporcional pode paralisar as atividades de uma propriedade e gerar multas astronômicas. Como engenheira agrônoma e advogada, a Dra. Daiana Paiva analisa laudos técnicos periciais com olhar técnico-científico, identifica nulidades nas fiscalizações e formula defesas administrativas e judiciais contundentes para desembargar terras e regularizar licenças e outorgas.",
-    topics: [
-      "Defesas administrativas e recursos contra autos de infração ambiental lavrados por IEF, IBAMA, SEMAD e Polícia de Meio Ambiente",
-      "Ações judiciais para anulação de multas ambientais arbitrárias e desproporcionais",
-      "Pedidos de desembargo imediato de áreas rurais e suspensão de sanções restritivas de direitos",
-      "Negociação e formalização de Termos de Ajustamento de Conduta (TAC) e planos de recuperação ambiental viáveis",
-      "Consultoria técnica e jurídica para Cadastro Ambiental Rural (CAR), Reserva Legal e Áreas de Preservação Permanente (APP)",
-      "Processos de licenciamento ambiental e pedidos de outorga de uso de recursos hídricos para irrigação e pecuária",
-    ],
-    whatsAppText:
-      "Olá, Dra. Daiana Paiva! Preciso de defesa ou orientação para uma demanda de Direito Ambiental Rural.",
-  },
-  {
-    id: "direito-familia-sucessoes",
-    title: "Direito de Família & Sucessões",
+    id: "inventarios-partilha-sucessoes",
+    title: "Inventários, Partilha de Bens & Sucessões",
     icon: Users,
-    tag: "Inventário Judicial & Extrajudicial · Planejamento Sucessório · Divórcio",
+    tag: "Inventário em Cartório & Judicial · Planejamento Familiar · Testamentos",
     summary:
-      "Atendimento acolhedor e seguro para proteger seus bens e pacificar relações familiares. Inventários rápidos em cartório ou judiciais, planejamento sucessório para preservação do patrimônio familiar e divórcios.",
+      "Agilidade e sensibilidade para resolver inventários e proteger o patrimônio que sua família construiu. Inventários extrajudiciais rápidos em cartório, partilhas judiciais estratégicas e planejamento sucessório.",
     details:
-      "Momentos de luto ou separação exigem sensibilidade humana ímpar combinada a uma técnica jurídica apurada para evitar conflitos destrutivos e proteger o patrimônio construído ao longo de uma vida inteira. A Dra. Daiana Paiva atua em inventários com foco na agilidade e na menor tributação lícita, bem como em planejamentos sucessórios para famílias e produtores rurais.",
+      "O inventário não precisa ser um processo demorado e desgastante. A Carvalho & Perígolo Advogados prioriza a via extrajudicial em cartório quando há consenso entre os herdeiros, e conduz inventários judiciais com rigor técnico, mediação humanizada e inteligência tributária para minimizar os custos com ITCMD e preservar os vínculos familiares.",
     topics: [
-      "Inventário Extrajudicial em Cartório de Notas célere e descomplicado quando há consenso entre os herdeiros",
-      "Inventário Judicial e partilha de bens com resolução estratégica de impasses e avaliação correta do acervo patrimonial",
-      "Planejamento Sucessório Familiar: doações com reserva de usufruto, testamentos e holdings familiares",
-      "Divórcio Consensual ou Litigioso com partilha justa de bens, imóveis e cotas empresariais/rurais",
-      "Fixação, revisão e execução de pensão alimentícia, guarda compartilhada e regime de convivência familiar",
-      "Reconhecimento e dissolução de união estável com proteção de meação e direitos hereditários",
+      "Inventário Extrajudicial em Cartório de Notas: procedimento rápido, descomplicado e seguro",
+      "Inventário Judicial e partilha de bens com composição amigável ou defesa firme do quinhão hereditário",
+      "Planejamento Sucessório Familiar: doações em vida com reserva de usufruto e cláusulas protetivas",
+      "Elaboração de testamentos públicos e estruturas societárias para proteção patrimonial de famílias e produtores",
+      "Sobrepartilha de bens sonegados ou descobertos após o encerramento do inventário",
+      "Alinhamento estratégico e mediação preventiva de conflitos sucessórios entre herdeiros",
     ],
     whatsAppText:
-      "Olá, Dra. Daiana Paiva! Gostaria de orientações sobre Inventário, Partilha de Bens ou Direito de Família.",
+      "Olá! Gostaria de orientações sobre Inventário, Partilha de Bens ou Planejamento Sucessório com o escritório Carvalho & Perígolo.",
   },
   {
-    id: "beneficios-inss-previdenciario",
-    title: "Benefícios do INSS · Rural & Urbano",
-    icon: FileCheck2,
-    tag: "Aposentadoria Rural · Tempo de Contribuição · Auxílio-Doença & BPC/LOAS",
+    id: "direito-publico-defesas-administrativas",
+    title: "Direito Público & Defesas Administrativas",
+    icon: Scale,
+    tag: "Especialização FGV · Concursos · Licitações · Servidores Públicos",
     summary:
-      "Garantia dos direitos previdenciários de quem trabalhou a vida inteira. Aposentadoria rural do segurado especial, aposentadoria urbana, averbação de tempo de roça, auxílio por incapacidade e BPC/LOAS.",
+      "Assessoria especializada com a chancela FGV em Direito Público. Atuação técnica em defesas administrativas, concursos públicos, licitações, improbidade e defesa de direitos de servidores e cidadãos.",
     details:
-      "O trabalhador do campo e da cidade frequentemente enfrenta exigências burocráticas injustas do INSS para ter sua aposentadoria ou benefício concedido. A Dra. Daiana Paiva reúne toda a documentação histórica, notas de produtor, certidões e testemunhas para comprovar o labor rural e assegurar o melhor benefício possível na via administrativa ou por meio de ação judicial.",
+      "Com a pós-graduação e especialização da Dra. Mônica Perígolo Magalhães pela Fundação Getúlio Vargas (FGV) em Direito Público, o escritório oferece uma defesa estratégica contra atos arbitrários ou desproporcionais da Administração Pública, atuando perante prefeituras, câmaras, secretarias e autarquias com precisão técnica e recursos eficazes.",
     topics: [
-      "Aposentadoria por Idade Rural para o segurado especial (agricultores familiares, meeiros, arrendatários e diaristas)",
+      "Defesas e recursos administrativos contra sanções, autuações e notificações de órgãos públicos",
+      "Ações judiciais e Mandados de Segurança contra ilegalidades em concursos públicos e nomeações",
+      "Defesa de servidores públicos civis e militares em Processos Administrativos Disciplinares (PAD)",
+      "Consultoria jurídica e acompanhamento técnico em licitações e contratos com o poder público",
+      "Ações ordinárias para concessão, reenquadramento e cobrança de direitos remuneratórios de servidores",
+      "Análise de constitucionalidade, improbidade administrativa e consultoria regulatória municipal",
+    ],
+    whatsAppText:
+      "Olá! Gostaria de consultar a Carvalho & Perígolo Advogados sobre uma demanda de Direito Público ou Administrativo.",
+  },
+  {
+    id: "direito-familia-solucoes-humanizadas",
+    title: "Direito de Família & Soluções Patrimoniais",
+    icon: HeartHandshake,
+    tag: "Divórcio Ágil · Pensão Alimentícia · Guarda · Dissolução de União Estável",
+    summary:
+      "Acolhimento empático e discrição absoluta para proteger o que mais importa. Divórcios em cartório ou judiciais, união estável, partilha de bens conjugais, pensão alimentícia e guarda de filhos.",
+    details:
+      "Questões familiares exigem equilíbrio entre firmeza jurídica e respeito à dignidade de cada pessoa. A equipe da Carvalho & Perígolo Advogados atua para pacificar conflitos, garantir a justa partilha dos bens acumulados no matrimônio ou união estável, e resguardar o bem-estar e o sustento dos filhos menores com soluções rápidas e humanizadas.",
+    topics: [
+      "Divórcio Extrajudicial em Cartório de Notas: solução ágil, sigilosa e amigável",
+      "Divórcio Judicial consensual ou litigioso com partilha equilibrada de imóveis, veículos e negócios",
+      "Reconhecimento e dissolução de união estável com resguardo da meação e direitos patrimoniais",
+      "Ação de alimentos: fixação justa, revisão, exoneração e execução de pensão alimentícia",
+      "Definição de guarda compartilhada, plano de convivência parental e proteção integral dos filhos",
+      "Pacto antenupcial, contrato de convivência e assessoria preventiva sobre regimes de bens",
+    ],
+    whatsAppText:
+      "Olá! Gostaria de atendimento reservado com a Carvalho & Perígolo Advogados sobre Divórcio, Guarda ou Família.",
+  },
+  {
+    id: "direito-previdenciario-inss-rural-urbano",
+    title: "Direito Previdenciário · INSS Rural & Urbano",
+    icon: Award,
+    tag: "Aposentadoria Rural · Tempo de Roça · Auxílio-Doença & BPC/LOAS",
+    summary:
+      "Garantia do benefício merecido a quem trabalhou e contribuiu uma vida inteira. Aposentadorias do trabalhador rural (segurado especial), averbação de tempo de lavoura, benefícios por incapacidade e LOAS.",
+    details:
+      "No Leste de Minas Gerais, muitos trabalhadores rurais e urbanos têm seus direitos negados ou postergados pelo INSS por falhas na comprovação documental histórica. A equipe reúne certidões de nascimento, notas fiscais de produtor, contratos rurais e testemunhas para comprovar o direito e obter a concessão com recebimento dos retroativos.",
+    topics: [
+      "Aposentadoria por Idade Rural do segurado especial (pequenos agricultores, meeiros, diaristas e arrendatários)",
       "Averbação e contagem de tempo de serviço rural antigo para antecipar a Aposentadoria Urbana",
-      "Aposentadoria por Idade Urbana, tempo de contribuição, aposentadoria especial e da pessoa com deficiência",
-      "Requerimento e restabelecimento de Auxílio por Incapacidade Temporária (auxílio-doença) e aposentadoria por invalidez",
-      "Pensão por Morte e Salário-Maternidade rural e urbano concedidos sem atrasos indevidos",
-      "Benefício de Prestação Continuada (BPC/LOAS) para idosos a partir de 65 anos e pessoas com deficiência em vulnerabilidade",
+      "Aposentadoria por Idade Urbana, por Tempo de Contribuição, Especial e da Pessoa com Deficiência",
+      "Concessão e restabelecimento judicial de Auxílio por Incapacidade Temporária (auxílio-doença) e Invalidez",
+      "Benefício de Prestação Continuada (BPC/LOAS) para idosos com 65+ anos e pessoas com deficiência em vulnerabilidade",
+      "Pensão por morte urbana e rural, salário-maternidade e planejamento previdenciário completo",
     ],
     whatsAppText:
-      "Olá, Dra. Daiana Paiva! Gostaria de consultar sobre a concessão de um benefício ou aposentadoria do INSS.",
+      "Olá! Gostaria de uma análise previdenciária com a Carvalho & Perígolo Advogados sobre aposentadoria ou benefício do INSS.",
   },
   {
-    id: "regularizacao-fundiaria-imobiliaria",
-    title: "Regularização Fundiária & Propriedade",
-    icon: HomeIcon,
-    tag: "Usucapião Rural e Urbano · Demarcação · Retificação de Escritura",
-    summary:
-      "Transforme a posse em propriedade legítima com registro em cartório. Ações e procedimentos de usucapião extrajudicial, retificação de área, demarcação de divisas e defesa da posse contra invasões.",
-    details:
-      "Ter apenas contrato de gaveta ou posse antiga sem escritura registrada diminui o valor de mercado do imóvel e impede financiamentos bancários e transferências seguras aos herdeiros. Unindo conhecimento agronômico de georreferenciamento e perícia jurídica, a Dra. Daiana Paiva promove a regularização registral completa do seu imóvel rural ou urbano.",
-    topics: [
-      "Usucapião Extrajudicial direto em Cartório de Registro de Imóveis: rapidez e segurança sem processo judicial",
-      "Usucapião Especial Rural (Art. 191 da CF) e Usucapião Urbano por posse mansa, pacífica e ininterrupta",
-      "Ações de retificação de área e inserção de medidas perimetrais no Cartório de Registro",
-      "Ações de demarcação e divisão de terras particulares para estremar divisas confusas ou litigiosas",
-      "Ações possessórias: reintegração de posse, manutenção de posse e interdito proibitório",
-      "Regularização de títulos de posse, contratos de cessão de direitos hereditários e escrituras pendentes",
-    ],
-    whatsAppText:
-      "Olá, Dra. Daiana Paiva! Gostaria de orientações sobre regularização de imóvel ou usucapião.",
-  },
-  {
-    id: "consultoria-preventiva-resolucao-conflitos",
-    title: "Consultoria Preventiva & Acordos",
+    id: "consultoria-civel-contratos-prevencao",
+    title: "Consultoria Cível, Contratos & Mediação",
     icon: ShieldCheck,
-    tag: "Assessoria Contínua · Prevenção de Litígios · Mediação Extrajudicial",
+    tag: "Advocacia Preventiva · Contratos Blindados · Mediação Extrajudicial",
     summary:
-      "Soluções jurídicas preventivas para você, sua família ou sua empresa rural tomarem decisões com total clareza e tranquilidade, evitando processos demorados e custos desnecessários.",
+      "Segurança jurídica contínua para prevenir litígios e proteger seus negócios. Elaboração de contratos seguros, cobranças estratégicas, mediações amigáveis e assessoria cível personalizada.",
     details:
-      "A melhor advocacia é aquela que previne litígios antes que eles se instalem e consumam tempo, recursos e a paz da sua família. A Dra. Daiana Paiva oferece consultoria jurídica próxima e descomplicada, atuando em mediações, redação de termos de acordo com validade de título executivo e orientação contínua com canal direto pelo WhatsApp.",
+      "Evitar um litígio custoso é sempre mais inteligente do que remediar um processo arrastado por anos. O Dr. Isaac Carvalho e a Dra. Mônica Perígolo oferecem consultoria preventiva para pessoas físicas e empresas, blindando instrumentos contratuais e intermediando negociações com diplomacia, autoridade jurídica e foco no resultado.",
     topics: [
-      "Consultoria jurídica consultiva para tomada de decisões financeiras, patrimoniais e contratuais",
-      "Mediação e condução de negociações amigáveis entre familiares, herdeiros ou sócios rurais",
-      "Elaboração de acordos extrajudiciais seguros homologados perante o Poder Judiciário",
-      "Pareceres jurídicos detalhados sobre viabilidade de demandas e riscos processuais",
-      "Canal de comunicação ágil e direto pelo WhatsApp sem intermediários ou termos herméticos",
-      "Atendimento presencial em Raul Soares - MG e consultas digitais estruturadas para clientes de todo o país",
+      "Elaboração e revisão detalhada de contratos civis, comerciais, agrários e imobiliários de alto padrão",
+      "Mediação de conflitos e formalização de acordos extrajudiciais com força de título executivo",
+      "Ações possessórias: reintegração de posse, manutenção e defesa contra turbação de divisas",
+      "Cobrança extrajudicial e judicial estratégica de títulos, cheques, notas promissórias e dívidas",
+      "Ações indenizatórias por danos materiais, danos morais e descumprimento de obrigações contratuais",
+      "Assessoria jurídica consultiva mensal para empresários, comerciantes e produtores locais",
     ],
     whatsAppText:
-      "Olá, Dra. Daiana Paiva! Gostaria de agendar uma consulta preventiva para analisar minha situação jurídica.",
+      "Olá! Gostaria de consultar a Carvalho & Perígolo Advogados sobre elaboração de contrato ou consultoria cível preventiva.",
   },
 ];
 
-const clientReviews = [
+interface ClientReview {
+  name: string;
+  reviewerTag: string;
+  badge: string;
+  rating: number;
+  content: string;
+  response?: string;
+}
+
+const clientReviews: ClientReview[] = [
   {
-    name: "Naiara Monteiro Damasceno",
-    reviewerTag: "Local Guide · 3 avaliações · 53 fotos",
-    badge: "Advogada & Agrônoma",
+    name: "Pollyana Fileno",
+    reviewerTag: "7 avaliações no Google",
+    badge: "Competência e Atenção",
     rating: 5,
     content:
-      "Super competente e dedicada. Resolveu de forma prática e rápida o meu problema. Além de ser advogada ainda é agrônoma. O que foi de suma importância para meu caso.",
+      "Excelente escritório de advocacia! Fui muito bem atendida desde o primeiro contato. A equipe demonstrou profissionalismo, competência e atenção em todas as etapas.. Recomendo pelos serviços prestados e pelo compromisso com seus clientes.",
+    response:
+      "Olá, Pollyana! Ficamos satisfeitos em saber que o atendimento prestado por nossa equipe correspondeu às suas expectativas. Trabalhamos com dedicação, responsabilidade e respeito. Estamos à disposição.",
   },
   {
-    name: "Rodrigo Antonio Chaves da Silva",
-    reviewerTag: "Prof. Rodrigo Chaves · 1 avaliação",
-    badge: "Eficiência & Serviço Nota Dez",
+    name: "Bruno Falcão",
+    reviewerTag: "10 avaliações · 2 fotos no Google",
+    badge: "Advogado Mais Atualizado",
     rating: 5,
     content:
-      "Profissional dedicada, competente e eficiente! Serviço nota dez! Paz e Bem!",
+      "O Dr. Isaac é o advogado mais atualizado da região. Atendimento com ética e respeito.",
+    response:
+      "Olá, Bruno! Agradecemos sua avaliação e as palavras de reconhecimento. Reafirmamos o nosso compromisso em prestar um atendimento pautado pela ética, respeito e constante aperfeiçoamento profissional. Somos gratos pela confiança em nossa equipe.",
   },
   {
-    name: "Gesiana Silva",
+    name: "Thaisa Bacellar",
+    reviewerTag: "4 avaliações · 1 foto no Google",
+    badge: "Advogado de Confiança",
+    rating: 5,
+    content:
+      "Excelente escritório, atenciosos e com ótimo atendimento. Isaac é nosso advogado de confiança",
+  },
+  {
+    name: "Stefane Paula",
     reviewerTag: "1 avaliação no Google",
-    badge: "Ética & Zelo Incomparável",
+    badge: "Educado e Eficaz",
     rating: 5,
     content:
-      "É um prazer conhecer alguém tão comprometido com seu trabalho! Sua dedicação e ética profissional demonstram um alto nível de responsabilidade e zelo pelos clientes. Você é um exemplo de profissionalismo e integridade! Gratidão!",
+      "Assistente muito educado e eficaz, Isaac é um ótimo advogado, nada a reclamar. Muito bom!!",
+    response:
+      "Olá, Stefane. Agradecemos por suas palavras e ficamos satisfeitos em saber que o atendimento prestado por nossa equipe atendeu às suas expectativas. Ficamos gratos pela confiança, e nos colocamos à disposição.",
   },
   {
-    name: "Carlos Mariano da Silva",
-    reviewerTag: "Local Guide · 12 avaliações",
-    badge: "Competente e Justa",
+    name: "Durcineia Neves",
+    reviewerTag: "10 avaliações · 3 fotos no Google",
+    badge: "Atenciosos e Simpáticos",
     rating: 5,
     content:
-      "Excelente profissional, competente e justa.",
+      "Sou cliente do escritório e estou satisfeita com o desempenho do trabalho dos profissionais que atendem são muito atenciosos e simpáticos!",
+    response:
+      "Olá, Durcinéia! Ficamos felizes em saber que você está satisfeita com nosso trabalho e com o atendimento prestado por nossa equipe. Somos gratos pela avaliação e por compartilhar sua experiência.",
   },
   {
-    name: "Regi Oliveira",
+    name: "Iandra Fileno",
+    reviewerTag: "3 avaliações · 2 fotos no Google",
+    badge: "Transparência e Dedicação",
+    rating: 5,
+    content:
+      "Atendimento excelente, com transparência e dedicação. Super recomendo!",
+  },
+  {
+    name: "Patricia Garcia",
     reviewerTag: "1 avaliação no Google",
-    badge: "Fez Toda a Diferença",
+    badge: "Profissionais Excelentes",
     rating: 5,
     content:
-      "Uma excelente profissional.. Muito obrigada por toda a dedicação! Seu trabalho fez toda a diferença.",
+      "Profissionais excelentes! Atenciosos e competentes.",
   },
   {
-    name: "Rosana Santos",
-    reviewerTag: "3 avaliações no Google",
-    badge: "Atendimento Espetacular",
+    name: "Anne Maciel",
+    reviewerTag: "4 avaliações no Google",
+    badge: "Gratidão e Reconhecimento",
     rating: 5,
     content:
-      "Profissional qualificada, atendimento espetacular, além de um coração enorme... super indico!",
+      "São ótimos, os melhores, isso falo com gratidão 🙏🏽",
   },
   {
-    name: "Jessica Pereira",
+    name: "Maria Eduarda Fileno Vieira Lopes",
     reviewerTag: "1 avaliação no Google",
-    badge: "Melhor Advogada de Raul Soares",
+    badge: "Ótimos Profissionais",
     rating: 5,
     content:
-      "Melhor advogada de Raul Soares! Atenciosa e com uma experiência incrível!!!",
-  },
-  {
-    name: "Stephane Carvalho",
-    reviewerTag: "2 avaliações no Google",
-    badge: "Profissional de Qualidade",
-    rating: 5,
-    content:
-      "Profissional de qualidade melhor advogada de Raul Soares super recomendo maravilhosa !!!",
-  },
-  {
-    name: "Vagner Sousa",
-    reviewerTag: "1 avaliação no Google",
-    badge: "Compromisso com os Clientes",
-    rating: 5,
-    content:
-      "Excelente profissional!. Dedicação e compromisso com seus clientes.",
-  },
-  {
-    name: "Juliana Magalhães",
-    reviewerTag: "1 avaliação no Google",
-    badge: "Super Competente",
-    rating: 5,
-    content:
-      "Advogada super competente. Recomendo muito!",
-  },
-  {
-    name: "Giovana Parzzanini",
-    reviewerTag: "2 avaliações no Google",
-    badge: "Honestidade e Responsabilidade",
-    rating: 5,
-    content:
-      "Competência, honestidade e responsabilidade.",
-  },
-  {
-    name: "Ana Carla",
-    reviewerTag: "3 avaliações · 2 fotos",
-    badge: "Seriedade e Agilidade",
-    rating: 5,
-    content:
-      "Seriedade, comprometimento, e agilidade, excelente profissional!",
+      "Ótimos profissionais 👏👏",
   },
 ];
 
@@ -398,7 +387,7 @@ function Heading({
       <p className={isLight ? "eyebrow-dark" : "eyebrow-gold"}>{eyebrow}</p>
       <h2
         className={`mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] sm:text-4xl lg:text-[3.15rem] ${
-          isLight ? "text-[#18130f]" : "text-[#fbf8f5]"
+          isLight ? "text-[#1a1114]" : "text-[#fbf6f4]"
         }`}
       >
         {children}
@@ -406,7 +395,7 @@ function Heading({
       {description && (
         <p
           className={`mt-4 text-[15px] leading-7 ${
-            isLight ? "text-[#4a4038]" : "text-[#dcd4ce]"
+            isLight ? "text-[#544349]" : "text-[#ded4cf]"
           }`}
         >
           {description}
@@ -435,25 +424,25 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#0a0908] text-[#fbf8f5] selection:bg-[#ce9568] selection:text-[#0a0908]">
-        {/* Navigation Bar - Warm Rose-Gold, Champagne & Luxury Noir */}
-        <header className="sticky top-0 z-40 border-b border-[#ce9568]/25 bg-[#0a0908]/95 backdrop-blur-xl shadow-card">
-          <div className="mx-auto flex h-[98px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[108px] lg:h-[114px] xl:h-[118px] sm:px-8 lg:px-12">
+      <main className="overflow-hidden bg-[#0b0708] text-[#fbf6f4] selection:bg-[#c96a56] selection:text-[#0b0708]">
+        {/* Navigation Bar - Warm Rose-Bronze, Metallic Copper & Deep Obsidian */}
+        <header className="sticky top-0 z-40 border-b border-[#c96a56]/25 bg-[#0b0708]/95 backdrop-blur-xl shadow-card">
+          <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[92px] lg:h-[98px] xl:h-[102px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Daiana Paiva Advocacia Especializada - Início"
+              aria-label="Carvalho & Perígolo Advogados - Início"
               onClick={closeMenu}
               className="flex shrink-0 items-center transition-opacity hover:opacity-95"
             >
-              <div className="relative h-[66px] w-[220px] sm:h-[76px] sm:w-[260px] lg:h-[86px] lg:w-[290px] xl:h-[92px] xl:w-[310px]">
+              <div className="relative h-[34px] w-[160px] sm:h-[42px] sm:w-[196px] lg:h-[48px] lg:w-[224px] xl:h-[52px] xl:w-[244px]">
                 <Image
-                  src={LOGO_SRC}
-                  alt="Daiana Paiva Advocacia Especializada - OAB/MG 211.743"
+                  src={LOGO_HORIZONTAL_SRC}
+                  alt="Carvalho & Perígolo Advogados"
                   fill
                   priority
                   unoptimized
-                  sizes="(max-width: 640px) 220px, (max-width: 1024px) 290px, 310px"
-                  className="object-contain object-left"
+                  sizes="(max-width: 640px) 160px, (max-width: 1024px) 224px, 244px"
+                  className="object-contain object-left drop-shadow-[0_2px_14px_rgba(228,142,120,0.3)]"
                 />
               </div>
             </a>
@@ -465,8 +454,8 @@ export default function Home() {
               <a className="nav-link" href="#inicio">
                 Início
               </a>
-              <a className="nav-link" href="#sobre">
-                A Advogada
+              <a className="nav-link" href="#socios">
+                Os Sócios
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
@@ -487,9 +476,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Avaliações da Dra. Daiana Paiva no Google"
-                className="grid size-10 place-items-center rounded-lg border border-[#ce9568]/30 bg-[#12100e] text-[#dcd4ce] transition-all hover:border-[#dfa67b] hover:bg-[#1a1714] hover:text-white shadow-xs"
-                title="5,0 ★ no Google (22 avaliações)"
+                aria-label="Avaliações da Carvalho & Perígolo Advogados no Google"
+                className="grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#130c0e] text-[#ded4cf] transition-all hover:border-[#e48e78] hover:bg-[#1a1013] hover:text-white shadow-xs"
+                title="5,0 ★ no Google (19 avaliações)"
               >
                 <GoogleIcon size={16} />
               </a>
@@ -497,16 +486,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Daiana Paiva"
-                className="grid size-10 place-items-center rounded-lg border border-[#ce9568]/30 bg-[#12100e] text-[#dcd4ce] transition-all hover:border-[#dfa67b] hover:bg-[#1a1714] hover:text-white shadow-xs"
+                aria-label="Instagram da Carvalho & Perígolo Advogados"
+                className="grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#130c0e] text-[#ded4cf] transition-all hover:border-[#e48e78] hover:bg-[#1a1013] hover:text-white shadow-xs"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para a Dra. Daiana Paiva"
-                className="grid size-10 place-items-center rounded-lg border border-[#ce9568]/30 bg-[#12100e] text-[#dcd4ce] transition-all hover:border-[#dfa67b] hover:bg-[#1a1714] hover:text-white shadow-xs"
+                aria-label="Ligar para a Carvalho & Perígolo Advogados"
+                className="grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#130c0e] text-[#ded4cf] transition-all hover:border-[#e48e78] hover:bg-[#1a1013] hover:text-white shadow-xs"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -515,22 +504,22 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dra. Daiana Paiva"
-                className="grid size-10 place-items-center rounded-lg border border-[#ce9568]/30 bg-[#12100e] text-[#dcd4ce] transition-all hover:border-[#dfa67b] hover:bg-[#1a1714] hover:text-white shadow-xs"
+                aria-label="WhatsApp Carvalho & Perígolo Advogados"
+                className="grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#130c0e] text-[#ded4cf] transition-all hover:border-[#e48e78] hover:bg-[#1a1013] hover:text-white shadow-xs"
                 title="Fale no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Daiana Paiva! Gostaria de uma consulta jurídica especializada."
+                  "Olá! Gostaria de consultar sobre atendimento com a Carvalho & Perígolo Advogados."
                 )}
                 target="_blank"
                 size="sm"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                Fale Comigo <ArrowUpRight size={14} className="text-[#0a0908]" />
+                Fale Conosco <ArrowUpRight size={14} className="text-[#0b0708]" />
               </GlowingButton>
             </div>
 
@@ -539,7 +528,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#ce9568]/40 bg-[#12100e] text-[#fbf8f5] lg:hidden shadow-xs"
+              className="grid size-11 place-items-center rounded-lg border border-[#c96a56]/40 bg-[#130c0e] text-[#fbf6f4] lg:hidden shadow-xs"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -555,12 +544,12 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#ce9568]/25 bg-[#12100e] px-6 text-[#fbf8f5] lg:hidden"
+                className="overflow-hidden border-t border-[#c96a56]/25 bg-[#130c0e] px-6 text-[#fbf6f4] lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["A Advogada", "#sobre"],
+                    ["Os Sócios Fundadores", "#socios"],
                     ["Áreas de Atuação", "#atuacao"],
                     ["Diferenciais", "#diferenciais"],
                     ["Avaliações (5,0 ★)", "#avaliacoes"],
@@ -570,31 +559,31 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-[#dcd4ce] hover:text-[#dfa67b]"
+                      className="py-3 text-sm font-medium text-[#ded4cf] hover:text-[#fab599]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#f8e5d3]/85 bg-gradient-to-r from-[#b0764c] via-[#e4be9c] to-[#b0764c] px-5 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0a0908] shadow-[0_4px_16px_rgba(206,149,104,0.4),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:brightness-105 active:translate-y-0"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#fdeade]/85 bg-gradient-to-r from-[#964239] via-[#fab599] to-[#964239] px-5 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0b0708] shadow-[0_4px_16px_rgba(201,106,86,0.4),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:brightness-105 active:translate-y-0"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Daiana Paiva! Gostaria de consultar sobre um caso."
+                        "Olá! Gostaria de consultar sobre um caso com a Carvalho & Perígolo Advogados."
                       )}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <WhatsAppIcon size={16} className="text-[#0a0908]" /> WhatsApp: {PHONE_DISPLAY}
+                      <WhatsAppIcon size={16} className="text-[#0b0708]" /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ce9568]/40 bg-[#1a1714] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#fbf8f5] transition-all hover:border-[#dfa67b]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#c96a56]/40 bg-[#1a1013] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#fbf6f4] transition-all hover:border-[#e48e78]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (22 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (19 avaliações)
                     </a>
                   </div>
                 </div>
@@ -603,16 +592,16 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* DOBRA 1 [MODO ESCURO] - Hero Section - Warm Rose-Gold Aura, Sophisticated Contrast & Authority */}
+        {/* DOBRA 1 [MODO ESCURO] - Hero Section - Warm Rose-Bronze Aura, Metallic Contrast & Authority */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#ce9568]/25 bg-gradient-to-b from-[#0a0908] via-[#100e0c] to-[#0a0908]"
+          className="relative isolate scroll-mt-24 border-b border-[#c96a56]/25 bg-gradient-to-b from-[#0b0708] via-[#120a0d] to-[#0b0708]"
         >
-          {/* Subtle warm champagne lighting aura */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#ce9568]/12 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#dfa67b]/8 blur-3xl" />
+          {/* Subtle warm rose-copper lighting aura */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#c96a56]/12 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#e48e78]/8 blur-3xl" />
 
-          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[700px] lg:grid-cols-[1.12fr_0.88fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[740px] xl:py-20">
+          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[750px] xl:py-20">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -621,30 +610,30 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#ce9568]/50 bg-[#1a1714]/85 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#e4be9c] shadow-xs backdrop-blur-md"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c96a56]/50 bg-[#1a1013]/85 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#fab599] shadow-xs backdrop-blur-md"
               >
                 <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dfa67b] opacity-75"></span>
-                  <span className="relative inline-flex size-2 rounded-full bg-[#f8e5d3]"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#e48e78] opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-[#fdeade]"></span>
                 </span>
-                <span>ADVOGADA & ENGENHEIRA AGRÔNOMA · OAB/MG 211.743</span>
+                <span>ADVOCACIA ESPECIALIZADA · SIMONÉSIA & LESTE DE MINAS GERAIS</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#fbf8f5] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#fbf6f4] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Segurança jurídica e dedicação para proteger sua família,{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#e4be9c] via-[#dfa67b] to-[#fef7f0]">
-                  seu patrimônio e suas terras.
+                Rigor técnico, ética e dedicação para proteger sua família,{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fab599] via-[#e48e78] to-[#fff5f0]">
+                  seu patrimônio e seus direitos.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-5 max-w-xl text-[15px] leading-7 text-[#dcd4ce] sm:text-base sm:leading-8"
+                className="mt-5 max-w-xl text-[15px] leading-7 text-[#ded4cf] sm:text-base sm:leading-8"
               >
-                Com a autoridade única de quem é <strong className="font-semibold text-white">advogada e engenheira agrônoma</strong>, a <strong className="font-semibold text-white">Dra. Daiana Paiva</strong> une rigor técnico, acolhimento humano e resolução prática em <strong className="font-semibold text-white">Direito do Agronegócio e Ambiental, Inventários e Família, e Benefícios Previdenciários do INSS</strong>. Sede em Raul Soares - MG e atendimento para todo o Brasil.
+                Fundada pela <strong className="font-semibold text-white">Dra. Mônica Perígolo Magalhães</strong> e pelo <strong className="font-semibold text-white">Dr. Isaac Augusto de Carvalho</strong>, a <strong className="font-semibold text-white">{FIRM_NAME}</strong> une alta especialização em <strong className="font-semibold text-white">Direito Notarial e Registral, Direito Público (FGV), Família, Sucessões e Previdenciário</strong> com atendimento humanizado, ágil e transparente. Sede em Simonésia - MG e consultoria jurídica para todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -653,54 +642,54 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Daiana Paiva! Gostaria de conversar sobre o meu caso no WhatsApp."
+                    "Olá! Gostaria de conversar com a equipe da Carvalho & Perígolo Advogados no WhatsApp."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} className="text-[#0a0908]" /> Falar com a Dra. Daiana no WhatsApp
+                  <WhatsAppIcon size={16} className="text-[#0b0708]" /> Falar no WhatsApp
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#ce9568]/45 bg-[#12100e]/90 backdrop-blur-md px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#fbf8f5] shadow-[0_4px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all hover:border-[#f8e5d3] hover:bg-[#1a1714] hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#c96a56]/45 bg-[#130c0e]/90 backdrop-blur-md px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#fbf6f4] shadow-[0_4px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all hover:border-[#fdeade] hover:bg-[#1a1013] hover:text-white"
                 >
                   Conhecer Áreas de Atuação{" "}
                   <ArrowRight
                     size={14}
-                    className="transition-transform group-hover:translate-x-1 text-[#dfa67b]"
+                    className="transition-transform group-hover:translate-x-1 text-[#e48e78]"
                   />
                 </a>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#ce9568]/25 pt-5 text-xs text-[#9e938a]"
+                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#c96a56]/25 pt-5 text-xs text-[#9c8e87]"
               >
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#fbf8f5] transition-colors hover:text-[#dfa67b]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#fbf6f4] transition-colors hover:text-[#fab599]"
                 >
-                  <Star size={14} className="fill-[#dfa67b] text-[#dfa67b]" /> 5,0 ★ no Google (22 avaliações)
+                  <Star size={14} className="fill-[#e48e78] text-[#e48e78]" /> 5,0 ★ no Google (19 avaliações)
                 </a>
-                <span className="inline-flex items-center gap-1.5 font-medium text-[#fbf8f5]">
-                  <Award size={14} className="text-[#dfa67b]" /> Advogada & Agrônoma
+                <span className="inline-flex items-center gap-1.5 font-medium text-[#fbf6f4]">
+                  <Award size={14} className="text-[#e48e78]" /> Especialistas Notariais & Registrais
                 </span>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#fbf8f5] transition-colors hover:text-[#dfa67b]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#fbf6f4] transition-colors hover:text-[#fab599]"
                 >
-                  <MapPin size={14} className="text-[#dfa67b]" /> R. José de Oliveira, 40 · Raul Soares - MG
+                  <MapPin size={14} className="text-[#e48e78]" /> Av. Gov. Valadares, 151 · Centro, Simonésia - MG
                 </a>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Official Portrait */}
+            {/* Hero Visual Presentation - Duo Founders Gallery */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -709,40 +698,83 @@ export default function Home() {
                 delay: 0.18,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="relative mx-auto w-full max-w-[390px] sm:max-w-[420px] lg:max-w-[450px] xl:max-w-[470px] lg:ml-auto lg:mr-0"
+              className="relative mx-auto w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[490px] xl:max-w-[510px] lg:ml-auto lg:mr-0"
             >
-              <div className="relative aspect-[4/5.2] overflow-hidden rounded-2xl border-2 border-[#ce9568]/50 bg-[#12100e] shadow-2xl ring-1 ring-[#dfa67b]/35">
-                <Image
-                  src={FOTO_HERO_SRC}
-                  alt="Dra. Daiana Paiva — Advogada Especializada e Agrônoma"
-                  fill
-                  priority
-                  loading="eager"
-                  unoptimized
-                  className="object-cover object-top"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0a0908] via-[#0a0908]/85 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3 text-white sm:bottom-6 sm:left-6 sm:right-6">
-                  <div>
-                    <p className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white">
-                      Dra. Daiana Paiva
-                    </p>
-                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#e4be9c]">
-                      Advogada · OAB/MG 211.743 & Agrônoma
-                    </p>
-                    <p className="mt-0.5 text-[11px] text-stone-300">
-                      R. José de Oliveira, 40 · Raul Soares - MG
-                    </p>
+              {/* Composite Duo Card */}
+              <div className="relative overflow-hidden rounded-2xl border-2 border-[#c96a56]/50 bg-[#130c0e] p-3 shadow-2xl ring-1 ring-[#e48e78]/35">
+                <div className="grid grid-cols-2 gap-2.5">
+                  {/* Dra. Mônica */}
+                  <div className="group relative aspect-[4/5.4] overflow-hidden rounded-xl border border-[#c96a56]/40 bg-[#0b0708]">
+                    <Image
+                      src={FOTO_MONICA_SRC}
+                      alt="Dra. Mônica Perígolo Magalhães — Sócia Fundadora"
+                      fill
+                      priority
+                      unoptimized
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0b0708] via-[#0b0708]/75 to-transparent" />
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
+                      <p className="font-serif text-xs sm:text-sm font-bold text-white">
+                        Dra. Mônica Perígolo
+                      </p>
+                      <p className="text-[9px] uppercase tracking-wider text-[#fab599]">
+                        Sócia Fundadora · FGV
+                      </p>
+                    </div>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#ce9568]/60 bg-[#0a0908]/85 text-[#dfa67b] backdrop-blur-sm shadow-md">
-                    <Scale size={18} />
+
+                  {/* Dr. Isaac */}
+                  <div className="group relative aspect-[4/5.4] overflow-hidden rounded-xl border border-[#c96a56]/40 bg-[#0b0708]">
+                    <Image
+                      src={FOTO_ISAAC_SRC}
+                      alt="Dr. Isaac Augusto de Carvalho — Sócio Fundador"
+                      fill
+                      priority
+                      unoptimized
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0b0708] via-[#0b0708]/75 to-transparent" />
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
+                      <p className="font-serif text-xs sm:text-sm font-bold text-white">
+                        Dr. Isaac Carvalho
+                      </p>
+                      <p className="text-[9px] uppercase tracking-wider text-[#fab599]">
+                        Sócio Fundador · FADILESTE
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-3 flex items-center justify-between border-t border-[#c96a56]/25 px-2 pt-2.5">
+                  <div className="flex items-center gap-2">
+                    <div className="relative size-7 shrink-0 overflow-hidden rounded-md border border-[#c96a56]/40 bg-[#0b0708]">
+                      <Image
+                        src={LOGO_SYMBOL_SRC}
+                        alt="Monograma Carvalho & Perígolo"
+                        fill
+                        unoptimized
+                        className="object-contain p-1"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-serif text-xs font-bold text-white">
+                        Carvalho & Perígolo Advogados
+                      </p>
+                      <p className="text-[9px] text-[#cfc1ba]">
+                        Av. Gov. Valadares, 151 · Centro, Simonésia - MG
+                      </p>
+                    </div>
+                  </div>
+                  <span className="grid size-8 shrink-0 place-items-center rounded-lg border border-[#c96a56]/60 bg-[#0b0708] text-[#fab599]">
+                    <Scale size={15} />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#ce9568]/50 bg-[#0a0908]/90 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#e4be9c] shadow-md backdrop-blur-md sm:-left-4">
-                SEDE EM RAUL SOARES · ATENDIMENTO EM TODO O BRASIL
+              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#c96a56]/50 bg-[#0b0708]/92 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#fab599] shadow-md backdrop-blur-md sm:-left-4">
+                SEDE EM SIMONÉSIA · ATENDIMENTO EM TODO O BRASIL
               </div>
 
               {/* Floating Google 5.0 Star Rating */}
@@ -750,24 +782,24 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#ce9568]/60 bg-[#12100e]/95 p-3 shadow-xl backdrop-blur-md transition-all hover:border-[#dfa67b] hover:bg-[#1a1714] sm:-right-4"
+                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#c96a56]/60 bg-[#130c0e]/95 p-3 shadow-xl backdrop-blur-md transition-all hover:border-[#e48e78] hover:bg-[#1a1013] sm:-right-4"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1.5">
-                    <div className="flex gap-0.5 text-[#dfa67b]">
-                      <Star size={12} className="fill-[#dfa67b] text-[#dfa67b]" />
+                    <div className="flex gap-0.5 text-[#e48e78]">
+                      <Star size={12} className="fill-[#e48e78] text-[#e48e78]" />
                     </div>
                     <span className="font-serif text-sm font-bold text-white">
                       5,0
                     </span>
-                    <span className="text-[9px] uppercase tracking-wider text-[#e4be9c]">
+                    <span className="text-[9px] uppercase tracking-wider text-[#fab599]">
                       / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#dcd4ce]">
-                  22 Avaliações no Google (100% 5★)
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#ded4cf]">
+                  19 Avaliações no Google (100% 5★)
                 </p>
               </a>
             </motion.div>
@@ -777,39 +809,39 @@ export default function Home() {
         {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#ce9568]/25 bg-[#12100e]"
+          className="border-b border-[#c96a56]/25 bg-[#130c0e]"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★ no Google",
-                "nota máxima em 22 avaliações reais reconhecendo competência, ética e dedicação",
+                "nota máxima unânime em 19 avaliações reais reconhecendo ética e competência",
               ],
               [
-                "Advogada & Agrônoma",
-                "domínio técnico e prático de questões agrárias, ambientais e fundiárias",
+                "Especialização FGV & FADILESTE",
+                "domínio técnico e aprofundado em Direito Notarial, Registral e Público",
               ],
               [
                 "Atendimento Humanizado",
-                "atenção aos detalhes, linguagem clara e acolhimento em cada etapa",
+                "atenção aos detalhes, escuta empática e acompanhamento próximo em cada fase",
               ],
               [
-                "Raul Soares • MG • Brasil",
-                "sede física estruturada e assessoria jurídica digital ágil para todo o país",
+                "Simonésia • Leste de MG",
+                "sede física estruturada no Centro e assessoria jurídica digital para todo o país",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#ce9568]/25"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#c96a56]/25"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-xl font-semibold text-[#dfa67b] sm:text-2xl">
+                <span className="font-serif text-xl font-semibold text-[#fab599] sm:text-2xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#dcd4ce]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#ded4cf]">
                   {label}
                 </span>
               </div>
@@ -817,182 +849,179 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 2 [MODO CLARO] - Sobre a Dra. Daiana Paiva - Ivory Alabaster Luxury */}
+        {/* DOBRA 2 [MODO CLARO] - Os Sócios Fundadores - Alabaster Cream & Metallic Rose-Bronze */}
         <section
-          id="sobre"
-          className="scroll-mt-24 border-y border-[#dfbeaa]/40 bg-[#fcf9f6] py-20 text-[#18130f] sm:py-28 lg:py-32"
+          id="socios"
+          className="scroll-mt-24 border-y border-[#dfbeaa]/40 bg-[#fcf8f6] py-20 text-[#1a1114] sm:py-28 lg:py-32"
         >
-          <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Portrait Card in Light Mode */}
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={reveal}
-              className="relative mx-auto w-full max-w-[480px]"
+              className="text-center max-w-3xl mx-auto"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#b0764c]/40 bg-[#ffffff] shadow-2xl ring-1 ring-[#b0764c]/20">
-                <Image
-                  src={FOTO_SOBRE_SRC}
-                  alt="Dra. Daiana Paiva — Advocacia Especializada"
-                  fill
-                  unoptimized
-                  className="object-cover object-top"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/80 to-transparent" />
+              <div className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#964239] shadow-xs">
+                <span className="size-2 shrink-0 rounded-full bg-[#964239]" />
+                <span>OS SÓCIOS FUNDADORES</span>
               </div>
-
-              {/* Authority badge card in Light Mode */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#dfbeaa] bg-white/95 backdrop-blur-md px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#8a4f25]">
-                  <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8a4f25]">
-                    Autoridade & Especialização
-                  </p>
-                </div>
-                <p className="mt-1 font-serif text-lg leading-snug text-[#18130f] font-bold">
-                  Dra. Daiana Paiva
-                </p>
-                <p className="mt-0.5 text-[11px] font-semibold text-[#8a4f25]">
-                  Advogada (OAB/MG 211.743) & Engenheira Agrônoma
-                </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#786b61]">
-                  R. José de Oliveira, 40 · Raul Soares - MG
-                </p>
-              </div>
-
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#b0764c]/30 sm:-left-7 sm:-top-7 sm:size-32" />
-            </motion.div>
-
-            {/* Story & Biography in Light Mode */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={stagger}
-            >
-              <motion.div
-                variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#dfbeaa] bg-[#f4ebe1] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8a4f25] shadow-xs"
-              >
-                <span className="size-2 shrink-0 rounded-full bg-[#8a4f25]" />
-                <span>SOBRE A PROFISSIONAL</span>
-              </motion.div>
-
-              <motion.h2
-                variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#18130f] sm:text-4xl lg:text-[3.25rem]"
-              >
-                A união do conhecimento jurídico com a visão prática do campo:{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#91572c] via-[#b0764c] to-[#78431e]">
-                  advocacia dedicada, ética e resolutiva.
+              <h2 className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#1a1114] sm:text-4xl lg:text-[3.25rem]">
+                Excelência acadêmica, vocação para a justiça e{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#964239] via-[#c96a56] to-[#6e2524]">
+                  compromisso absoluto com cada cliente.
                 </span>
-              </motion.h2>
-
-              <motion.p
-                variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4a4038]"
-              >
-                Com escritório sediado em <strong className="font-bold text-[#18130f]">Raul Soares - MG</strong>, a <strong className="font-bold text-[#18130f]">Dra. Daiana Paiva</strong> destaca-se pela sua formação multidisciplinar rara e valorosa: é advogada e também <strong className="font-bold text-[#18130f]">engenheira agrônoma</strong>.
-              </motion.p>
-
-              <motion.p
-                variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4a4038]"
-              >
-                Essa combinação traz uma vantagem estratégica imensa para produtores rurais, famílias e clientes que necessitam de soluções no <strong className="font-bold text-[#18130f]">Direito do Agronegócio, Ambiental, Imobiliário/Fundiário, Família & Sucessões e Benefícios do INSS</strong>. Dra. Daiana compreende os laudos técnicos, as normas cartorárias, os ciclos do campo e os anseios familiares com a mesma profundidade técnica.
-              </motion.p>
-
-              {/* Client Quote Card in Light Mode */}
-              <motion.div
-                variants={reveal}
-                className="mt-6 rounded-xl border border-[#dfbeaa]/70 bg-white p-5 shadow-sm"
-              >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#18130f]">
-                  &ldquo;Super competente e dedicada. Resolveu de forma prática e rápida o meu problema. Além de ser advogada ainda é agrônoma. O que foi de suma importância para meu caso.&rdquo;
-                </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8a4f25]">
-                  — Naiara Monteiro Damasceno · Avaliação real 5,0 ★ no Google Meu Negócio
-                </p>
-              </motion.div>
-
-              {/* Credentials / Pillars in Light Mode */}
-              <motion.div
-                variants={reveal}
-                className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
-              >
-                <div className="rounded-lg border border-[#dfbeaa]/60 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#18130f]">22 Avaliações 5,0 ★</p>
-                  <p className="mt-0.5 text-[11px] text-[#786b61]">
-                    100% de avaliações 5 estrelas no Google
-                  </p>
-                </div>
-                <div className="rounded-lg border border-[#dfbeaa]/60 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#18130f]">Advogada & Agrônoma</p>
-                  <p className="mt-0.5 text-[11px] text-[#786b61]">
-                    Visão técnica integrada do Direito e do Campo
-                  </p>
-                </div>
-                <div className="rounded-lg border border-[#dfbeaa]/60 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-[#18130f]">Atendimento Próximo</p>
-                  <p className="mt-0.5 text-[11px] text-[#786b61]">
-                    Comunicação direta, transparente e humanizada
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#28211b] sm:grid-cols-2"
-              >
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                  <span>Sede na R. José de Oliveira, 40 · Raul Soares - MG</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                  <span>Nota 5,0 ★ unânime no Google com 22 avaliações reais</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                  <span>Contato direto pelo WhatsApp com a Dra. Daiana Paiva</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                  <span>Atendimento presencial em MG e digital em todo o Brasil</span>
-                </div>
-              </motion.div>
-
-              <motion.div
-                variants={reveal}
-                className="mt-8 flex flex-wrap items-center gap-4"
-              >
-                <GlowingButton
-                  href={getWhatsAppUrl(
-                    "Olá, Dra. Daiana Paiva! Gostaria de uma consulta para analisar meu caso."
-                  )}
-                  target="_blank"
-                  size="md"
-                  variant="gold"
-                  className="rounded-lg shadow-md"
-                >
-                  <WhatsAppIcon size={16} className="text-[#0a0908]" /> Falar com a Dra. Daiana Paiva
-                </GlowingButton>
-                <a
-                  href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#4a4038] transition-colors hover:text-[#8a4f25]"
-                >
-                  <Phone size={15} /> {PHONE_DISPLAY}
-                </a>
-              </motion.div>
+              </h2>
+              <p className="mt-4 text-[15px] leading-7 text-[#544349]">
+                Conheça a trajetória e os princípios que movem a <strong className="font-bold text-[#1a1114]">{FIRM_NAME}</strong>, combinando especialização notarial de ponta com um atendimento pautado pelo respeito e pela transparência.
+              </p>
             </motion.div>
+
+            {/* Duo Founders Cards */}
+            <div className="mt-14 grid gap-10 lg:grid-cols-2">
+              {/* Dra. Mônica Perígolo Magalhães */}
+              <motion.article
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.7 }}
+                className="group flex flex-col justify-between rounded-2xl border-2 border-[#dfbeaa] bg-white p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#c96a56] hover:shadow-2xl sm:p-9"
+              >
+                <div>
+                  <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+                    <div className="relative aspect-[4/5] w-full sm:w-[190px] shrink-0 overflow-hidden rounded-xl border-2 border-[#c96a56]/30 bg-[#f7ede6] shadow-md">
+                      <Image
+                        src={FOTO_MONICA_SRC}
+                        alt="Dra. Mônica Perígolo Magalhães"
+                        fill
+                        unoptimized
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div>
+                      <span className="inline-block rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#964239]">
+                        Sócia Fundadora
+                      </span>
+                      <h3 className="mt-2 font-serif text-2xl font-bold leading-tight text-[#1a1114] sm:text-[1.75rem]">
+                        Dra. Mônica Perígolo Magalhães
+                      </h3>
+                      <p className="mt-1 text-xs font-semibold text-[#964239]">
+                        Especialista em Direito Público & Direito Notarial e Registral (FGV)
+                      </p>
+                      <div className="mt-3 space-y-1.5 text-xs text-[#544349]">
+                        <p className="flex items-center gap-1.5">
+                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
+                          <span>Graduada em Direito pelo Instituto Vianna Jr (2014)</span>
+                        </p>
+                        <p className="flex items-center gap-1.5">
+                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
+                          <span>Pós-graduada pela Fundação Getúlio Vargas — FGV (2016)</span>
+                        </p>
+                        <p className="flex items-center gap-1.5">
+                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
+                          <span>Atuação em Direito Notarial, Sucessões e Família</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <blockquote className="mt-6 rounded-xl border-l-4 border-[#c96a56] bg-[#fcf8f6] p-4 text-[13px] italic leading-relaxed text-[#2c1d22]">
+                    &ldquo;Escolhi esta profissão quando cursava a 7ª série, estudando a divisão dos três poderes. Tamanho é o meu amor e prontidão em defesa das causas que acredito. Deus preparou para eu ser auxiliadora do direito dos homens. O pilar é que: <strong>&lsquo;Enquanto houver vontade de lutar haverá esperança de vencer&rsquo; (Santo Agostinho).</strong>&rdquo;
+                  </blockquote>
+                </div>
+
+                <div className="mt-6 border-t border-[#dfbeaa]/40 pt-4">
+                  <a
+                    href={getWhatsAppUrl(
+                      "Olá, Dra. Mônica Perígolo! Gostaria de consultar sobre um caso com a senhora."
+                    )}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcf8f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1114] transition-all hover:border-[#964239] hover:bg-[#1a1114] hover:text-white"
+                  >
+                    <span className="inline-flex items-center gap-2">
+                      <WhatsAppIcon size={15} /> Conversar com a Dra. Mônica Perígolo
+                    </span>
+                    <ArrowUpRight size={15} />
+                  </a>
+                </div>
+              </motion.article>
+
+              {/* Dr. Isaac Augusto de Carvalho */}
+              <motion.article
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="group flex flex-col justify-between rounded-2xl border-2 border-[#dfbeaa] bg-white p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#c96a56] hover:shadow-2xl sm:p-9"
+              >
+                <div>
+                  <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+                    <div className="relative aspect-[4/5] w-full sm:w-[190px] shrink-0 overflow-hidden rounded-xl border-2 border-[#c96a56]/30 bg-[#f7ede6] shadow-md">
+                      <Image
+                        src={FOTO_ISAAC_SRC}
+                        alt="Dr. Isaac Augusto de Carvalho"
+                        fill
+                        unoptimized
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div>
+                      <span className="inline-block rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#964239]">
+                        Sócio Fundador
+                      </span>
+                      <h3 className="mt-2 font-serif text-2xl font-bold leading-tight text-[#1a1114] sm:text-[1.75rem]">
+                        Dr. Isaac Augusto de Carvalho
+                      </h3>
+                      <p className="mt-1 text-xs font-semibold text-[#964239]">
+                        Especialista em Direito Notarial e Registral (FADILESTE)
+                      </p>
+                      <div className="mt-3 space-y-1.5 text-xs text-[#544349]">
+                        <p className="flex items-center gap-1.5">
+                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
+                          <span>Graduado em Direito pela Doctum Manhuaçu (2014)</span>
+                        </p>
+                        <p className="flex items-center gap-1.5">
+                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
+                          <span>Pós-graduado pela FADILESTE (2020)</span>
+                        </p>
+                        <p className="flex items-center gap-1.5">
+                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
+                          <span>Apontado por clientes como o advogado mais atualizado da região</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <blockquote className="mt-6 rounded-xl border-l-4 border-[#c96a56] bg-[#fcf8f6] p-4 text-[13px] italic leading-relaxed text-[#2c1d22]">
+                    &ldquo;Cursar direito foi como um sonho. Além de dar continuidade ao legado do meu pai, sempre me vi defendendo o direito do próximo, podendo auxiliar a outrem a partir do meu conhecimento. É gratificante. <strong>Nenhuma outra profissão me realizaria tanto.</strong>&rdquo;
+                  </blockquote>
+                </div>
+
+                <div className="mt-6 border-t border-[#dfbeaa]/40 pt-4">
+                  <a
+                    href={getWhatsAppUrl(
+                      "Olá, Dr. Isaac Carvalho! Gostaria de consultar sobre um caso com o senhor."
+                    )}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcf8f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1114] transition-all hover:border-[#964239] hover:bg-[#1a1114] hover:text-white"
+                  >
+                    <span className="inline-flex items-center gap-2">
+                      <WhatsAppIcon size={15} /> Conversar com o Dr. Isaac Carvalho
+                    </span>
+                    <ArrowUpRight size={15} />
+                  </a>
+                </div>
+              </motion.article>
+            </div>
           </div>
         </section>
 
         {/* DOBRA 3 [MODO ESCURO] - Pilares de Atuação / Serviços Especializados */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#ce9568]/25 bg-[#0e0c0b] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c96a56]/25 bg-[#0f090c] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -1005,14 +1034,14 @@ export default function Home() {
               <Heading
                 theme="dark"
                 eyebrow="PILARES DE ATUAÇÃO JURÍDICA ESPECIALIZADA"
-                description="Soluções jurídicas preventivas e contenciosas com o mais alto rigor técnico, linguagem clara e foco na resolução eficiente do seu problema."
+                description="Soluções preventivas e contenciosas com alto rigor técnico notarial, linguagem clara e foco na resolução prática do seu problema."
               >
-                Áreas de especialidade para defender seus direitos em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e4be9c] via-[#dfa67b] to-[#fef7f0]">
-                  Raul Soares, Minas Gerais e em todo o Brasil.
+                Áreas de especialidade para proteger seus direitos em{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fab599] via-[#e48e78] to-[#fff5f0]">
+                  Simonésia, Leste de Minas Gerais e em todo o Brasil.
                 </span>
               </Heading>
-              <p className="max-w-[280px] pb-1 text-xs leading-6 text-[#9e938a]">
+              <p className="max-w-[280px] pb-1 text-xs leading-6 text-[#9c8e87]">
                 Clique em uma área de atuação abaixo para conferir o detalhamento completo dos serviços e solicitar atendimento no WhatsApp.
               </p>
             </motion.div>
@@ -1030,25 +1059,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#ce9568]/30 bg-[#151310] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#dfa67b] hover:shadow-gold sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#c96a56]/30 bg-[#150d10] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#e48e78] hover:shadow-gold sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#ce9568]/40 bg-[#0a0908] text-[#dfa67b] shadow-xs transition-colors group-hover:bg-[#ce9568] group-hover:text-[#0a0908] group-hover:border-[#e4be9c]">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#c96a56]/40 bg-[#0b0708] text-[#fab599] shadow-xs transition-colors group-hover:bg-[#c96a56] group-hover:text-[#0b0708] group-hover:border-[#fdeade]">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#ce9568]/40 group-hover:text-[#dfa67b]">
+                      <span className="font-serif text-2xl text-[#c96a56]/40 group-hover:text-[#fab599]">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#ce9568]/30 bg-[#0a0908] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#e4be9c] shadow-xs">
+                      <span className="inline-block rounded-md border border-[#c96a56]/30 bg-[#0b0708] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#fab599] shadow-xs">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.42rem] leading-tight text-white group-hover:text-[#e4be9c] transition-colors">
+                      <h3 className="mt-3 font-serif text-[1.42rem] leading-tight text-white group-hover:text-[#fab599] transition-colors">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#dcd4ce]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#ded4cf]">
                         {area.summary}
                       </p>
                     </div>
@@ -1056,7 +1085,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfa67b] hover:text-white"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#fab599] hover:text-white cursor-pointer"
                     >
                       Ver detalhes e atuação{" "}
                       <ArrowRight
@@ -1071,141 +1100,141 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 4 [MODO CLARO] - Por Que Escolher / Diferenciais + Instagram - Linen Cream */}
+        {/* DOBRA 4 [MODO CLARO] - Diferenciais + Instagram - Linen Rose Cream */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-t border-[#dfbeaa]/40 bg-[#f7f3ee] py-20 text-[#18130f] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#dfbeaa]/40 bg-[#f7f0eb] py-20 text-[#1a1114] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 theme="light"
-                eyebrow="DUPLA QUALIFICAÇÃO, ÉTICA & ATENDIMENTO PERSONALIZADO"
-                description="Quando o seu patrimônio, sua família ou suas terras estão em jogo, você precisa de um atendimento técnico, transparente e que realmente se importa com o seu resultado."
+                eyebrow="RIGOR TÉCNICO, ÉTICA & ATENDIMENTO PERSONALIZADO"
+                description="Quando o seu patrimônio, sua família ou seus direitos estão em jogo, você merece advogados que combinem conhecimento acadêmico de excelência com escuta atenta e respeito."
               >
-                Por que confiar suas causas à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#91572c] via-[#b0764c] to-[#78431e]">
-                  Dra. Daiana Paiva?
+                Por que escolher a{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#964239] via-[#c96a56] to-[#6e2524]">
+                  Carvalho & Perígolo Advogados?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Daiana Paiva! Gostaria de conversar para entender melhor como funciona o atendimento."
+                  "Olá! Gostaria de conversar com a equipe da Carvalho & Perígolo Advogados."
                 )}
                 target="_blank"
                 size="md"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                <WhatsAppIcon size={16} className="text-[#0a0908]" /> Falar no WhatsApp
+                <WhatsAppIcon size={16} className="text-[#0b0708]" /> Falar no WhatsApp
               </GlowingButton>
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Autoridade Única - Advogada e Agrônoma */}
+              {/* Card 1: Domínio Notarial e Registral de Ponta */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dfbeaa]/70 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#b0764c] hover:shadow-xl sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#dfbeaa]/70 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c96a56] hover:shadow-xl sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfbeaa] bg-[#f4ebe1] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#8a4f25]">
-                      <Wheat size={14} /> Dupla Especialização Técnica
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#964239]">
+                      <Building2 size={14} /> Especialistas Notariais & Registrais
                     </span>
-                    <span className="text-xs font-semibold text-[#8a4f25]">
-                      Diferencial Exclusivo
+                    <span className="text-xs font-semibold text-[#964239]">
+                      FGV & FADILESTE
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#18130f] sm:text-[1.75rem]">
-                    Visão Agronômica e Jurídica Integrada
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1a1114] sm:text-[1.75rem]">
+                    Especialização Cartorária & Imobiliária
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#4a4038]">
-                    A maioria dos advogados conhece as leis, mas desconhece a realidade física e prática das lavouras, das divisas rurais, do manejo ambiental e da documentação do produtor. A Dra. Daiana Paiva une o olhar de engenheira agrônoma com o domínio do direito, trazendo soluções precisas e sem intermediários para questões do campo.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#544349]">
+                    Regularizar um imóvel ou conduzir um inventário exige domínio minucioso das normas da Corregedoria e da Lei de Registros Públicos. Na Carvalho & Perígolo, os dois sócios possuem pós-graduação na área, permitindo destravar escrituras, usucapiões e partilhas com máxima celeridade e total segurança jurídica.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#28211b]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2c1d22]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                      <span>Análise técnica aprofundada de perícias, laudos ambientais e mapas topográficos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
+                      <span>Regularizações extrajudiciais ágeis direto em Cartório de Registro de Imóveis</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                      <span>Defesas eficientes contra autuações ambientais e desembargos de áreas produtivas</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
+                      <span>Inventários rápidos em cartório e blindagem sucessória familiar</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                      <span>Contratos rurais e regularizações fundiárias estruturadas com respaldo técnico</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
+                      <span>Assessoria em Direito Público com especialização pela FGV</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-[#dfbeaa]/40 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Daiana Paiva! Gostaria de consultar sobre demandas de Agronegócio ou Direito Ambiental."
+                      "Olá! Gostaria de consultar sobre Regularização de Imóveis ou Inventário na Carvalho & Perígolo."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcfaf7] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#18130f] transition-all hover:border-[#8a4f25] hover:bg-[#18130f] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcf8f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1114] transition-all hover:border-[#964239] hover:bg-[#1a1114] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar sobre Demandas Rurais & Ambientais
+                      <WhatsAppIcon size={15} /> Conversar sobre Imóveis ou Inventário
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Acolhimento, Clareza & Eficiência */}
+              {/* Card 2: Ética, Atualização & Atendimento Humanizado */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dfbeaa]/70 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#b0764c] hover:shadow-xl sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#dfbeaa]/70 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c96a56] hover:shadow-xl sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfbeaa] bg-[#f4ebe1] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#8a4f25]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado & Ágil
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#964239]">
+                      <HeartHandshake size={14} /> Atendimento Humanizado & Confiável
                     </span>
-                    <span className="text-xs font-semibold text-[#8a4f25]">
+                    <span className="text-xs font-semibold text-[#964239]">
                       5,0 ★ no Google
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#18130f] sm:text-[1.75rem]">
-                    Linguagem Acessível, Sem Juridiquês e Foco em Resultados
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1a1114] sm:text-[1.75rem]">
+                    Transparência, Respeito e Proximidade
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#4a4038]">
-                    Como evidenciado nos depoimentos de clientes no Google, o atendimento da Dra. Daiana se destaca pela paciência em ouvir, clareza para explicar cada etapa e resolução rápida. Seja em um inventário familiar delicado ou na busca por uma aposentadoria justa no INSS, você recebe acolhimento sincero e firmeza profissional.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#544349]">
+                    Avaliações espontâneas de clientes destacam a ética, o aperfeiçoamento contínuo e a simpatia de toda a equipe. Aqui seu caso é tratado com zelo pessoal pelos próprios sócios, sem juridiquês hermético e com canal de comunicação ágil pelo WhatsApp para você acompanhar cada etapa.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#28211b]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2c1d22]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                      <span>Atendimento próximo e canal direto pelo WhatsApp com a advogada</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
+                      <span>Reconhecido no Google como o escritório mais atualizado da região</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                      <span>Inventários em cartório e judiciais conduzidos com total transparência</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
+                      <span>Atendimento empático desde o primeiro contato até o desfecho</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8a4f25]" />
-                      <span>Comprovação rigorosa de tempo rural e concessão segura de benefícios no INSS</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
+                      <span>Sede estruturada em Simonésia e consultoria online com segurança</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-[#dfbeaa]/40 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Daiana Paiva! Gostaria de consultar sobre Inventário, Família ou Benefício do INSS."
+                      "Olá! Gostaria de consultar sobre atendimento jurídico com a Carvalho & Perígolo Advogados."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcfaf7] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#18130f] transition-all hover:border-[#8a4f25] hover:bg-[#18130f] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcf8f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1114] transition-all hover:border-[#964239] hover:bg-[#1a1114] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar sobre Inventário, Família ou INSS
+                      <WhatsAppIcon size={15} /> Falar no WhatsApp com a Equipe
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1213,7 +1242,7 @@ export default function Home() {
               </motion.article>
             </div>
 
-            {/* Instagram Spotlight & Creator Banner in Light Mode */}
+            {/* Instagram Spotlight Banner */}
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1222,29 +1251,29 @@ export default function Home() {
               className="mt-10 flex flex-col items-center justify-between gap-6 rounded-2xl border border-[#dfbeaa] bg-white p-6 shadow-md sm:p-8 md:flex-row"
             >
               <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
-                <div className="relative size-16 shrink-0 rounded-full border-2 border-[#b0764c] p-0.5 shadow-md">
-                  <div className="relative size-full overflow-hidden rounded-full">
+                <div className="relative size-16 shrink-0 rounded-full border-2 border-[#c96a56] p-0.5 shadow-md">
+                  <div className="relative size-full overflow-hidden rounded-full bg-[#0b0708]">
                     <Image
-                      src={FOTO_HERO_SRC}
-                      alt="Dra. Daiana Paiva no Instagram"
+                      src={LOGO_SYMBOL_SRC}
+                      alt="Carvalho & Perígolo no Instagram"
                       fill
                       unoptimized
-                      className="object-cover object-top"
+                      className="object-contain p-2"
                     />
                   </div>
                 </div>
                 <div>
                   <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
-                    <span className="font-serif text-lg font-bold text-[#18130f]">@dra_daiana_paiva</span>
-                    <span className="rounded-full border border-[#dfbeaa] bg-[#f4ebe1] px-2.5 py-0.5 text-[10px] font-bold text-[#8a4f25]">
-                      Criadora de Conteúdo Digital
+                    <span className="font-serif text-lg font-bold text-[#1a1114]">{INSTAGRAM_HANDLE}</span>
+                    <span className="rounded-full border border-[#dfbeaa] bg-[#f7ede6] px-2.5 py-0.5 text-[10px] font-bold text-[#964239]">
+                      Canal Oficial no Instagram
                     </span>
                   </div>
-                  <p className="mt-1 text-sm font-semibold text-[#18130f]">
-                    Descomplico o Direito Ambiental e o Agronegócio • Direito das Famílias • Benefícios INSS
+                  <p className="mt-1 text-sm font-semibold text-[#1a1114]">
+                    Direito Notarial & Registral • Sucessões & Família • Direito Público • Previdenciário
                   </p>
-                  <p className="mt-1 text-xs text-[#54483e]">
-                    Acompanhe vídeos explicativos, orientações práticas sobre leis do campo, regularização de imóveis, partilha de bens e benefícios do INSS diretamente no perfil oficial.
+                  <p className="mt-1 text-xs text-[#544349]">
+                    Acompanhe publicações, esclarecimentos jurídicos práticos sobre regularização de imóveis, inventários, partilha de bens e decisões dos tribunais diretamente no perfil oficial.
                   </p>
                 </div>
               </div>
@@ -1252,36 +1281,36 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex shrink-0 items-center gap-2.5 rounded-lg border border-[#f8e5d3]/85 bg-gradient-to-r from-[#b0764c] via-[#e4be9c] to-[#b0764c] px-6 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0a0908] shadow-[0_4px_16px_rgba(206,149,104,0.35),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:scale-105 active:scale-100"
+                className="inline-flex shrink-0 items-center gap-2.5 rounded-lg border border-[#fdeade]/85 bg-gradient-to-r from-[#964239] via-[#fab599] to-[#964239] px-6 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0b0708] shadow-[0_4px_16px_rgba(201,106,86,0.35),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:scale-105 active:scale-100"
               >
-                <InstagramIcon size={16} className="text-[#0a0908]" /> Seguir no Instagram <ArrowUpRight size={14} className="text-[#0a0908]" />
+                <InstagramIcon size={16} className="text-[#0b0708]" /> Seguir no Instagram <ArrowUpRight size={14} className="text-[#0b0708]" />
               </a>
             </motion.div>
           </div>
         </section>
 
         {/* DOBRA 5 [MODO ESCURO] - Método de Atendimento em 3 Etapas */}
-        <section className="relative overflow-hidden border-t border-[#ce9568]/25 bg-[#0a0908] py-20 text-[#fbf8f5] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#ce9568]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#dfa67b]/10 blur-3xl" />
+        <section className="relative overflow-hidden border-t border-[#c96a56]/25 bg-[#0b0708] py-20 text-[#fbf6f4] sm:py-24 lg:py-28">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c96a56]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#e48e78]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 theme="dark"
                 eyebrow="COMO FUNCIONA O ATENDIMENTO"
-                description="Um processo claro, ético e organizado para você ter tranquilidade do início ao desfecho do seu caso."
+                description="Um processo transparente, sigiloso e eficiente para você ter tranquilidade do início à conclusão do seu caso."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e4be9c] via-[#dfa67b] to-[#fef7f0]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fab599] via-[#e48e78] to-[#fff5f0]">
                   proteger seus direitos e o patrimônio da sua família.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#ce9568]/35 bg-[#151310] p-6 font-serif text-base italic leading-7 text-[#fbf8f5] shadow-card">
-                &ldquo;Nosso propósito é descomplicar o Direito e oferecer um atendimento com o máximo zelo, responsabilidade e empatia. Cuidamos do seu caso como se fosse nosso, buscando sempre a solução mais célere, segura e justa.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#dfa67b]">
-                  — Dra. Daiana Paiva · OAB/MG 211.743
+              <blockquote className="mt-8 rounded-xl border border-[#c96a56]/35 bg-[#150d10] p-6 font-serif text-base italic leading-7 text-[#fbf6f4] shadow-card">
+                &ldquo;Trabalhamos com dedicação, responsabilidade e respeito. Nosso compromisso é prestar um atendimento pautado pela ética e pelo constante aperfeiçoamento profissional, buscando sempre a solução mais segura e justa para nossos clientes.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#fab599]">
+                  — Dra. Mônica Perígolo & Dr. Isaac Carvalho
                 </footer>
               </blockquote>
             </div>
@@ -1291,23 +1320,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#ce9568]/25"
+              className="divide-y divide-[#c96a56]/25"
             >
               {[
                 [
                   "01",
                   "Contato Inicial & Escuta Atenta",
-                  "Envie uma mensagem pelo WhatsApp ou agende uma reunião presencial. Analisamos detalhadamente seus documentos e a sua situação de forma acolhedora e sigilosa.",
+                  "Envie uma mensagem pelo WhatsApp ou agende um atendimento presencial em Simonésia. Ouvimos sua demanda com empatia, analisamos os documentos e compreendemos seus objetivos.",
                 ],
                 [
                   "02",
-                  "Diagnóstico Jurídico & Estratégia Personalizada",
-                  "Apresentamos um plano de ação claro, com estimativa realista de prazos, custos e as melhores alternativas extrajudiciais ou judiciais cabíveis.",
+                  "Diagnóstico Registral & Estratégia sob Medida",
+                  "Apresentamos um parecer objetivo com as melhores alternativas — seja pela via extrajudicial em cartório ou pela via judicial —, indicando prazos realistas e custos envolvidos.",
                 ],
                 [
                   "03",
-                  "Execução Ágil & Acompanhamento Próximo",
-                  "Condução técnica vigorosa perante cartórios, órgãos ambientais, INSS ou tribunais, com informações regulares e canal aberto para tirar todas as dúvidas.",
+                  "Atuação Diligente & Acompanhamento Contínuo",
+                  "Execução vigorosa e acompanhamento direto junto aos cartórios, órgãos públicos ou tribunais, com informações regulares e canal direto no WhatsApp para sanar todas as suas dúvidas.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1315,12 +1344,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#dfa67b]">
+                  <span className="font-serif text-2xl font-semibold text-[#fab599]">
                     {number}
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#dcd4ce]">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#ded4cf]">
                       {description}
                     </p>
                   </div>
@@ -1330,99 +1359,107 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 6 [MODO CLARO] - Avaliações / Depoimentos Reais no Google Meu Negócio - Alabaster */}
+        {/* DOBRA 6 [MODO CLARO] - Avaliações / Depoimentos Reais no Google Meu Negócio */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#dfbeaa]/40 bg-[#fcf9f6] py-20 text-[#18130f] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#dfbeaa]/40 bg-[#fcf8f6] py-20 text-[#1a1114] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira as opiniões de quem confiou suas causas à Dra. Daiana Paiva em Raul Soares - MG e em toda a região."
+                description="Veja a opinião de quem confiou suas causas à Carvalho & Perígolo Advogados em Simonésia - MG e em todo o Leste de Minas Gerais."
               >
                 Nota máxima 5,0 ★ com{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#91572c] via-[#b0764c] to-[#78431e]">
-                  22 avaliações no Google pela competência, ética e dedicação.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#964239] via-[#c96a56] to-[#6e2524]">
+                  19 avaliações no Google pela competência, ética e dedicação.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card in Light Mode */}
               <div className="flex flex-col gap-3 rounded-xl border border-[#dfbeaa] bg-white p-5 shadow-md sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#dfbeaa]/80 bg-[#f7f2eb] shadow-xs">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#dfbeaa]/80 bg-[#f7ede6] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#18130f]">
+                    <span className="font-serif text-3xl font-bold leading-none text-[#1a1114]">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#d98236]">
+                    <div className="flex gap-0.5 text-[#c96a56]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#d98236] text-[#d98236]"
+                          className="fill-[#c96a56] text-[#c96a56]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#4a4038]">
-                    Daiana Paiva - Advocacia Especializada
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#544349]">
+                    Carvalho & Perígolo Advogados
                   </p>
                   <a
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#8a4f25] transition-colors hover:text-[#18130f]"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#964239] transition-colors hover:text-[#1a1114]"
                   >
-                    22 avaliações no Google (100% 5★) <ArrowUpRight size={13} />
+                    19 avaliações no Google (100% 5★) <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Client Reviews Grid in Light Mode */}
+            {/* Client Reviews Grid */}
             <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#dfbeaa]/70 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#b0764c] hover:shadow-xl sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#dfbeaa]/70 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c96a56] hover:shadow-xl sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#d98236]">
+                      <div className="flex gap-1 text-[#c96a56]">
                         {Array.from({ length: review.rating }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#d98236] text-[#d98236]"
+                            className="fill-[#c96a56] text-[#c96a56]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#dfbeaa] bg-[#f7f2eb] px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#8a4f25] shadow-xs">
+                      <span className="rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#964239] shadow-xs">
                         {review.badge}
                       </span>
                     </div>
 
                     {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#2c241e]">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#2c1d22]">
                       &ldquo;{review.content}&rdquo;
                     </p>
+
+                    {/* Office response if exists */}
+                    {review.response && (
+                      <div className="mt-4 rounded-lg border-l-2 border-[#c96a56] bg-[#fcf8f6] p-3 text-[11px] leading-5 text-[#544349]">
+                        <p className="font-semibold text-[#964239]">Resposta da Carvalho & Perígolo:</p>
+                        <p className="mt-0.5 italic">{review.response}</p>
+                      </div>
+                    )}
                   </div>
 
                   {/* Reviewer info */}
                   <div className="mt-6 flex items-center gap-3 border-t border-[#dfbeaa]/40 pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#dfbeaa] bg-[#f7f2eb] font-serif text-sm font-bold text-[#8a4f25] shadow-xs">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#dfbeaa] bg-[#f7ede6] font-serif text-sm font-bold text-[#964239] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-bold text-[#18130f]">
+                      <p className="truncate font-serif text-base font-bold text-[#1a1114]">
                         {review.name}
                       </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#786b61]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#857177]">
                         {review.reviewerTag}
                       </p>
                     </div>
@@ -1435,19 +1472,19 @@ export default function Home() {
             <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#dfbeaa]/40 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogada em Raul Soares - MG",
-                  "Engenheira Agrônoma",
-                  "Direito do Agronegócio",
-                  "Direito Ambiental Rural",
-                  "Inventário & Partilha de Bens",
-                  "Benefícios do INSS & Aposentadoria",
+                  "Advogados em Simonésia - MG",
+                  "Direito Notarial & Registral",
+                  "Especialização FGV & FADILESTE",
+                  "Regularização de Imóveis",
+                  "Inventário em Cartório & Sucessões",
+                  "Direito de Família & Previdenciário",
                   "Nota Máxima 5,0 ★ no Google",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#dfbeaa] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#2c241e] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#dfbeaa] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#2c1d22] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#8a4f25]" />
+                    <CheckCircle2 size={13} className="text-[#964239]" />
                     {tag}
                   </span>
                 ))}
@@ -1457,9 +1494,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#8a4f25] transition-colors hover:text-[#18130f]"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#964239] transition-colors hover:text-[#1a1114]"
               >
-                Ver Todas as 22 Avaliações no Google{" "}
+                Ver Todas as 19 Avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1469,20 +1506,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 7 [MODO ESCURO] - Contato & Localização da Sede em Raul Soares - MG */}
+        {/* DOBRA 7 [MODO ESCURO] - Contato & Localização da Sede em Simonésia - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#ce9568]/25 bg-[#0a0908] py-20 text-[#fbf8f5] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c96a56]/25 bg-[#0b0708] py-20 text-[#fbf6f4] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 theme="dark"
                 eyebrow="CONTATO & AGENDAMENTO DE CONSULTA"
-                description="Entre em contato diretamente pelo WhatsApp para agendar um atendimento presencial ou uma consulta jurídica online com sigilo e rapidez."
+                description="Entre em contato diretamente pelo WhatsApp para agendar um atendimento presencial na sede em Simonésia ou uma consulta jurídica online com sigilo e rapidez."
               >
                 Prontidão para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e4be9c] via-[#dfa67b] to-[#fef7f0]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fab599] via-[#e48e78] to-[#fff5f0]">
                   atender você com atenção e excelência técnica.
                 </span>
               </Heading>
@@ -1490,67 +1527,67 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Daiana Paiva! Gostaria de agendar um atendimento com a senhora."
+                    "Olá! Gostaria de agendar um atendimento na Carvalho & Perígolo Advogados."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} className="text-[#0a0908]" /> Falar no WhatsApp com a Dra. Daiana
+                  <WhatsAppIcon size={17} className="text-[#0b0708]" /> Falar no WhatsApp com o Escritório
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#dcd4ce]">
-                  Atendimento telefônico e WhatsApp:{" "}
+                <p className="text-[11px] leading-5 text-[#ded4cf]">
+                  Telefone e WhatsApp:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#dcd4ce]">
+              <div className="mt-10 space-y-4 text-xs text-[#ded4cf]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#dfa67b]"
+                    className="mt-0.5 shrink-0 text-[#fab599]"
                   />
                   <div>
                     <p className="font-semibold text-white">
-                      Horário de Atendimento
+                      Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#e4be9c] font-bold">
-                      Segunda a Sexta-feira: 08:00 às 18:00
+                    <p className="mt-0.5 text-[#fab599] font-bold">
+                      Segunda a Sexta-feira: a partir das 08:30
                     </p>
-                    <p className="text-[11px] text-[#9e938a]">
-                      Atendimento presencial em Raul Soares - MG e consultas agendadas via WhatsApp
+                    <p className="text-[11px] text-[#9c8e87]">
+                      Atendimento presencial em Simonésia - MG e consultas agendadas via WhatsApp
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#dfa67b]" />
+                  <Phone size={16} className="shrink-0 text-[#fab599]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#dfa67b]"
+                    className="font-medium text-white transition-colors hover:text-[#fab599]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#dfa67b]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#fab599]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#dfa67b] text-white"
+                    className="transition-colors hover:text-[#fab599] text-white"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#dfa67b]" />
+                  <Mail size={16} className="shrink-0 text-[#fab599]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#dfa67b] text-white"
+                    className="transition-colors hover:text-[#fab599] text-white"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1559,7 +1596,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#dfa67b]"
+                    className="mt-0.5 shrink-0 text-[#fab599]"
                   />
                   <div>
                     <span className="text-white">{ADDRESS_TEXT}</span>
@@ -1568,7 +1605,7 @@ export default function Home() {
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#dfa67b] hover:underline"
+                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#fab599] hover:underline"
                     >
                       Abrir no Google Maps <ArrowUpRight size={12} />
                     </a>
@@ -1578,88 +1615,101 @@ export default function Home() {
             </div>
 
             {/* Office Card with executive presentation */}
-            <div className="relative overflow-hidden rounded-xl border border-[#ce9568]/35 bg-[#151310] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#b0764c] via-[#dfa67b] to-[#e4be9c]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#c96a56]/35 bg-[#150d10] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#964239] via-[#fab599] to-[#e48e78]" />
 
               <div className="flex flex-col gap-2">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#e4be9c]">
-                  Escritório em Raul Soares - MG
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#fab599]">
+                  Sede em Simonésia - MG
                 </p>
-                <div className="relative h-[68px] w-[260px] sm:h-[78px] sm:w-[310px]">
+                <div className="relative h-[40px] w-[185px] sm:h-[46px] sm:w-[215px]">
                   <Image
-                    src={LOGO_SRC}
-                    alt="Daiana Paiva - Advocacia Especializada"
+                    src={LOGO_HORIZONTAL_SRC}
+                    alt="Carvalho & Perígolo Advogados"
                     fill
                     unoptimized
-                    sizes="310px"
-                    className="object-contain object-left"
+                    sizes="215px"
+                    className="object-contain object-left drop-shadow-[0_2px_10px_rgba(228,142,120,0.25)]"
                   />
                 </div>
               </div>
 
-              {/* Office presentation photo */}
-              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#ce9568]/30 bg-[#0a0908] shadow-xs">
-                <Image
-                  src={FOTO_HERO_SRC}
-                  alt="Dra. Daiana Paiva — Advocacia Especializada em Raul Soares - MG"
-                  fill
-                  unoptimized
-                  className="object-cover object-top"
-                />
+              {/* Office presentation visual */}
+              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#c96a56]/30 bg-[#0b0708] shadow-xs">
+                <div className="grid grid-cols-2 size-full">
+                  <div className="relative size-full border-r border-[#c96a56]/20">
+                    <Image
+                      src={FOTO_MONICA_SRC}
+                      alt="Dra. Mônica Perígolo Magalhães"
+                      fill
+                      unoptimized
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="relative size-full">
+                    <Image
+                      src={FOTO_ISAAC_SRC}
+                      alt="Dr. Isaac Augusto de Carvalho"
+                      fill
+                      unoptimized
+                      className="object-cover object-top"
+                    />
+                  </div>
+                </div>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4 text-white">
                   <p className="text-xs font-semibold">Ambiente Acolhedor, Moderno e Reservado</p>
                   <p className="text-[10px] text-stone-300">{ADDRESS_TEXT}</p>
                 </div>
               </div>
 
-              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#dcd4ce]">
+              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#ded4cf]">
                 <strong className="font-semibold text-white">
-                  Daiana Paiva - Advocacia Especializada
+                  {FIRM_NAME}
                 </strong>
                 <br />
-                {LAWYER_TITLE}
+                Dra. Mônica Perígolo Magalhães & Dr. Isaac Augusto de Carvalho
                 <br />
-                Atendimento presencial em Raul Soares, Zona da Mata, Rio Doce e todo o Brasil
+                Atendimento presencial em Simonésia, Manhuaçu, Leste de Minas e consultoria online em todo o Brasil
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#ce9568]/25 bg-[#0a0908] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#e4be9c]">
+              <div className="mt-6 rounded-lg border border-[#c96a56]/25 bg-[#0b0708] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#fab599]">
                   Atendimento & Localização
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#dcd4ce]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#ded4cf]">
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-semibold text-[#e4be9c]">
-                    Segunda a Sexta (08h às 18h)
+                  <span className="text-right font-semibold text-[#fab599]">
+                    Segunda a Sexta (a partir das 08:30)
                   </span>
                   <span>WhatsApp & Consultas</span>
-                  <span className="text-right font-medium text-[#dfa67b]">
-                    (31) 98258-2001
+                  <span className="text-right font-medium text-[#e48e78]">
+                    {PHONE_DISPLAY}
                   </span>
                   <span>Endereço</span>
-                  <span className="text-right text-white">R. José de Oliveira, 40</span>
+                  <span className="text-right text-white">Av. Gov. Valadares, 151</span>
                   <span>Avaliações Google</span>
-                  <span className="text-right font-semibold text-[#dfa67b]">5,0 ★ (22 avaliações)</span>
+                  <span className="text-right font-semibold text-[#fab599]">5,0 ★ (19 avaliações)</span>
                   <span>Atuação Regional</span>
-                  <span className="text-right text-white">MG & Atendimento Online Nacional</span>
+                  <span className="text-right text-white">Simonésia, Leste de MG & Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#ce9568]/25" />
+              <div className="my-7 h-px bg-[#c96a56]/25" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-[#9e938a]">
+                <p className="text-xs text-[#9c8e87]">
                   Atendimento sob estrito sigilo profissional e conformidade ética
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Daiana Paiva! Gostaria de agendar um atendimento no escritório."
+                    "Olá! Gostaria de agendar um atendimento na Carvalho & Perígolo Advogados."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#ce9568]/50 bg-[#1a1714] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#dfa67b] hover:bg-[#ce9568] hover:text-[#0a0908]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#c96a56]/50 bg-[#1a1013] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#e48e78] hover:bg-[#c96a56] hover:text-[#0b0708]"
                 >
                   <WhatsAppIcon size={14} /> Falar no WhatsApp <ArrowUpRight size={14} />
                 </a>
@@ -1669,68 +1719,68 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#ce9568]/25 bg-gradient-to-r from-[#0a0908] via-[#151310] to-[#0a0908] px-5 py-14 text-[#fbf8f5] shadow-card sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#c96a56]/25 bg-gradient-to-r from-[#0b0708] via-[#150d10] to-[#0b0708] px-5 py-14 text-[#fbf6f4] shadow-card sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#e4be9c]">
-                <Sparkles size={13} /> DAIANA PAIVA · ADVOCACIA ESPECIALIZADA
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#fab599]">
+                <Sparkles size={13} /> CARVALHO & PERÍGOLO ADVOGADOS
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de orientação jurídica especializada para suas terras, sua família ou seu benefício?
+                Precisa de orientação jurídica especializada para seu imóvel, sua família ou seu benefício?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Daiana Paiva! Gostaria de uma consulta jurídica."
+                "Olá! Gostaria de uma consulta jurídica com a Carvalho & Perígolo Advogados."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg border border-[#f8e5d3]/85 bg-gradient-to-r from-[#b0764c] via-[#e4be9c] to-[#b0764c] px-8 py-4 text-[11px] font-black uppercase tracking-[0.15em] text-[#0a0908] shadow-[0_8px_24px_-4px_rgba(206,149,104,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.85)] transition-all hover:-translate-y-0.5 hover:from-[#ce9568] hover:via-[#f8e5d3] hover:to-[#ce9568] hover:shadow-[0_12px_32px_rgba(223,166,123,0.7)]"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg border border-[#fdeade]/85 bg-gradient-to-r from-[#964239] via-[#fab599] to-[#964239] px-8 py-4 text-[11px] font-black uppercase tracking-[0.15em] text-[#0b0708] shadow-[0_8px_24px_-4px_rgba(201,106,86,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.85)] transition-all hover:-translate-y-0.5 hover:from-[#c96a56] hover:via-[#fff5f0] hover:to-[#c96a56] hover:shadow-[0_12px_32px_rgba(228,142,120,0.7)]"
             >
-              <WhatsAppIcon size={17} className="text-[#0a0908]" /> Iniciar Atendimento{" "}
-              <ArrowUpRight size={15} className="text-[#0a0908]" />
+              <WhatsAppIcon size={17} className="text-[#0b0708]" /> Iniciar Atendimento{" "}
+              <ArrowUpRight size={15} className="text-[#0b0708]" />
             </a>
           </div>
         </section>
 
         {/* Footer - Elegant Luxury Noir */}
-        <footer className="border-t border-[#ce9568]/25 bg-[#0a0908] px-5 py-14 text-[#fbf8f5] sm:px-8 lg:px-12">
+        <footer className="border-t border-[#c96a56]/25 bg-[#0b0708] px-5 py-14 text-[#fbf6f4] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Daiana Paiva Advocacia Especializada"
+                aria-label="Carvalho & Perígolo Advogados"
                 className="inline-block transition-transform hover:scale-[1.01]"
               >
-                <div className="relative h-[78px] w-[270px] sm:h-[92px] sm:w-[320px]">
+                <div className="relative h-[44px] w-[205px] sm:h-[50px] sm:w-[235px] lg:h-[55px] lg:w-[255px]">
                   <Image
-                    src={LOGO_SRC}
-                    alt="Daiana Paiva Advocacia Especializada"
+                    src={LOGO_HORIZONTAL_SRC}
+                    alt="Carvalho & Perígolo Advogados"
                     fill
                     unoptimized
-                    sizes="320px"
-                    className="object-contain object-left"
+                    sizes="255px"
+                    className="object-contain object-left drop-shadow-[0_2px_12px_rgba(228,142,120,0.3)]"
                   />
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#9e938a]">
-                ⚖️ Advocacia com rigor técnico, ética inabalável e atendimento humanizado. Foco especializado em Direito do Agronegócio e Ambiental, Família e Sucessões, e Benefícios Previdenciários (INSS) em Raul Soares - MG e para todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#9c8e87]">
+                ⚖️ Advocacia com rigor técnico notarial e registral, ética inabalável e atendimento humanizado. Dra. Mônica Perígolo Magalhães e Dr. Isaac Augusto de Carvalho em Simonésia - MG e com consultoria online para todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#dfa67b]">
-                Dra. Daiana Paiva — Advogada (OAB/MG 211.743) & Engenheira Agrônoma
+              <p className="mt-3 text-[11px] font-semibold text-[#fab599]">
+                Dra. Mônica Perígolo (FGV) & Dr. Isaac Carvalho (FADILESTE)
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e4be9c]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#fab599]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#dcd4ce]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#ded4cf]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
-                <a className="footer-link" href="#sobre">
-                  A Advogada
+                <a className="footer-link" href="#socios">
+                  Os Sócios Fundadores
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
@@ -1748,13 +1798,13 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e4be9c]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#fab599]">
                 Contato & Atendimento
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#dcd4ce]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#ded4cf]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Daiana Paiva! Gostaria de atendimento."
+                    "Olá! Gostaria de atendimento com a Carvalho & Perígolo Advogados."
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -1791,16 +1841,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </a>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#e4be9c] font-semibold">
-                  <Clock size={14} className="shrink-0 text-[#dfa67b]" /> Atendimento de Segunda a Sexta, 08h às 18h
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#fab599] font-semibold">
+                  <Clock size={14} className="shrink-0 text-[#e48e78]" /> Segunda a Sexta, a partir das 08:30
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#ce9568]/25 pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#c96a56]/25 pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} DAIANA PAIVA ADVOCACIA ESPECIALIZADA. Todos os direitos reservados.
+              © {new Date().getFullYear()} CARVALHO & PERÍGOLO ADVOGADOS. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1815,21 +1865,21 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Daiana Paiva! Gostaria de atendimento pelo WhatsApp."
+              "Olá! Gostaria de atendimento pelo WhatsApp com a Carvalho & Perígolo Advogados."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Daiana Paiva"
-            className="group relative flex size-14 items-center justify-center rounded-full border-2 border-[#dfa67b]/80 bg-gradient-to-b from-[#1a1714] via-[#12100e] to-[#0a0908] text-[#eed2b9] shadow-[0_8px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(206,149,104,0.35)] transition-all duration-300 hover:scale-110 hover:border-[#f8e5d3] hover:shadow-[0_10px_35px_rgba(223,166,123,0.6)] focus:outline-none focus:ring-4 focus:ring-[#dfa67b]/40"
+            aria-label="Falar agora pelo WhatsApp com a Carvalho & Perígolo Advogados"
+            className="group relative flex size-14 items-center justify-center rounded-full border-2 border-[#e48e78]/80 bg-gradient-to-b from-[#1a1013] via-[#130c0e] to-[#0b0708] text-[#fccfb1] shadow-[0_8px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(201,106,86,0.35)] transition-all duration-300 hover:scale-110 hover:border-[#fdeade] hover:shadow-[0_10px_35px_rgba(228,142,120,0.6)] focus:outline-none focus:ring-4 focus:ring-[#e48e78]/40"
           >
             {/* Live pulsating status beacon */}
             <span className="absolute -top-0.5 -right-0.5 flex size-3.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dfa67b] opacity-75"></span>
-              <span className="relative inline-flex size-3.5 rounded-full border-2 border-[#0a0908] bg-[#f8e5d3]"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#e48e78] opacity-75"></span>
+              <span className="relative inline-flex size-3.5 rounded-full border-2 border-[#0b0708] bg-[#fdeade]"></span>
             </span>
-            <WhatsAppIcon size={26} className="text-[#f8e5d3] transition-transform duration-300 group-hover:scale-110" />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg border border-[#ce9568]/60 bg-[#0a0908]/95 px-3.5 py-1.5 text-xs font-semibold text-[#fbf8f5] shadow-2xl backdrop-blur-md transition-opacity group-hover:block">
-              <span className="text-[#e4be9c]">Atendimento no WhatsApp</span> · Dra. Daiana Paiva
+            <WhatsAppIcon size={26} className="text-[#fdeade] transition-transform duration-300 group-hover:scale-110" />
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg border border-[#c96a56]/60 bg-[#0b0708]/95 px-3.5 py-1.5 text-xs font-semibold text-[#fbf6f4] shadow-2xl backdrop-blur-md transition-opacity group-hover:block">
+              <span className="text-[#fab599]">Atendimento no WhatsApp</span> · Carvalho & Perígolo
             </span>
           </a>
         </aside>
@@ -1853,22 +1903,22 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#ce9568]/40 bg-[#12100e] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#fbf8f5]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#c96a56]/40 bg-[#130c0e] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#fbf6f4]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#ce9568]/30 bg-[#1a1714] text-[#fbf8f5] transition-colors hover:border-[#dfa67b] hover:text-[#e4be9c]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#1a1013] text-[#fbf6f4] transition-colors hover:border-[#e48e78] hover:text-[#fab599] cursor-pointer"
                 >
                   <X size={18} />
                 </button>
 
                 <div className="flex items-center gap-3 pr-12">
-                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#ce9568]/40 bg-[#0a0908] p-1 shadow-xs">
+                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#c96a56]/40 bg-[#0b0708] p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Brasão Daiana Paiva Advocacia"
+                      alt="Brasão Carvalho & Perígolo Advogados"
                       fill
                       sizes="40px"
                       className="object-contain"
@@ -1876,8 +1926,8 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="eyebrow-light">ADVOCACIA ESPECIALIZADA</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#dfa67b] uppercase">
-                      {LAWYER_NAME} · {LAWYER_TITLE}
+                    <p className="text-[10px] font-semibold tracking-wider text-[#e48e78] uppercase">
+                      {FIRM_NAME} · Simonésia - MG
                     </p>
                   </div>
                 </div>
@@ -1889,21 +1939,21 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#dcd4ce]">
+                <p className="mt-5 text-sm leading-7 text-[#ded4cf]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#ce9568]/25 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e4be9c]">
+                <div className="mt-6 border-t border-[#c96a56]/25 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#fab599]">
                     Atuação e Procedimentos Adotados pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-[#dcd4ce]"
+                        className="flex items-center gap-3 text-sm text-[#ded4cf]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#dfa67b]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#e48e78]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1918,12 +1968,12 @@ export default function Home() {
                     variant="gold"
                     className="rounded-lg shadow-md"
                   >
-                    <WhatsAppIcon size={16} className="text-[#0a0908]" /> Consultar sobre esta demanda
+                    <WhatsAppIcon size={16} className="text-[#0b0708]" /> Consultar sobre esta demanda
                   </GlowingButton>
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-[#9e938a] transition-colors hover:text-white"
+                    className="px-5 py-3 text-xs font-semibold text-[#9c8e87] transition-colors hover:text-white cursor-pointer"
                   >
                     Fechar
                   </button>

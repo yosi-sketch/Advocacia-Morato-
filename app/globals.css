@@ -3,41 +3,41 @@
 :root {
   color-scheme: dark;
   
-  /* Deep Luxury Warm Obsidian Noir Canvas */
-  --brand-noir-deep: #060505;
-  --brand-noir-canvas: #0a0908;
-  --brand-noir-surface: #12100e;
-  --brand-noir-elevated: #1a1714;
-  --brand-noir-card: #151310;
-  --brand-noir-card-hover: #201c18;
+  /* Deep Luxury Warm Obsidian & Wine Noir Canvas */
+  --brand-noir-deep: #070405;
+  --brand-noir-canvas: #0b0708;
+  --brand-noir-surface: #130c0e;
+  --brand-noir-elevated: #1a1013;
+  --brand-noir-card: #150d10;
+  --brand-noir-card-hover: #211419;
   --brand-border-subtle: rgba(255, 255, 255, 0.08);
-  --brand-border-gold: rgba(223, 166, 123, 0.28);
-  --brand-border-gold-bright: rgba(241, 208, 181, 0.65);
+  --brand-border-gold: rgba(228, 142, 120, 0.28);
+  --brand-border-gold-bright: rgba(250, 181, 153, 0.65);
 
-  /* Warm Rose-Gold, Bronze & Champagne Metallic Palette (Extracted directly from Daiana Paiva Logo) */
-  --brand-gold-specular: #fef7f0;
-  --brand-gold-light: #f8e5d3;
-  --brand-gold-luminous: #eed2b9;
-  --brand-gold-highlight: #e4be9c;
-  --brand-gold-accent: #dfa67b;
-  --brand-gold: #ce9568;
-  --brand-gold-dark: #b0764c;
-  --brand-gold-bronze: #885431;
-  --brand-gold-deep: #59331a;
+  /* Warm Rose-Bronze, Metallic Copper & Antique Wine Palette (Extracted directly from Carvalho & Perígolo Logo) */
+  --brand-gold-specular: #fff5f0;
+  --brand-gold-light: #fdeade;
+  --brand-gold-luminous: #fccfb1;
+  --brand-gold-highlight: #fab599;
+  --brand-gold-accent: #e48e78;
+  --brand-gold: #c96a56;
+  --brand-gold-dark: #964239;
+  --brand-gold-bronze: #6e2524;
+  --brand-gold-deep: #430201;
 
   /* Pure Pearl & Warm Silvers */
   --brand-plat-pure: #ffffff;
-  --brand-plat-highlight: #fbf8f5;
-  --brand-plat-light: #ece4dc;
-  --brand-plat-steel: #d2c8be;
-  --brand-plat-muted: #9f948a;
-  --brand-plat-dark: #6e645b;
+  --brand-plat-highlight: #fbf6f4;
+  --brand-plat-light: #ede2dd;
+  --brand-plat-steel: #cfc1ba;
+  --brand-plat-muted: #9c8e87;
+  --brand-plat-dark: #6b5d56;
 
   /* Text & Inks */
-  --brand-text-primary: #fbf8f5;
-  --brand-text-secondary: #dcd4ce;
-  --brand-text-muted: #9e938a;
-  --brand-text-gold: #dfa67b;
+  --brand-text-primary: #fbf6f4;
+  --brand-text-secondary: #ded4cf;
+  --brand-text-muted: #9c8e87;
+  --brand-text-gold: #fab599;
 }
 
 @theme inline {
@@ -45,67 +45,67 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-canvas: #0a0908;
-  --color-surface: #12100e;
-  --color-elevated: #1a1714;
-  --color-card: #151310;
+  --color-canvas: #0b0708;
+  --color-surface: #130c0e;
+  --color-elevated: #1a1013;
+  --color-card: #150d10;
 
-  /* Metallic Rose-Gold & Champagne */
-  --color-gold-50: #fef7f0;
-  --color-gold-100: #f8e5d3;
-  --color-gold-200: #eed2b9;
-  --color-gold-300: #e4be9c;
-  --color-gold-400: #dfa67b;
-  --color-gold-500: #ce9568;
-  --color-gold-600: #b0764c;
-  --color-gold-700: #885431;
-  --color-gold-800: #59331a;
-  --color-gold-900: #381e0d;
+  /* Metallic Rose-Bronze & Antique Copper */
+  --color-gold-50: #fff5f0;
+  --color-gold-100: #fdeade;
+  --color-gold-200: #fccfb1;
+  --color-gold-300: #fab599;
+  --color-gold-400: #e48e78;
+  --color-gold-500: #c96a56;
+  --color-gold-600: #964239;
+  --color-gold-700: #6e2524;
+  --color-gold-800: #430201;
+  --color-gold-900: #2c0406;
 
   /* Warm Silver & Pearl */
   --color-plat-50: #ffffff;
-  --color-plat-100: #fbf8f5;
-  --color-plat-200: #f4eee7;
-  --color-plat-300: #ece4dc;
-  --color-plat-400: #d2c8be;
-  --color-plat-500: #9f948a;
-  --color-plat-600: #6e645b;
-  --color-plat-700: #524a42;
-  --color-plat-800: #38312b;
-  --color-plat-900: #221c17;
+  --color-plat-100: #fbf6f4;
+  --color-plat-200: #f4ece6;
+  --color-plat-300: #ede2dd;
+  --color-plat-400: #cfc1ba;
+  --color-plat-500: #9c8e87;
+  --color-plat-600: #6b5d56;
+  --color-plat-700: #4f423d;
+  --color-plat-800: #352a27;
+  --color-plat-900: #201715;
 
   /* Luxury Warm Obsidian Noir */
-  --color-noir-50: #221c17;
-  --color-noir-100: #1a1714;
-  --color-noir-200: #151310;
-  --color-noir-300: #12100e;
-  --color-noir-400: #0e0c0b;
-  --color-noir-500: #0a0908;
-  --color-noir-900: #060505;
+  --color-noir-50: #211419;
+  --color-noir-100: #1a1013;
+  --color-noir-200: #150d10;
+  --color-noir-300: #130c0e;
+  --color-noir-400: #0f090b;
+  --color-noir-500: #0b0708;
+  --color-noir-900: #070405;
 
-  --shadow-card: 0 10px 35px -5px rgba(0, 0, 0, 0.65);
-  --shadow-gold: 0 10px 30px -8px rgba(206, 149, 104, 0.35);
-  --shadow-gold-lg: 0 18px 45px -10px rgba(223, 166, 123, 0.45);
-  --shadow-glow: 0 0 40px rgba(223, 166, 123, 0.22);
-  --shadow-gold-xl: 0 20px 50px -10px rgba(223, 166, 123, 0.55);
+  --shadow-card: 0 10px 35px -5px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 10px 30px -8px rgba(201, 106, 86, 0.35);
+  --shadow-gold-lg: 0 18px 45px -10px rgba(228, 142, 120, 0.45);
+  --shadow-glow: 0 0 40px rgba(228, 142, 120, 0.22);
+  --shadow-gold-xl: 0 20px 50px -10px rgba(228, 142, 120, 0.55);
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 7.5rem;
-  background-color: #0a0908;
+  background-color: #0b0708;
 }
 
 body {
-  background: #0a0908;
-  color: #fbf8f5;
+  background: #0b0708;
+  color: #fbf6f4;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #dfa67b;
+  caret-color: #fab599;
 }
 
 ::selection {
-  background: #ce9568;
-  color: #0a0908;
+  background: #c96a56;
+  color: #0b0708;
 }
 
 .font-cinzel {
@@ -127,19 +127,19 @@ body {
 }
 
 .eyebrow {
-  color: #d2c8be;
+  color: #cfc1ba;
 }
 
 .eyebrow-light {
-  color: #e4be9c;
+  color: #fab599;
 }
 
 .eyebrow-gold {
-  color: #dfa67b;
+  color: #e48e78;
 }
 
 .eyebrow-dark {
-  color: #8f542a;
+  color: #964239;
 }
 
 .eyebrow::before,
@@ -156,7 +156,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #d2c8be;
+  color: #cfc1ba;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -170,7 +170,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #ce9568, #dfa67b);
+  background: linear-gradient(90deg, #c96a56, #fab599);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -190,7 +190,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #dfa67b;
+  color: #fab599;
 }
 
 /* Custom Metallic Scrollbar */
@@ -199,17 +199,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0908;
+  background: #0b0708;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #0a0908;
+  border: 2px solid #0b0708;
   border-radius: 999px;
-  background: #885431;
+  background: #6e2524;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ce9568;
+  background: #c96a56;
 }
 
 @media (prefers-reduced-motion: reduce) {

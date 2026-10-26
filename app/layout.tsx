@@ -36,64 +36,66 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0a0908",
+  themeColor: "#0b0708",
   colorScheme: "dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.daianapaiva.adv.br"),
-  title: "Daiana Paiva · Advocacia Especializada · Agronegócio, Família & INSS · Raul Soares - MG",
+  metadataBase: new URL("https://www.carvalhoeperigolo.adv.br"),
+  title:
+    "Carvalho & Perígolo Advogados · Simonésia - MG · Direito Notarial, Registral, Família & Previdenciário",
   description:
-    "⚖️ Dra. Daiana Paiva (OAB/MG 211.743) — Advocacia Especializada com a autoridade única de quem é Advogada e Engenheira Agrônoma. Direito do Agronegócio e Ambiental, Família e Sucessões, e Benefícios Previdenciários (INSS). Nota máxima 5,0 ★ no Google (22 avaliações). Sede em Raul Soares - MG e atendimento em todo o Brasil.",
+    "⚖️ Carvalho & Perígolo Advogados — Dra. Mônica Perígolo Magalhães e Dr. Isaac Augusto de Carvalho. Especialistas em Direito Notarial, Registral, Regularização Imobiliária, Família, Sucessões e Previdenciário. Nota máxima 5,0 ★ no Google (19 avaliações). Sede em Simonésia - MG e atendimento para todo o Brasil.",
   keywords: [
-    "Daiana Paiva Advocacia Especializada",
-    "Dra Daiana Paiva",
-    "Daiana Paiva Advogada",
-    "OAB MG 211.743",
-    "Advogada e Agronoma",
-    "Direito do Agronegocio Raul Soares",
-    "Direito Ambiental MG",
-    "Regularizacao Fundiaria MG",
-    "Contratos Rurais e Arrendamento",
-    "Advogada Direito de Familia Raul Soares",
-    "Inventario e Partilha de Bens Raul Soares",
-    "Planejamento Sucessorio Familiar e Rural",
-    "Aposentadoria Rural INSS",
-    "Advogada Previdenciario Raul Soares",
-    "Beneficios INSS Raul Soares MG",
-    "Advocacia Especializada Raul Soares",
+    "Carvalho & Perígolo Advogados",
+    "Carvalho e Perigolo Advogados",
+    "Dra Mônica Perígolo Magalhães",
+    "Dr Isaac Augusto de Carvalho",
+    "Advogados Simonésia MG",
+    "Advocacia Simonésia Minas Gerais",
+    "Direito Notarial e Registral Simonésia",
+    "Regularização de Imóveis Simonésia",
+    "Usucapião Extrajudicial MG",
+    "Inventário em Cartório Simonésia",
+    "Planejamento Sucessório e Partilha de Bens",
+    "Direito Público FGV MG",
+    "Direito de Família e Divórcio Simonésia",
+    "Advogado Previdenciário Simonésia",
+    "Aposentadoria Rural e Urbana INSS",
+    "Advogados Leste de Minas Gerais",
   ],
-  authors: [{ name: "Daiana Paiva Advocacia Especializada" }],
-  creator: "Daiana Paiva Advocacia Especializada",
-  publisher: "Daiana Paiva Advocacia Especializada",
+  authors: [{ name: "Carvalho & Perígolo Advogados" }],
+  creator: "Carvalho & Perígolo Advogados",
+  publisher: "Carvalho & Perígolo Advogados",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=10", sizes: "any" },
-      { url: "/favicon-32x32.png?v=10", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=10", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=10", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico?v=cp1", sizes: "any" },
+      { url: "/favicon-32x32.png?v=cp1", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=cp1", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=cp1", type: "image/png", sizes: "192x192" },
     ],
-    shortcut: "/favicon.ico?v=10",
-    apple: [{ url: "/apple-icon.png?v=10", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=cp1",
+    apple: [{ url: "/apple-icon.png?v=cp1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.daianapaiva.adv.br",
-    title: "Daiana Paiva · Advocacia Especializada · Agronegócio, Família & INSS",
+    url: "https://www.carvalhoeperigolo.adv.br",
+    title:
+      "Carvalho & Perígolo Advogados · Simonésia - MG · Direito Notarial, Registral & Previdenciário",
     description:
-      "⚖️ Advocacia com rigor técnico, atendimento humanizado e a autoridade única de quem é advogada e agrônoma. 5,0 ★ no Google (22 avaliações). R. José de Oliveira, 40 - Raul Soares, MG e atendimento em todo o Brasil.",
-    siteName: "Daiana Paiva Advocacia Especializada",
+      "⚖️ Advocacia com rigor técnico, atendimento humanizado e alta especialização notarial e registral. Dra. Mônica Perígolo e Dr. Isaac Carvalho. Nota 5,0 ★ no Google (19 avaliações). Av. Gov. Valadares, 151 - Centro, Simonésia - MG.",
+    siteName: "Carvalho & Perígolo Advogados",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 341,
-        alt: "Daiana Paiva Advocacia Especializada",
+        height: 512,
+        alt: "Carvalho & Perígolo Advogados",
       },
     ],
   },
@@ -107,41 +109,43 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Daiana Paiva - Advocacia Especializada",
-    alternateName: "Dra. Daiana Paiva — Advogada & Engenheira Agrônoma",
-    legalName: "Daiana Paiva Advocacia Especializada",
-    telephone: "+55-31-98258-2001",
-    email: "contato@daianapaiva.adv.br",
-    url: "https://www.daianapaiva.adv.br",
-    image: "https://www.daianapaiva.adv.br/logo.png",
+    name: "Carvalho & Perígolo Advogados",
+    alternateName: "Carvalho e Perígolo Advogados — Dra. Mônica Perígolo & Dr. Isaac Carvalho",
+    legalName: "Carvalho & Perígolo Advogados",
+    telephone: "+55-33-99873-3957",
+    email: "contato@carvalhoeperigolo.adv.br",
+    url: "https://www.carvalhoeperigolo.adv.br",
+    image: "https://www.carvalhoeperigolo.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. José de Oliveira, 40",
-      addressLocality: "Raul Soares",
+      streetAddress: "Av. Gov. Valadares, 151 - Centro",
+      addressLocality: "Simonésia",
       addressRegion: "MG",
-      postalCode: "35350-000",
+      postalCode: "36930-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -20.1031,
-      longitude: -42.4533,
+      latitude: -20.1206,
+      longitude: -42.0003,
     },
     priceRange: "$$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "22",
+      reviewCount: "19",
     },
     areaServed: [
-      "Raul Soares",
-      "Rio Casca",
-      "São Pedro dos Ferros",
-      "Ponte Nova",
-      "Caratinga",
-      "Viçosa",
+      "Simonésia",
       "Manhuaçu",
+      "Caratinga",
+      "Ipanema",
+      "Mutum",
+      "Lajinha",
+      "Santana do Manhuaçu",
+      "Reduto",
       "Zona da Mata",
+      "Leste de Minas",
       "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
@@ -156,13 +160,25 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:00",
+        opens: "08:30",
         closes: "18:00",
       },
     ],
+    founder: [
+      {
+        "@type": "Person",
+        name: "Dra. Mônica Perígolo Magalhães",
+        jobTitle: "Sócia Fundadora & Advogada",
+      },
+      {
+        "@type": "Person",
+        name: "Dr. Isaac Augusto de Carvalho",
+        jobTitle: "Sócio Fundador & Advogado",
+      },
+    ],
     sameAs: [
-      "https://www.instagram.com/dra_daiana_paiva/",
-      "https://wa.me/5531982582001",
+      "https://instagram.com/carvalhoeperigolo/",
+      "https://wa.me/5533998733957",
     ],
   };
 
@@ -172,18 +188,18 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=10" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=10" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=10" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=10" />
-        <link rel="shortcut icon" href="/favicon.ico?v=10" />
-        <meta name="theme-color" content="#0a0908" />
+        <link rel="icon" href="/favicon.ico?v=cp1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=cp1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=cp1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=cp1" />
+        <link rel="shortcut icon" href="/favicon.ico?v=cp1" />
+        <meta name="theme-color" content="#0b0708" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#0a0908] font-sans text-[#fbf8f5] antialiased selection:bg-[#ce9568] selection:text-[#0a0908]">
+      <body className="min-h-screen overflow-x-clip bg-[#0b0708] font-sans text-[#fbf6f4] antialiased selection:bg-[#c96a56] selection:text-[#0b0708]">
         {children}
       </body>
     </html>

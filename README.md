@@ -1,23 +1,24 @@
-# Daiana Paiva — Advocacia Especializada
+# Carvalho & Perígolo Advogados
 
-Landing page institucional e de alta conversão para o escritório **Daiana Paiva - Advocacia Especializada**, liderado pela **Dra. Daiana Paiva** (OAB/MG 211.743), Advogada e Engenheira Agrônoma com sede na R. José de Oliveira, 40, Raul Soares - MG.
+Landing page institucional e de alta conversão para o escritório **Carvalho & Perígolo Advogados**, liderado pela **Dra. Mônica Perígolo Magalhães** (Especialista em Direito Público e Notarial/Registral pela FGV) e pelo **Dr. Isaac Augusto de Carvalho** (Especialista em Direito Notarial/Registral pela FADILESTE), com sede na Av. Gov. Valadares, 151 - Centro, Simonésia - MG.
 
 ## Principais Especialidades
-- **Direito do Agronegócio & Contratos Rurais:** Arrendamento, parcerias agrícolas, crédito rural, penhor e defesa da posse.
-- **Direito Ambiental Rural:** Defesas em autos de infração (IEF, IBAMA, SEMAD, Polícia Militar de Meio Ambiente), desembargo de áreas produtivas, TAC, CAR, Reserva Legal e outorgas de água.
-- **Direito de Família & Sucessões:** Inventários judiciais e extrajudiciais (cartório), partilha de bens, planejamento sucessório familiar e patrimonial, divórcios e pensão.
-- **Benefícios Previdenciários (INSS):** Aposentadoria rural (segurado especial), aposentadoria por idade e tempo de contribuição, averbação de tempo de roça, auxílio-doença, pensão por morte e BPC/LOAS.
-- **Regularização Fundiária & Imobiliária:** Usucapião judicial e extrajudicial, retificação de áreas e demarcação de terras.
-- **Consultoria Preventiva & Mediação Extrajudicial:** Prevenção de conflitos, confecção de acordos com validade de título e consultoria contínua.
+- **Direito Notarial, Registral & Regularização Imobiliária:** Usucapião extrajudicial em cartório e judicial, regularização fundiária, retificação de áreas e escrituras públicas.
+- **Inventários, Partilha de Bens & Sucessões:** Inventário extrajudicial em cartório de notas rápido e seguro, partilhas judiciais, planejamento sucessório familiar e testamentos.
+- **Direito Público & Defesas Administrativas:** Especialização FGV em Direito Público, defesas de servidores em PAD, mandados de segurança, concursos e assessoria perante órgãos públicos.
+- **Direito de Família & Soluções Patrimoniais:** Divórcio consensual e litigioso, dissolução de união estável, partilha de bens, pensão alimentícia e guarda.
+- **Direito Previdenciário (INSS Rural & Urbano):** Aposentadorias por idade rural (segurado especial), averbação de tempo de roça, auxílio-doença, pensão e BPC/LOAS.
+- **Consultoria Cível, Contratos & Mediação Estratégica:** Elaboração e blindagem de contratos civis e comerciais, prevenção de litígios e mediação extrajudicial.
 
 ## Informações de Contato
-- **Nome:** Daiana Paiva - Advocacia Especializada
-- **Advogada Titular:** Dra. Daiana Paiva (OAB/MG 211.743 & Engenheira Agrônoma)
-- **Telefone / WhatsApp:** (31) 98258-2001
-- **E-mail:** contato@daianapaiva.adv.br
-- **Endereço:** R. José de Oliveira, 40 - Raul Soares, MG, 35350-000, Brasil
-- **Avaliações no Google:** 5,0 ★ com 22 avaliações no Google Meu Negócio
-- **Instagram:** [@dra_daiana_paiva](https://www.instagram.com/dra_daiana_paiva)
+- **Nome:** Carvalho & Perígolo Advogados
+- **Sócios Fundadores:** Dra. Mônica Perígolo Magalhães & Dr. Isaac Augusto de Carvalho
+- **Telefone / WhatsApp:** (33) 99873-3957
+- **E-mail:** contato@carvalhoeperigolo.adv.br
+- **Endereço:** Av. Gov. Valadares, 151 - Centro, Simonésia - MG, 36930-000, Brasil
+- **Horário de Atendimento:** Segunda a Sexta a partir das 08:30
+- **Avaliações no Google:** 5,0 ★ com 19 avaliações no Google Meu Negócio
+- **Instagram:** [@carvalhoeperigolo](https://instagram.com/carvalhoeperigolo/)
 
 ## Stack Tecnológica
 - **Next.js 16 (App Router)**
