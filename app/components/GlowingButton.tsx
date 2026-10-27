@@ -35,52 +35,52 @@ export default function GlowingButton({
     lg: "px-8 py-4 text-xs tracking-[0.15em]",
   }[size];
 
-  // Haute Horlogerie styling tailored to Carvalho & Perígolo's Rose-Bronze & Metallic Copper palette
+  // Haute Horlogerie styling tailored to Morato Advocacia's Imperial Emerald & Metallic Gold palette
   const variantClasses = {
-    // Primary Signature: Rose-Bronze / Copper Metallic with Specular Inset & Luminous Glow
+    // Primary Signature: Polished Imperial Metallic Gold with Specular Inset & Luminous Glow
     gold:
-      "relative border border-[#fdeade]/85 bg-gradient-to-r from-[#964239] via-[#fab599] to-[#964239] text-[#0b0708] font-black tracking-[0.14em] " +
-      "shadow-[0_6px_22px_-2px_rgba(201,106,86,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.85),inset_0_-1px_1.5px_rgba(0,0,0,0.3)] " +
-      "hover:-translate-y-0.5 hover:from-[#c96a56] hover:via-[#fff5f0] hover:to-[#c96a56] " +
-      "hover:shadow-[0_10px_32px_-2px_rgba(228,142,120,0.7),inset_0_1px_2px_rgba(255,255,255,1)] " +
-      "hover:border-[#ffffff] active:translate-y-0 active:shadow-[0_3px_12px_rgba(201,106,86,0.4)]",
+      "relative border border-[#f5e3b5]/85 bg-gradient-to-r from-[#705018] via-[#dfba6a] to-[#705018] text-[#071510] font-black tracking-[0.14em] " +
+      "shadow-[0_6px_22px_-2px_rgba(212,175,55,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.85),inset_0_-1px_1.5px_rgba(0,0,0,0.3)] " +
+      "hover:-translate-y-0.5 hover:from-[#c59a3f] hover:via-[#fff8e7] hover:to-[#c59a3f] " +
+      "hover:shadow-[0_10px_32px_-2px_rgba(223,186,106,0.7),inset_0_1px_2px_rgba(255,255,255,1)] " +
+      "hover:border-[#ffffff] active:translate-y-0 active:shadow-[0_3px_12px_rgba(212,175,55,0.4)]",
 
-    // Deep Forest Emerald Luxury with Rose-Copper Metallic Frame
+    // Deep Forest Emerald Luxury with Imperial Gold Metallic Frame
     emerald:
-      "relative border border-[#e48e78]/70 bg-gradient-to-r from-[#0a2315] via-[#133924] to-[#0a2315] text-[#fbf6f4] font-bold tracking-[0.14em] " +
-      "shadow-[0_6px_20px_-2px_rgba(10,35,21,0.6),inset_0_1px_1px_rgba(250,181,153,0.5),inset_0_-1px_1px_rgba(0,0,0,0.4)] " +
-      "hover:-translate-y-0.5 hover:border-[#fdeade] hover:from-[#0f301e] hover:via-[#194a2f] hover:to-[#0f301e] " +
-      "hover:shadow-[0_10px_28px_-2px_rgba(19,57,36,0.7),0_0_20px_rgba(228,142,120,0.25)]",
+      "relative border border-[#dfba6a]/70 bg-gradient-to-r from-[#071f16] via-[#144532] to-[#071f16] text-[#fbfaf6] font-bold tracking-[0.14em] " +
+      "shadow-[0_6px_20px_-2px_rgba(7,31,22,0.6),inset_0_1px_1px_rgba(223,186,106,0.5),inset_0_-1px_1px_rgba(0,0,0,0.4)] " +
+      "hover:-translate-y-0.5 hover:border-[#f5e3b5] hover:from-[#0f3526] hover:via-[#1d6d4c] hover:to-[#0f3526] " +
+      "hover:shadow-[0_10px_28px_-2px_rgba(23,87,61,0.7),0_0_20px_rgba(223,186,106,0.25)]",
 
     champagne:
-      "relative border border-[#fab599] bg-gradient-to-r from-[#6e2524] via-[#c96a56] to-[#6e2524] text-[#fbf6f4] font-bold tracking-[0.14em] " +
-      "shadow-[0_6px_20px_-2px_rgba(201,106,86,0.35),inset_0_1px_1px_rgba(255,255,255,0.5)] " +
-      "hover:-translate-y-0.5 hover:from-[#964239] hover:via-[#e48e78] hover:to-[#964239] hover:shadow-[0_10px_28px_rgba(228,142,120,0.5)]",
+      "relative border border-[#dfba6a] bg-gradient-to-r from-[#422e0b] via-[#c59a3f] to-[#422e0b] text-[#fbfaf6] font-bold tracking-[0.14em] " +
+      "shadow-[0_6px_20px_-2px_rgba(212,175,55,0.35),inset_0_1px_1px_rgba(255,255,255,0.5)] " +
+      "hover:-translate-y-0.5 hover:from-[#705018] hover:via-[#e8ce8c] hover:to-[#705018] hover:shadow-[0_10px_28px_rgba(223,186,106,0.5)]",
 
-    // Obsidian Noir Surface with Precision Rose-Bronze Rim & Top Shimmer
+    // Emerald Noir Surface with Precision Gold Rim & Top Shimmer
     dark:
-      "relative border border-[#c96a56]/40 bg-[#130c0e] text-[#fbf6f4] font-bold tracking-[0.13em] " +
+      "relative border border-[#c59a3f]/40 bg-[#0d211a] text-[#fbfaf6] font-bold tracking-[0.13em] " +
       "shadow-[0_6px_20px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.08)] " +
-      "hover:-translate-y-0.5 hover:bg-[#1a1013] hover:border-[#e48e78] hover:text-white " +
-      "hover:shadow-[0_8px_25px_rgba(228,142,120,0.25)]",
+      "hover:-translate-y-0.5 hover:bg-[#122b22] hover:border-[#dfba6a] hover:text-white " +
+      "hover:shadow-[0_8px_25px_rgba(223,186,106,0.25)]",
 
-    // Outline with Rose-Bronze Accent & Glassmorphism
+    // Outline with Gold Accent & Glassmorphism
     outline:
-      "relative border border-[#c96a56]/60 bg-[#0b0708]/60 backdrop-blur-md text-[#fab599] font-bold tracking-[0.13em] " +
+      "relative border border-[#c59a3f]/60 bg-[#071510]/60 backdrop-blur-md text-[#dfba6a] font-bold tracking-[0.13em] " +
       "shadow-[0_4px_16px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.05)] " +
-      "hover:-translate-y-0.5 hover:border-[#fdeade] hover:bg-[#c96a56]/15 hover:text-white " +
-      "hover:shadow-[0_6px_20px_rgba(228,142,120,0.25)]",
+      "hover:-translate-y-0.5 hover:border-[#f5e3b5] hover:bg-[#c59a3f]/15 hover:text-white " +
+      "hover:shadow-[0_6px_20px_rgba(223,186,106,0.25)]",
 
     white:
-      "border border-[#ede2dd]/20 bg-white/10 text-white backdrop-blur-md shadow-sm hover:-translate-y-0.5 hover:bg-white/15 hover:border-white/40",
+      "border border-[#f0ede4]/20 bg-white/10 text-white backdrop-blur-md shadow-sm hover:-translate-y-0.5 hover:bg-white/15 hover:border-white/40",
     navy:
-      "border border-[#c96a56]/60 bg-gradient-to-r from-[#130c0e] via-[#1a1013] to-[#130c0e] text-[#fbf6f4] font-bold shadow-md shadow-black/60 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#e48e78]",
+      "border border-[#c59a3f]/60 bg-gradient-to-r from-[#0d211a] via-[#122b22] to-[#0d211a] text-[#fbfaf6] font-bold shadow-md shadow-black/60 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#dfba6a]",
     ruby:
       "border border-red-500/50 bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white font-bold shadow-md hover:-translate-y-0.5 hover:brightness-110",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2.5 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#e48e78] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2.5 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#dfba6a] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

@@ -1,29 +1,32 @@
-# Carvalho & Perígolo Advogados
+# Morato Advocacia · Site Institucional & Landing Page
 
-Landing page institucional e de alta conversão para o escritório **Carvalho & Perígolo Advogados**, liderado pela **Dra. Mônica Perígolo Magalhães** (Especialista em Direito Público e Notarial/Registral pela FGV) e pelo **Dr. Isaac Augusto de Carvalho** (Especialista em Direito Notarial/Registral pela FADILESTE), com sede na Av. Gov. Valadares, 151 - Centro, Simonésia - MG.
+Landing page institucional de alto padrão para **Morato Advocacia**, liderada pela **Dra. Michelle Morato**, advogada especialista em Direito de Família com sede em Contagem - MG (Eldorado) e atendimento online para todo o Brasil.
 
-## Principais Especialidades
-- **Direito Notarial, Registral & Regularização Imobiliária:** Usucapião extrajudicial em cartório e judicial, regularização fundiária, retificação de áreas e escrituras públicas.
-- **Inventários, Partilha de Bens & Sucessões:** Inventário extrajudicial em cartório de notas rápido e seguro, partilhas judiciais, planejamento sucessório familiar e testamentos.
-- **Direito Público & Defesas Administrativas:** Especialização FGV em Direito Público, defesas de servidores em PAD, mandados de segurança, concursos e assessoria perante órgãos públicos.
-- **Direito de Família & Soluções Patrimoniais:** Divórcio consensual e litigioso, dissolução de união estável, partilha de bens, pensão alimentícia e guarda.
-- **Direito Previdenciário (INSS Rural & Urbano):** Aposentadorias por idade rural (segurado especial), averbação de tempo de roça, auxílio-doença, pensão e BPC/LOAS.
-- **Consultoria Cível, Contratos & Mediação Estratégica:** Elaboração e blindagem de contratos civis e comerciais, prevenção de litígios e mediação extrajudicial.
+## Principais Recursos
 
-## Informações de Contato
-- **Nome:** Carvalho & Perígolo Advogados
-- **Sócios Fundadores:** Dra. Mônica Perígolo Magalhães & Dr. Isaac Augusto de Carvalho
-- **Telefone / WhatsApp:** (33) 99873-3957
-- **E-mail:** contato@carvalhoeperigolo.adv.br
-- **Endereço:** Av. Gov. Valadares, 151 - Centro, Simonésia - MG, 36930-000, Brasil
-- **Horário de Atendimento:** Segunda a Sexta a partir das 08:30
-- **Avaliações no Google:** 5,0 ★ com 19 avaliações no Google Meu Negócio
-- **Instagram:** [@carvalhoeperigolo](https://instagram.com/carvalhoeperigolo/)
+- **Identidade Visual Autêntica:** Paleta extraída diretamente do novo logotipo oficial, harmonizando **Verde Esmeralda Real**, **Ouro Imperial Metálico** e **Forest Noir**.
+- **Tipografia Nobre:** Combinação das famílias Cinzel, Playfair Display e Plus Jakarta Sans para máxima legibilidade e sofisticação jurídica.
+- **Prova Social em Destaque:** Integração dos 41 depoimentos reais e nota 5,0 ★ unânime no Google Meu Negócio.
+- **Modais Interativos de Especialidades:** Exploração detalhada das áreas de atuação (Divórcio, Pensão Alimentícia, Guarda, Partilha de Bens, União Estável e Inventário Familiar) com chamadas diretas personalizadas para o WhatsApp.
+- **Conversão Otimizada (CTAs):** Botões com efeito de iluminação nobre direcionados para atendimento imediato via WhatsApp no número oficial (31) 2568-2738.
+- **Favicons & Ícones Nativos:** Favicons multi-resolução gerados com o brasão oficial da Morato Advocacia.
+- **SEO & Schema.org:** Estruturação rica para busca local no Google (LegalService / Attorney).
 
-## Stack Tecnológica
-- **Next.js 16 (App Router)**
-- **React 19**
-- **Tailwind CSS v4**
-- **Framer Motion**
-- **Lucide React**
-- **TypeScript**
+## Execução
+
+```bash
+# Instalação das dependências
+npm install
+
+# Execução em desenvolvimento
+npm run dev
+
+# Compilação para produção
+npm run build
+```
+
+## Dados de Contato
+
+- **WhatsApp / Telefone:** (31) 2568-2738
+- **Instagram:** [@michellemoratoadvogada](https://www.instagram.com/michellemoratoadvogada/)
+- **Endereço:** Av. João César de Oliveira, 1730 - Sl 104 - Eldorado, Contagem - MG, 32310-000

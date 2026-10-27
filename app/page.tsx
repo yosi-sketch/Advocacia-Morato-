@@ -7,7 +7,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   Award,
-  Building2,
+  Calendar,
   CheckCircle2,
   Clock,
   HeartHandshake,
@@ -21,33 +21,38 @@ import {
   Users,
   ShieldCheck,
   X,
+  FileText,
+  BadgeCheck,
+  MessageCircle,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5533998733957";
-const PHONE_DISPLAY = "(33) 99873-3957";
-const EMAIL_CONTACT = "contato@carvalhoeperigolo.adv.br";
-const INSTAGRAM_URL = "https://instagram.com/carvalhoeperigolo/";
-const INSTAGRAM_HANDLE = "@carvalhoeperigolo";
-const FIRM_NAME = "Carvalho & Perígolo Advogados";
+// Informações Oficiais da Morato Advocacia
+const WHATSAPP_NUMBER = "553125682738";
+const PHONE_DISPLAY = "(31) 2568-2738";
+const EMAIL_CONTACT = "contato@moratoadvocacia.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/michellemoratoadvogada/";
+const INSTAGRAM_HANDLE = "@michellemoratoadvogada";
+const FIRM_NAME = "Morato Advocacia";
+const LAWYER_NAME = "Dra. Michelle Morato";
 
-const ADDRESS_TEXT = "Av. Gov. Valadares, 151 - Centro, Simonésia - MG, 36930-000";
+const ADDRESS_TEXT = "Av. João César de Oliveira, 1730 - Sl 104 - Eldorado, Contagem - MG, 32310-000";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Carvalho+%26+Per%C3%ADgolo+Advogados+Av+Gov+Valadares+151+Simonesia+MG";
+  "https://www.google.com/maps/search/?api=1&query=Morato+Advocacia+Av+Joao+Cesar+de+Oliveira+1730+Eldorado+Contagem+MG";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Carvalho+%26+Per%C3%ADgolo+Advogados%0ASimon%C3%A9sia+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Morato+Advocacia%0AContagem+%C2%B7+MG%0A&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_HORIZONTAL_SRC = "/logo-horizontal.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_MONICA_SRC = "/dra-monica.jpg";
-const FOTO_ISAAC_SRC = "/dr-isaac.jpg";
+const FOTO_MICHELLE_SRC = "/dra-michelle.jpg";
+const FOTO_MICHELLE_SEATED_SRC = "/dra-michelle-seated.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá! Gostaria de consultar sobre atendimento jurídico na Carvalho & Perígolo Advogados.";
+    "Olá, Dra. Michelle Morato! Gostaria de consultar sobre atendimento jurídico na Morato Advocacia.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -157,124 +162,124 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-notarial-registral-imobiliario",
-    title: "Direito Notarial, Registral & Regularização Imobiliária",
-    icon: Building2,
-    tag: "Usucapião Extrajudicial · Regularização de Imóveis · Escrituras & Registros",
-    summary:
-      "Segurança jurídica definitiva para o seu patrimônio imobiliário rural e urbano. Regularização fundiária, usucapião direto em cartório, retificação de área, escrituras públicas e adjudicação compulsória.",
-    details:
-      "Com sólida pós-graduação e especialização pela FGV e pela FADILESTE em Direito Notarial e Registral, os sócios fundadores Dra. Mônica Perígolo e Dr. Isaac Carvalho dominam a fundo os trâmites dos Cartórios de Registro de Imóveis e de Notas. Transformamos a posse irregular em propriedade titulada com matrícula e registro definitivo, agregando valor e garantindo tranquilidade jurídica aos proprietários.",
-    topics: [
-      "Usucapião Extrajudicial direto em Cartório de Registro de Imóveis (célere, sem necessidade de processo judicial)",
-      "Usucapião Judicial para imóveis rurais e urbanos com histórico documental complexo",
-      "Retificação administrativa e judicial de áreas, metragens e inserção de confrontações perimetrais",
-      "Regularização de loteamentos, desmembramentos, certidões e cancelamento de gravames/hipotecas",
-      "Adjudicação Compulsória Extrajudicial para contratos particulares de gaveta com quitação comprovada",
-      "Due Diligence imobiliária e auditoria registral preventiva na compra e venda de fazendas e imóveis",
-    ],
-    whatsAppText:
-      "Olá! Gostaria de consultar a Carvalho & Perígolo Advogados sobre Regularização de Imóvel, Usucapião ou Direito Notarial e Registral.",
-  },
-  {
-    id: "inventarios-partilha-sucessoes",
-    title: "Inventários, Partilha de Bens & Sucessões",
-    icon: Users,
-    tag: "Inventário em Cartório & Judicial · Planejamento Familiar · Testamentos",
-    summary:
-      "Agilidade e sensibilidade para resolver inventários e proteger o patrimônio que sua família construiu. Inventários extrajudiciais rápidos em cartório, partilhas judiciais estratégicas e planejamento sucessório.",
-    details:
-      "O inventário não precisa ser um processo demorado e desgastante. A Carvalho & Perígolo Advogados prioriza a via extrajudicial em cartório quando há consenso entre os herdeiros, e conduz inventários judiciais com rigor técnico, mediação humanizada e inteligência tributária para minimizar os custos com ITCMD e preservar os vínculos familiares.",
-    topics: [
-      "Inventário Extrajudicial em Cartório de Notas: procedimento rápido, descomplicado e seguro",
-      "Inventário Judicial e partilha de bens com composição amigável ou defesa firme do quinhão hereditário",
-      "Planejamento Sucessório Familiar: doações em vida com reserva de usufruto e cláusulas protetivas",
-      "Elaboração de testamentos públicos e estruturas societárias para proteção patrimonial de famílias e produtores",
-      "Sobrepartilha de bens sonegados ou descobertos após o encerramento do inventário",
-      "Alinhamento estratégico e mediação preventiva de conflitos sucessórios entre herdeiros",
-    ],
-    whatsAppText:
-      "Olá! Gostaria de orientações sobre Inventário, Partilha de Bens ou Planejamento Sucessório com o escritório Carvalho & Perígolo.",
-  },
-  {
-    id: "direito-publico-defesas-administrativas",
-    title: "Direito Público & Defesas Administrativas",
+    id: "divorcio-consensual-litigioso",
+    title: "Divórcio Consensual & Litigioso",
     icon: Scale,
-    tag: "Especialização FGV · Concursos · Licitações · Servidores Públicos",
+    tag: "Divórcio em Cartório Rápido · Judicial · Pacificação de Conflitos",
     summary:
-      "Assessoria especializada com a chancela FGV em Direito Público. Atuação técnica em defesas administrativas, concursos públicos, licitações, improbidade e defesa de direitos de servidores e cidadãos.",
+      "Resolução célere e humanizada para o encerramento do matrimônio. Prioridade ao divórcio consensual extrajudicial em cartório e defesa técnica e firme em processos litigiosos complexos.",
     details:
-      "Com a pós-graduação e especialização da Dra. Mônica Perígolo Magalhães pela Fundação Getúlio Vargas (FGV) em Direito Público, o escritório oferece uma defesa estratégica contra atos arbitrários ou desproporcionais da Administração Pública, atuando perante prefeituras, câmaras, secretarias e autarquias com precisão técnica e recursos eficazes.",
+      "O divórcio marca uma transição profunda na vida de uma família. Dra. Michelle Morato atua com escuta atenta e estratégia personalizada, buscando sempre o caminho mais rápido e pacífico — quando há consenso, o divórcio pode ser homologado diretamente em cartório em poucos dias. Em casos litigiosos, a atuação combina rigor jurídico para salvaguardar seus direitos com mediação acolhedora para preservar a estabilidade emocional e dos filhos.",
     topics: [
-      "Defesas e recursos administrativos contra sanções, autuações e notificações de órgãos públicos",
-      "Ações judiciais e Mandados de Segurança contra ilegalidades em concursos públicos e nomeações",
-      "Defesa de servidores públicos civis e militares em Processos Administrativos Disciplinares (PAD)",
-      "Consultoria jurídica e acompanhamento técnico em licitações e contratos com o poder público",
-      "Ações ordinárias para concessão, reenquadramento e cobrança de direitos remuneratórios de servidores",
-      "Análise de constitucionalidade, improbidade administrativa e consultoria regulatória municipal",
+      "Divórcio Extrajudicial em Cartório de Notas: procedimento ágil, sigiloso e sem burocracia desnecessária",
+      "Divórcio Judicial Consensual ou Litigioso com partilha estratégica de bens e fixação de acordos",
+      "Dissolução de União Estável com apuração detalhada de direitos patrimoniais e convivência",
+      "Medidas cautelares urgentes de afastamento do lar, arrolamento e bloqueio protetivo de bens",
+      "Orientação preventiva sobre alteração de nome, registros civis e averbação em cartório",
+      "Mediação construtiva de conflitos para reduzir desgaste emocional e custos financeiros",
     ],
     whatsAppText:
-      "Olá! Gostaria de consultar a Carvalho & Perígolo Advogados sobre uma demanda de Direito Público ou Administrativo.",
+      "Olá, Dra. Michelle Morato! Gostaria de consultar sobre Divórcio na Morato Advocacia.",
   },
   {
-    id: "direito-familia-solucoes-humanizadas",
-    title: "Direito de Família & Soluções Patrimoniais",
+    id: "pensao-alimenticia-alimentos",
+    title: "Pensão Alimentícia (Alimentos)",
     icon: HeartHandshake,
-    tag: "Divórcio Ágil · Pensão Alimentícia · Guarda · Dissolução de União Estável",
+    tag: "Fixação Justa · Revisão · Execução de Atrasados · Exoneração",
     summary:
-      "Acolhimento empático e discrição absoluta para proteger o que mais importa. Divórcios em cartório ou judiciais, união estável, partilha de bens conjugais, pensão alimentícia e guarda de filhos.",
+      "Garantia do sustento digno e do melhor interesse dos filhos. Ações rápidas para fixação, revisão de valores defasados, cobrança de débitos em atraso e exoneração de pensão.",
     details:
-      "Questões familiares exigem equilíbrio entre firmeza jurídica e respeito à dignidade de cada pessoa. A equipe da Carvalho & Perígolo Advogados atua para pacificar conflitos, garantir a justa partilha dos bens acumulados no matrimônio ou união estável, e resguardar o bem-estar e o sustento dos filhos menores com soluções rápidas e humanizadas.",
+      "A pensão alimentícia deve equilibrar com precisão o binômio necessidade de quem recebe e possibilidade de quem paga. A Morato Advocacia analisa detalhadamente a renda real, gastos essenciais da criança ou adolescente e evolução patrimonial para fixar um valor justo, cobrar com agilidade pensões em atraso (sob rito de prisão ou penhora) ou readequar valores diante de mudanças financeiras.",
     topics: [
-      "Divórcio Extrajudicial em Cartório de Notas: solução ágil, sigilosa e amigável",
-      "Divórcio Judicial consensual ou litigioso com partilha equilibrada de imóveis, veículos e negócios",
-      "Reconhecimento e dissolução de união estável com resguardo da meação e direitos patrimoniais",
-      "Ação de alimentos: fixação justa, revisão, exoneração e execução de pensão alimentícia",
-      "Definição de guarda compartilhada, plano de convivência parental e proteção integral dos filhos",
-      "Pacto antenupcial, contrato de convivência e assessoria preventiva sobre regimes de bens",
+      "Ação de Fixação de Alimentos Provisórios urgentes para suprir despesas imediatas dos filhos",
+      "Ação Revisional de Alimentos para majoração (aumento) ou redução comprovada dos valores",
+      "Execução e cobrança de pensão em atraso sob rito de prisão civil ou penhora de bens e contas",
+      "Ação de Exoneração de Alimentos quando atingida a maioridade ou independência financeira",
+      "Alimentos gravídicos em favor da gestante durante o período gestacional",
+      "Pensão alimentícia entre cônjuges ou companheiros em caso de vulnerabilidade transitória",
     ],
     whatsAppText:
-      "Olá! Gostaria de atendimento reservado com a Carvalho & Perígolo Advogados sobre Divórcio, Guarda ou Família.",
+      "Olá, Dra. Michelle Morato! Gostaria de orientações sobre Pensão Alimentícia com o escritório.",
   },
   {
-    id: "direito-previdenciario-inss-rural-urbano",
-    title: "Direito Previdenciário · INSS Rural & Urbano",
-    icon: Award,
-    tag: "Aposentadoria Rural · Tempo de Roça · Auxílio-Doença & BPC/LOAS",
+    id: "guarda-regime-convivencia-visitas",
+    title: "Guarda & Regime de Convivência (Visitas)",
+    icon: Users,
+    tag: "Guarda Compartilhada · Convivência Saudável · Melhor Interesse da Criança",
     summary:
-      "Garantia do benefício merecido a quem trabalhou e contribuiu uma vida inteira. Aposentadorias do trabalhador rural (segurado especial), averbação de tempo de lavoura, benefícios por incapacidade e LOAS.",
+      "Construção de planos de convivência sólidos e afetuosos. Proteção integral do vínculo entre pais e filhos com regras claras para férias, feriados, rotinas escolares e visitas.",
     details:
-      "No Leste de Minas Gerais, muitos trabalhadores rurais e urbanos têm seus direitos negados ou postergados pelo INSS por falhas na comprovação documental histórica. A equipe reúne certidões de nascimento, notas fiscais de produtor, contratos rurais e testemunhas para comprovar o direito e obter a concessão com recebimento dos retroativos.",
+      "Nas disputas de guarda, a prioridade absoluta deve ser sempre a segurança psicológica e o bem-estar dos filhos. Dra. Michelle Morato atua para estabelecer a guarda compartilhada de forma equilibrada e harmoniosa, elaborar planos detalhados de convivência familiar e agir com firmeza perante o Judiciário em casos de alienação parental, negligência ou necessidade de guarda unilateral.",
     topics: [
-      "Aposentadoria por Idade Rural do segurado especial (pequenos agricultores, meeiros, diaristas e arrendatários)",
-      "Averbação e contagem de tempo de serviço rural antigo para antecipar a Aposentadoria Urbana",
-      "Aposentadoria por Idade Urbana, por Tempo de Contribuição, Especial e da Pessoa com Deficiência",
-      "Concessão e restabelecimento judicial de Auxílio por Incapacidade Temporária (auxílio-doença) e Invalidez",
-      "Benefício de Prestação Continuada (BPC/LOAS) para idosos com 65+ anos e pessoas com deficiência em vulnerabilidade",
-      "Pensão por morte urbana e rural, salário-maternidade e planejamento previdenciário completo",
+      "Definição e regulamentação de Guarda Compartilhada e fixação da residência principal",
+      "Guarda Unilateral fundamentada na proteção e no superior interesse do menor",
+      "Estruturação de Plano de Convivência Parental minucioso (férias, datas festivas e finais de semana)",
+      "Combate à Alienação Parental e medidas judiciais de proteção ao vínculo afetivo",
+      "Autorização judicial para viagens nacionais e internacionais de menores desacompanhados",
+      "Ações de modificação de guarda decorrentes de mudança de cidade ou contexto familiar",
     ],
     whatsAppText:
-      "Olá! Gostaria de uma análise previdenciária com a Carvalho & Perígolo Advogados sobre aposentadoria ou benefício do INSS.",
+      "Olá, Dra. Michelle Morato! Gostaria de consultar sobre Guarda e Regime de Convivência dos filhos.",
   },
   {
-    id: "consultoria-civel-contratos-prevencao",
-    title: "Consultoria Cível, Contratos & Mediação",
+    id: "partilha-bens-protecao-patrimonial",
+    title: "Partilha de Bens & Proteção Patrimonial",
     icon: ShieldCheck,
-    tag: "Advocacia Preventiva · Contratos Blindados · Mediação Extrajudicial",
+    tag: "Divisão Equitativa · Imóveis & Empresas · Prevenção de Prejuízos",
     summary:
-      "Segurança jurídica contínua para prevenir litígios e proteger seus negócios. Elaboração de contratos seguros, cobranças estratégicas, mediações amigáveis e assessoria cível personalizada.",
+      "Divisão transparente e justa do patrimônio construído durante o casamento ou união estável. Avaliação minuciosa de imóveis, investimentos, participações societárias e veículos.",
     details:
-      "Evitar um litígio custoso é sempre mais inteligente do que remediar um processo arrastado por anos. O Dr. Isaac Carvalho e a Dra. Mônica Perígolo oferecem consultoria preventiva para pessoas físicas e empresas, blindando instrumentos contratuais e intermediando negociações com diplomacia, autoridade jurídica e foco no resultado.",
+      "A partilha de bens exige rigor técnico, clareza contábil e estratégia jurídica para evitar que um dos cônjuges seja prejudicado ou tenha bens ocultados. A Morato Advocacia atua na apuração de acervo patrimonial em regimes de comunhão parcial, universal ou separação de bens, intermediando acordos justos ou postulando em juízo a divisão correta de patrimônios urbanos, rurais e empresariais.",
     topics: [
-      "Elaboração e revisão detalhada de contratos civis, comerciais, agrários e imobiliários de alto padrão",
-      "Mediação de conflitos e formalização de acordos extrajudiciais com força de título executivo",
-      "Ações possessórias: reintegração de posse, manutenção e defesa contra turbação de divisas",
-      "Cobrança extrajudicial e judicial estratégica de títulos, cheques, notas promissórias e dívidas",
-      "Ações indenizatórias por danos materiais, danos morais e descumprimento de obrigações contratuais",
-      "Assessoria jurídica consultiva mensal para empresários, comerciantes e produtores locais",
+      "Apuração e divisão de imóveis financiados, quitados, veículos e investimentos bancários",
+      "Partilha de cotas societárias, empresas familiares e apuração de haveres conjugais",
+      "Investigação patrimonial em casos de ocultação, dissimulação ou fraude de bens na separação",
+      "Sobrepartilha de bens sonegados ou não incluídos no divórcio originário",
+      "Assessoria jurídica na compensação financeira e meação com foco na preservação patrimonial",
+      "Pactos antenupciais e consultoria pré-matrimonial sobre escolha de regime de bens",
     ],
     whatsAppText:
-      "Olá! Gostaria de consultar a Carvalho & Perígolo Advogados sobre elaboração de contrato ou consultoria cível preventiva.",
+      "Olá, Dra. Michelle Morato! Gostaria de orientação sobre Partilha de Bens e Patrimônio.",
+  },
+  {
+    id: "uniao-estavel-planejamento",
+    title: "União Estável: Reconhecimento & Dissolução",
+    icon: FileText,
+    tag: "Escritura Pública · Contrato de Convivência · Direitos Patrimoniais",
+    summary:
+      "Segurança jurídica para casais que convivem em união estável. Elaboração de contratos de convivência, reconhecimento formal perante a lei e dissolução com justa partilha.",
+    details:
+      "A união estável é uma realidade para milhões de famílias, mas a ausência de documentação formal pode gerar severos conflitos patrimoniais e sucessórios. Dra. Michelle Morato auxilia casais a redigirem contratos de convivência sob medida e atua judicial ou extrajudicialmente no reconhecimento e dissolução da união, garantindo todos os direitos meatórios e previdenciários.",
+    topics: [
+      "Elaboração de Escritura Pública de Reconhecimento de União Estável em Cartório",
+      "Contrato de Convivência com estipulação clara do regime de bens adotado pelo casal",
+      "Ação Declaratória de Reconhecimento e Dissolução cumulada com partilha de bens e alimentos",
+      "Reconhecimento Post Mortem de união estável para fins sucessórios e pensão por morte",
+      "Conversão formal de União Estável em Casamento Civil",
+      "Defesa de meação contra execuções e dívidas exclusivas do companheiro",
+    ],
+    whatsAppText:
+      "Olá, Dra. Michelle Morato! Gostaria de consultar sobre Reconhecimento ou Dissolução de União Estável.",
+  },
+  {
+    id: "inventario-familiar-planejamento-sucessorio",
+    title: "Inventário Familiar & Sucessões",
+    icon: Award,
+    tag: "Inventário em Cartório Ágil · Partilha Amigável · Menor Custo Tributário",
+    summary:
+      "Condução sensível e célere para transmitir o patrimônio da família aos herdeiros. Inventários extrajudiciais descomplicados em cartório e partilhas judiciais com pacificação.",
+    details:
+      "Após a perda de um ente querido, lidar com burocracias fiscais e partilhas pode se tornar um fardo pesado. A Morato Advocacia prioriza a via extrajudicial direta em cartório para que o inventário seja concluído com agilidade e harmonia entre os herdeiros, além de atuar em inventários judiciais com foco na proteção dos quinhões e otimização do ITCMD.",
+    topics: [
+      "Inventário Extrajudicial em Cartório de Notas: resolução célere e simplificada havendo consenso",
+      "Inventário Judicial quando houver menores, incapazes ou testamento registrado",
+      "Partilha amigável de bens móveis, imóveis, contas bancárias e cotas empresariais",
+      "Planejamento Sucessório Familiar: doação em vida com reserva de usufruto e cláusulas restritivas",
+      "Alvarás judiciais para levantamento de valores, FGTS e saldos de contas de falecidos",
+      "Mediação ativa entre herdeiros para prevenir disputas prolongadas e desgastes no Judiciário",
+    ],
+    whatsAppText:
+      "Olá, Dra. Michelle Morato! Gostaria de orientações sobre Inventário Familiar e Sucessão.",
   },
 ];
 
@@ -284,89 +289,153 @@ interface ClientReview {
   badge: string;
   rating: number;
   content: string;
-  response?: string;
+  timeAgo?: string;
 }
 
 const clientReviews: ClientReview[] = [
   {
-    name: "Pollyana Fileno",
-    reviewerTag: "7 avaliações no Google",
-    badge: "Competência e Atenção",
+    name: "Dias Oliveira Housecleaning",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Luta Pelo Meu Filho",
     rating: 5,
+    timeAgo: "Recente",
     content:
-      "Excelente escritório de advocacia! Fui muito bem atendida desde o primeiro contato. A equipe demonstrou profissionalismo, competência e atenção em todas as etapas.. Recomendo pelos serviços prestados e pelo compromisso com seus clientes.",
-    response:
-      "Olá, Pollyana! Ficamos satisfeitos em saber que o atendimento prestado por nossa equipe correspondeu às suas expectativas. Trabalhamos com dedicação, responsabilidade e respeito. Estamos à disposição.",
+      "Quero agradecer de coração pelo excelente trabalho, pela dedicação e pelo profissionalismo. Sua competência, atenção e empenho fizeram toda a diferença. Sou muito grata por todo o suporte, cuidado e compromisso demonstrados. Michelle vc fez muita diferença nesse momento complicado da minha vida, obrigada por lutar pelo meu filho e por mim ⚖️🙏🏻❤️",
   },
   {
-    name: "Bruno Falcão",
-    reviewerTag: "10 avaliações · 2 fotos no Google",
-    badge: "Advogado Mais Atualizado",
+    name: "Wanderson Oliveira Almeida",
+    reviewerTag: "5 avaliações no Google",
+    badge: "Excelente Mediadora & Preço Justo",
     rating: 5,
+    timeAgo: "1 ano atrás",
     content:
-      "O Dr. Isaac é o advogado mais atualizado da região. Atendimento com ética e respeito.",
-    response:
-      "Olá, Bruno! Agradecemos sua avaliação e as palavras de reconhecimento. Reafirmamos o nosso compromisso em prestar um atendimento pautado pela ética, respeito e constante aperfeiçoamento profissional. Somos gratos pela confiança em nossa equipe.",
+      "Dra Michele é uma excelente profissional, sensata, ponderada, ágil, eficiente, educada, cortês, boa mediadora e preço justo, conduziu de forma excelente a minha demanda.",
   },
   {
-    name: "Thaisa Bacellar",
-    reviewerTag: "4 avaliações · 1 foto no Google",
-    badge: "Advogado de Confiança",
+    name: "Jessica Fontoura",
+    reviewerTag: "Local Guide · 24 avaliações · 5 fotos",
+    badge: "Simplifica a Linguagem do Direito",
     rating: 5,
+    timeAgo: "4 anos atrás",
     content:
-      "Excelente escritório, atenciosos e com ótimo atendimento. Isaac é nosso advogado de confiança",
+      "Profissional extremamente qualificada. Se preocupa em atender de forma individualizada, cuidando do cliente com muita excelência. Faz questão de simplificar a linguagem complexa do direito, para que o cliente leigo no assunto se sinta de fato seguro com relação ao seu processo. Super indico!",
   },
   {
-    name: "Stefane Paula",
+    name: "Doraci Rocha",
     reviewerTag: "1 avaliação no Google",
-    badge: "Educado e Eficaz",
+    badge: "Rápida e Atenciosa",
     rating: 5,
+    timeAgo: "2 anos atrás",
     content:
-      "Assistente muito educado e eficaz, Isaac é um ótimo advogado, nada a reclamar. Muito bom!!",
-    response:
-      "Olá, Stefane. Agradecemos por suas palavras e ficamos satisfeitos em saber que o atendimento prestado por nossa equipe atendeu às suas expectativas. Ficamos gratos pela confiança, e nos colocamos à disposição.",
+      "Muito satisfeito com o trabalho da advogada. Rápida e atenciosa, conseguiu em dias o que pensei que levaria meses, e a um preço justo.",
   },
   {
-    name: "Durcineia Neves",
-    reviewerTag: "10 avaliações · 3 fotos no Google",
-    badge: "Atenciosos e Simpáticos",
+    name: "Frederico Luiz",
+    reviewerTag: "3 avaliações no Google",
+    badge: "Transparência e Profissionalismo",
     rating: 5,
+    timeAgo: "7 meses atrás",
     content:
-      "Sou cliente do escritório e estou satisfeita com o desempenho do trabalho dos profissionais que atendem são muito atenciosos e simpáticos!",
-    response:
-      "Olá, Durcinéia! Ficamos felizes em saber que você está satisfeita com nosso trabalho e com o atendimento prestado por nossa equipe. Somos gratos pela avaliação e por compartilhar sua experiência.",
+      "Excelente escritório de advocacia. Está conduzindo o caso do meu irmão e também o meu com transparência, responsabilidade e profissionalismo. Atendimento claro e seguro. Recomendo.",
   },
   {
-    name: "Iandra Fileno",
-    reviewerTag: "3 avaliações · 2 fotos no Google",
-    badge: "Transparência e Dedicação",
+    name: "Kelly Sene",
+    reviewerTag: "Local Guide · 53 avaliações",
+    badge: "Atendimento Maravilhoso",
     rating: 5,
+    timeAgo: "3 anos atrás",
     content:
-      "Atendimento excelente, com transparência e dedicação. Super recomendo!",
+      "Michelle Morato foi extremamente atenciosa, tirou todas as dúvidas. Atendimento maravilhoso. Eu queria inclusive pagar pela consulta que não foi curta. Muito obrigada, Michelle. ❤️",
   },
   {
-    name: "Patricia Garcia",
+    name: "Lucas Nunes",
+    reviewerTag: "Local Guide · 10 avaliações · 24 fotos",
+    badge: "Competência e Eficácia",
+    rating: 5,
+    timeAgo: "4 anos atrás",
+    content:
+      "A Michele é, além de um ser humano inigualável, uma profissional de altíssimo gabarito, extremamente competente e eficaz! Indico a que todos conheçam o trabalho incrível dela.",
+  },
+  {
+    name: "Karoline Nayara",
+    reviewerTag: "5 avaliações no Google",
+    badge: "Carinho e Humanidade",
+    rating: 5,
+    timeAgo: "4 anos atrás",
+    content:
+      "O que falar dessa advogada gigante, excelente profissional, com uma sabedoria fora de série, trata as pessoas com muito carinho e humanidade. Não conheço ninguém melhor nesta área! Michele ❣️",
+  },
+  {
+    name: "Tais Miranda",
+    reviewerTag: "6 avaliações no Google",
+    badge: "Atenção a Cada Detalhe",
+    rating: 5,
+    timeAgo: "4 anos atrás",
+    content:
+      "Uma excelente profissional, tem uma dedicação com o cliente formidável, uma atenção a cada detalhe, te orienta a cada passo, eu não só indico como eu recomendo!!!",
+  },
+  {
+    name: "Ana Clara Faustino",
+    reviewerTag: "3 avaliações no Google",
+    badge: "Resolvido em Poucos Dias",
+    rating: 5,
+    timeAgo: "3 anos atrás",
+    content:
+      "Ótima experiência. Michele muito competente e atenciosa! Resolveu meu problema em poucos dias! Muita gratidão a ela!",
+  },
+  {
+    name: "Leonardo Patrick",
+    reviewerTag: "Nutricionista · 2 avaliações no Google",
+    badge: "Criteriosa e Competente",
+    rating: 5,
+    timeAgo: "3 anos atrás",
+    content:
+      "Recomendo 100%. A Dra. Michelle é extremamente competente, criteriosa e profissional.",
+  },
+  {
+    name: "Welter Campos",
+    reviewerTag: "Local Guide · 12 avaliações · 2 fotos",
+    badge: "Dedicada e Competente",
+    rating: 5,
+    timeAgo: "2 anos atrás",
+    content:
+      "Excelente profissional, dedicada e competente, indico sem medo.",
+  },
+  {
+    name: "Alysson Santos",
     reviewerTag: "1 avaliação no Google",
-    badge: "Profissionais Excelentes",
+    badge: "Tranquilidade e Confiança",
     rating: 5,
+    timeAgo: "3 anos atrás",
     content:
-      "Profissionais excelentes! Atenciosos e competentes.",
+      "Atendimento perfeito, muita atenção, interesse e conhecimento. Soluções rápidas que me passaram tranquilidade e confiança.",
   },
   {
-    name: "Anne Maciel",
+    name: "Tatiana Gibim",
+    reviewerTag: "Local Guide · 17 avaliações · 10 fotos",
+    badge: "Honesta e Preço Justo",
+    rating: 5,
+    timeAgo: "6 anos atrás",
+    content:
+      "Excelente profissional, competente, comprometida, honesta e com um preço justo. Quer uma excelente Advogada? Procure a Morato Advocacia. Recomendo.",
+  },
+  {
+    name: "Felipe Couto",
     reviewerTag: "4 avaliações no Google",
-    badge: "Gratidão e Reconhecimento",
+    badge: "Do Início ao Fim",
     rating: 5,
+    timeAgo: "1 ano atrás",
     content:
-      "São ótimos, os melhores, isso falo com gratidão 🙏🏽",
+      "Excelente profissional do início ao fim do processo, sempre me prestando esclarecimentos. Recomendo.",
   },
   {
-    name: "Maria Eduarda Fileno Vieira Lopes",
-    reviewerTag: "1 avaliação no Google",
-    badge: "Ótimos Profissionais",
+    name: "Luana Tatiane",
+    reviewerTag: "4 avaliações · 3 fotos",
+    badge: "A Melhor Sem Dúvidas",
     rating: 5,
+    timeAgo: "4 anos atrás",
     content:
-      "Ótimos profissionais 👏👏",
+      "Advogada muito atenciosa e criteriosa, profissional dedicada e comprometida em ajudar, super indico seu trabalho... A melhor sem dúvidas!",
   },
 ];
 
@@ -387,7 +456,7 @@ function Heading({
       <p className={isLight ? "eyebrow-dark" : "eyebrow-gold"}>{eyebrow}</p>
       <h2
         className={`mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] sm:text-4xl lg:text-[3.15rem] ${
-          isLight ? "text-[#1a1114]" : "text-[#fbf6f4]"
+          isLight ? "text-[#071510]" : "text-[#fbfaf6]"
         }`}
       >
         {children}
@@ -395,7 +464,7 @@ function Heading({
       {description && (
         <p
           className={`mt-4 text-[15px] leading-7 ${
-            isLight ? "text-[#544349]" : "text-[#ded4cf]"
+            isLight ? "text-[#3f4f46]" : "text-[#ded9cf]"
           }`}
         >
           {description}
@@ -424,25 +493,25 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#0b0708] text-[#fbf6f4] selection:bg-[#c96a56] selection:text-[#0b0708]">
-        {/* Navigation Bar - Warm Rose-Bronze, Metallic Copper & Deep Obsidian */}
-        <header className="sticky top-0 z-40 border-b border-[#c96a56]/25 bg-[#0b0708]/95 backdrop-blur-xl shadow-card">
+      <main className="relative min-h-screen overflow-x-clip bg-[#071510] text-[#fbfaf6]">
+        {/* Header / Navbar com Brasão Morato e Dourado Imperial */}
+        <header className="sticky top-0 z-40 border-b border-[#c59a3f]/25 bg-[#071510]/95 backdrop-blur-xl transition-all">
           <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[92px] lg:h-[98px] xl:h-[102px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Carvalho & Perígolo Advogados - Início"
+              aria-label="Morato Advocacia - Início"
               onClick={closeMenu}
               className="flex shrink-0 items-center transition-opacity hover:opacity-95"
             >
-              <div className="relative h-[34px] w-[160px] sm:h-[42px] sm:w-[196px] lg:h-[48px] lg:w-[224px] xl:h-[52px] xl:w-[244px]">
+              <div className="relative h-[38px] w-[170px] sm:h-[46px] sm:w-[210px] lg:h-[52px] lg:w-[240px] xl:h-[56px] xl:w-[260px]">
                 <Image
                   src={LOGO_HORIZONTAL_SRC}
-                  alt="Carvalho & Perígolo Advogados"
+                  alt="Morato Advocacia — Advogada de Família"
                   fill
                   priority
                   unoptimized
-                  sizes="(max-width: 640px) 160px, (max-width: 1024px) 224px, 244px"
-                  className="object-contain object-left drop-shadow-[0_2px_14px_rgba(228,142,120,0.3)]"
+                  sizes="(max-width: 640px) 170px, (max-width: 1024px) 240px, 260px"
+                  className="object-contain object-left drop-shadow-[0_2px_14px_rgba(212,175,55,0.3)]"
                 />
               </div>
             </a>
@@ -454,8 +523,8 @@ export default function Home() {
               <a className="nav-link" href="#inicio">
                 Início
               </a>
-              <a className="nav-link" href="#socios">
-                Os Sócios
+              <a className="nav-link" href="#sobre">
+                Dra. Michelle Morato
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
@@ -473,117 +542,113 @@ export default function Home() {
 
             <div className="hidden items-center gap-3 lg:flex">
               <a
-                href={GOOGLE_SEARCH_URL}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Avaliações da Carvalho & Perígolo Advogados no Google"
-                className="grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#130c0e] text-[#ded4cf] transition-all hover:border-[#e48e78] hover:bg-[#1a1013] hover:text-white shadow-xs"
-                title="5,0 ★ no Google (19 avaliações)"
-              >
-                <GoogleIcon size={16} />
-              </a>
-              <a
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Carvalho & Perígolo Advogados"
-                className="grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#130c0e] text-[#ded4cf] transition-all hover:border-[#e48e78] hover:bg-[#1a1013] hover:text-white shadow-xs"
-                title={`Instagram ${INSTAGRAM_HANDLE}`}
+                aria-label="Instagram da Dra. Michelle Morato"
+                className="flex size-10 items-center justify-center rounded-lg border border-[#c59a3f]/40 bg-[#0d211a] text-[#dfba6a] transition-all hover:border-[#dfba6a] hover:bg-[#122b22] hover:text-white"
               >
-                <InstagramIcon size={16} />
-              </a>
-              <a
-                href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para a Carvalho & Perígolo Advogados"
-                className="grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#130c0e] text-[#ded4cf] transition-all hover:border-[#e48e78] hover:bg-[#1a1013] hover:text-white shadow-xs"
-                title={`Ligar: ${PHONE_DISPLAY}`}
-              >
-                <Phone size={16} />
-              </a>
-              <a
-                href={getWhatsAppUrl()}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="WhatsApp Carvalho & Perígolo Advogados"
-                className="grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#130c0e] text-[#ded4cf] transition-all hover:border-[#e48e78] hover:bg-[#1a1013] hover:text-white shadow-xs"
-                title="Fale no WhatsApp"
-              >
-                <WhatsAppIcon size={18} />
+                <InstagramIcon size={17} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá! Gostaria de consultar sobre atendimento com a Carvalho & Perígolo Advogados."
+                  "Olá, Dra. Michelle Morato! Gostaria de agendar um atendimento na Morato Advocacia."
                 )}
                 target="_blank"
                 size="sm"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                Fale Conosco <ArrowUpRight size={14} className="text-[#0b0708]" />
+                <WhatsAppIcon size={15} className="text-[#071510]" /> Falar no WhatsApp
               </GlowingButton>
             </div>
 
+            {/* Mobile menu toggle */}
             <button
               type="button"
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#c96a56]/40 bg-[#130c0e] text-[#fbf6f4] lg:hidden shadow-xs"
-              onClick={() => setMenuOpen((open) => !open)}
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="flex size-11 items-center justify-center rounded-lg border border-[#c59a3f]/40 bg-[#0d211a] text-[#dfba6a] transition-colors hover:border-[#dfba6a] hover:text-white lg:hidden cursor-pointer"
             >
-              {menuOpen ? <X size={20} /> : <Menu size={20} />}
+              {menuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
 
+          {/* Mobile drawer */}
           <AnimatePresence>
             {menuOpen && (
               <motion.nav
                 id="mobile-navigation"
-                aria-label="Navegação móvel"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#c96a56]/25 bg-[#130c0e] px-6 text-[#fbf6f4] lg:hidden"
+                transition={{ duration: 0.25 }}
+                className="overflow-hidden border-t border-[#c59a3f]/25 bg-[#071510]/98 px-5 py-6 backdrop-blur-2xl sm:px-8 lg:hidden"
               >
-                <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
-                  {[
-                    ["Início", "#inicio"],
-                    ["Os Sócios Fundadores", "#socios"],
-                    ["Áreas de Atuação", "#atuacao"],
-                    ["Diferenciais", "#diferenciais"],
-                    ["Avaliações (5,0 ★)", "#avaliacoes"],
-                    ["Contato & Sede", "#contato"],
-                  ].map(([label, href]) => (
-                    <a
-                      key={label}
-                      href={href}
-                      onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-[#ded4cf] hover:text-[#fab599]"
-                    >
-                      {label}
-                    </a>
-                  ))}
-                  <div className="mt-3 flex flex-col gap-2">
-                    <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#fdeade]/85 bg-gradient-to-r from-[#964239] via-[#fab599] to-[#964239] px-5 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0b0708] shadow-[0_4px_16px_rgba(201,106,86,0.4),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:brightness-105 active:translate-y-0"
+                <div className="flex flex-col gap-3.5 text-xs font-semibold uppercase tracking-[0.12em]">
+                  <a
+                    className="py-2 text-[#ded9cf] hover:text-[#dfba6a]"
+                    href="#inicio"
+                    onClick={closeMenu}
+                  >
+                    Início
+                  </a>
+                  <a
+                    className="py-2 text-[#ded9cf] hover:text-[#dfba6a]"
+                    href="#sobre"
+                    onClick={closeMenu}
+                  >
+                    Dra. Michelle Morato
+                  </a>
+                  <a
+                    className="py-2 text-[#ded9cf] hover:text-[#dfba6a]"
+                    href="#atuacao"
+                    onClick={closeMenu}
+                  >
+                    Áreas de Atuação
+                  </a>
+                  <a
+                    className="py-2 text-[#ded9cf] hover:text-[#dfba6a]"
+                    href="#diferenciais"
+                    onClick={closeMenu}
+                  >
+                    Diferenciais
+                  </a>
+                  <a
+                    className="py-2 text-[#ded9cf] hover:text-[#dfba6a]"
+                    href="#avaliacoes"
+                    onClick={closeMenu}
+                  >
+                    Avaliações no Google (5,0 ★)
+                  </a>
+                  <a
+                    className="py-2 text-[#ded9cf] hover:text-[#dfba6a]"
+                    href="#contato"
+                    onClick={closeMenu}
+                  >
+                    Contato & Sede
+                  </a>
+                  <div className="mt-3 flex flex-col gap-2.5 pt-3 border-t border-[#c59a3f]/25">
+                    <GlowingButton
                       href={getWhatsAppUrl(
-                        "Olá! Gostaria de consultar sobre um caso com a Carvalho & Perígolo Advogados."
+                        "Olá, Dra. Michelle Morato! Gostaria de atendimento no WhatsApp."
                       )}
                       target="_blank"
-                      rel="noreferrer"
-                      onClick={closeMenu}
+                      size="md"
+                      variant="gold"
+                      className="w-full justify-center rounded-lg"
                     >
-                      <WhatsAppIcon size={16} className="text-[#0b0708]" /> WhatsApp: {PHONE_DISPLAY}
-                    </a>
+                      <WhatsAppIcon size={16} className="text-[#071510]" /> Falar no WhatsApp
+                    </GlowingButton>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#c96a56]/40 bg-[#1a1013] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#fbf6f4] transition-all hover:border-[#e48e78]"
-                      href={GOOGLE_SEARCH_URL}
+                      href={INSTAGRAM_URL}
                       target="_blank"
                       rel="noreferrer"
-                      onClick={closeMenu}
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#c59a3f]/40 bg-[#0d211a] py-3 text-[11px] font-bold uppercase tracking-wider text-[#dfba6a]"
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (19 avaliações)
+                      <InstagramIcon size={15} /> Acessar Instagram Oficial
                     </a>
                   </div>
                 </div>
@@ -592,16 +657,16 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* DOBRA 1 [MODO ESCURO] - Hero Section - Warm Rose-Bronze Aura, Metallic Contrast & Authority */}
+        {/* DOBRA 1 [MODO ESCURO] - Hero Section - Imperial Emerald & Metallic Gold Aura */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#c96a56]/25 bg-gradient-to-b from-[#0b0708] via-[#120a0d] to-[#0b0708]"
+          className="relative isolate scroll-mt-24 border-b border-[#c59a3f]/25 bg-gradient-to-b from-[#071510] via-[#0b1e17] to-[#071510]"
         >
-          {/* Subtle warm rose-copper lighting aura */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#c96a56]/12 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#e48e78]/8 blur-3xl" />
+          {/* Luzes ambiente sutis em esmeralda e dourado */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#17573d]/20 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#dfba6a]/10 blur-3xl" />
 
-          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[750px] xl:py-20">
+          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[720px] lg:grid-cols-[1.12fr_0.88fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[750px] xl:py-20">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -610,30 +675,30 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c96a56]/50 bg-[#1a1013]/85 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#fab599] shadow-xs backdrop-blur-md"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c59a3f]/50 bg-[#0d211a]/85 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfba6a] shadow-xs backdrop-blur-md"
               >
                 <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#e48e78] opacity-75"></span>
-                  <span className="relative inline-flex size-2 rounded-full bg-[#fdeade]"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dfba6a] opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-[#f5e3b5]"></span>
                 </span>
-                <span>ADVOCACIA ESPECIALIZADA · SIMONÉSIA & LESTE DE MINAS GERAIS</span>
+                <span>ADVOCACIA DE FAMÍLIA · CONTAGEM & ATENDIMENTO ONLINE</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#fbf6f4] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#fbfaf6] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Rigor técnico, ética e dedicação para proteger sua família,{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fab599] via-[#e48e78] to-[#fff5f0]">
-                  seu patrimônio e seus direitos.
+                Estratégia jurídica com acolhimento para proteger{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#dfba6a] via-[#f5e3b5] to-[#c59a3f]">
+                  sua família, seus filhos e seu patrimônio.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-5 max-w-xl text-[15px] leading-7 text-[#ded4cf] sm:text-base sm:leading-8"
+                className="mt-5 max-w-xl text-[15px] leading-7 text-[#ded9cf] sm:text-base sm:leading-8"
               >
-                Fundada pela <strong className="font-semibold text-white">Dra. Mônica Perígolo Magalhães</strong> e pelo <strong className="font-semibold text-white">Dr. Isaac Augusto de Carvalho</strong>, a <strong className="font-semibold text-white">{FIRM_NAME}</strong> une alta especialização em <strong className="font-semibold text-white">Direito Notarial e Registral, Direito Público (FGV), Família, Sucessões e Previdenciário</strong> com atendimento humanizado, ágil e transparente. Sede em Simonésia - MG e consultoria jurídica para todo o Brasil.
+                Comandada pela <strong className="font-semibold text-white">{LAWYER_NAME}</strong>, a <strong className="font-semibold text-white">{FIRM_NAME}</strong> oferece atuação especializada em <strong className="font-semibold text-white">Divórcio, Pensão Alimentícia, Guarda, Visitas e Partilha de Bens</strong>, combinando rigor técnico, postura mediadora e linguagem clara para que você se sinta 100% seguro. Atendimento presencial no Eldorado (Contagem - MG) e online para todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -642,54 +707,54 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de conversar com a equipe da Carvalho & Perígolo Advogados no WhatsApp."
+                    "Olá, Dra. Michelle Morato! Gostaria de conversar com a senhora no WhatsApp sobre meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} className="text-[#0b0708]" /> Falar no WhatsApp
+                  <WhatsAppIcon size={16} className="text-[#071510]" /> Falar com a Dra. Michelle
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#c96a56]/45 bg-[#130c0e]/90 backdrop-blur-md px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#fbf6f4] shadow-[0_4px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all hover:border-[#fdeade] hover:bg-[#1a1013] hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#c59a3f]/45 bg-[#0d211a]/90 backdrop-blur-md px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#fbfaf6] shadow-[0_4px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all hover:border-[#f5e3b5] hover:bg-[#122b22] hover:text-white"
                 >
-                  Conhecer Áreas de Atuação{" "}
+                  Conhecer Especialidades{" "}
                   <ArrowRight
                     size={14}
-                    className="transition-transform group-hover:translate-x-1 text-[#e48e78]"
+                    className="transition-transform group-hover:translate-x-1 text-[#dfba6a]"
                   />
                 </a>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#c96a56]/25 pt-5 text-xs text-[#9c8e87]"
+                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#c59a3f]/25 pt-5 text-xs text-[#9e978c]"
               >
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#fbf6f4] transition-colors hover:text-[#fab599]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf6] transition-colors hover:text-[#dfba6a]"
                 >
-                  <Star size={14} className="fill-[#e48e78] text-[#e48e78]" /> 5,0 ★ no Google (19 avaliações)
+                  <Star size={14} className="fill-[#dfba6a] text-[#dfba6a]" /> 5,0 ★ no Google (41 avaliações)
                 </a>
-                <span className="inline-flex items-center gap-1.5 font-medium text-[#fbf6f4]">
-                  <Award size={14} className="text-[#e48e78]" /> Especialistas Notariais & Registrais
+                <span className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf6]">
+                  <Award size={14} className="text-[#dfba6a]" /> Especialista em Direito de Família
                 </span>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#fbf6f4] transition-colors hover:text-[#fab599]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf6] transition-colors hover:text-[#dfba6a]"
                 >
-                  <MapPin size={14} className="text-[#e48e78]" /> Av. Gov. Valadares, 151 · Centro, Simonésia - MG
+                  <MapPin size={14} className="text-[#dfba6a]" /> Eldorado · Contagem - MG
                 </a>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Duo Founders Gallery */}
+            {/* Hero Visual Presentation - Michelle Morato Portrait Card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -698,161 +763,100 @@ export default function Home() {
                 delay: 0.18,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="relative mx-auto w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[490px] xl:max-w-[510px] lg:ml-auto lg:mr-0"
+              className="relative mx-auto w-full max-w-[390px] sm:max-w-[430px] lg:max-w-[460px] xl:max-w-[480px] lg:ml-auto lg:mr-0"
             >
-              {/* Composite Duo Card */}
-              <div className="relative overflow-hidden rounded-2xl border-2 border-[#c96a56]/50 bg-[#130c0e] p-3 shadow-2xl ring-1 ring-[#e48e78]/35">
-                <div className="grid grid-cols-2 gap-2.5">
-                  {/* Dra. Mônica */}
-                  <div className="group relative aspect-[4/5.4] overflow-hidden rounded-xl border border-[#c96a56]/40 bg-[#0b0708]">
-                    <Image
-                      src={FOTO_MONICA_SRC}
-                      alt="Dra. Mônica Perígolo Magalhães — Sócia Fundadora"
-                      fill
-                      priority
-                      unoptimized
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0b0708] via-[#0b0708]/75 to-transparent" />
-                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                      <p className="font-serif text-xs sm:text-sm font-bold text-white">
-                        Dra. Mônica Perígolo
-                      </p>
-                      <p className="text-[9px] uppercase tracking-wider text-[#fab599]">
-                        Sócia Fundadora · FGV
-                      </p>
-                    </div>
+              {/* Moldura de Alta Joalheria Esmeralda & Ouro */}
+              <div className="relative overflow-hidden rounded-2xl border-2 border-[#c59a3f]/60 bg-[#0d211a] p-3 shadow-2xl ring-1 ring-[#dfba6a]/35">
+                <div className="group relative aspect-[4/5] overflow-hidden rounded-xl border border-[#c59a3f]/40 bg-[#071510]">
+                  <Image
+                    src={FOTO_MICHELLE_SRC}
+                    alt="Dra. Michelle Morato — Advogada de Família em Contagem - MG"
+                    fill
+                    priority
+                    unoptimized
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#071510] via-[#071510]/80 to-transparent" />
+                  
+                  {/* Floating badge inside photo */}
+                  <div className="absolute top-3 right-3 rounded-md border border-[#c59a3f]/60 bg-[#071510]/85 px-2.5 py-1 backdrop-blur-md shadow-md">
+                    <span className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-[#dfba6a]">
+                      <BadgeCheck size={13} className="text-[#dfba6a]" /> OAB/MG
+                    </span>
                   </div>
 
-                  {/* Dr. Isaac */}
-                  <div className="group relative aspect-[4/5.4] overflow-hidden rounded-xl border border-[#c96a56]/40 bg-[#0b0708]">
-                    <Image
-                      src={FOTO_ISAAC_SRC}
-                      alt="Dr. Isaac Augusto de Carvalho — Sócio Fundador"
-                      fill
-                      priority
-                      unoptimized
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0b0708] via-[#0b0708]/75 to-transparent" />
-                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                      <p className="font-serif text-xs sm:text-sm font-bold text-white">
-                        Dr. Isaac Carvalho
-                      </p>
-                      <p className="text-[9px] uppercase tracking-wider text-[#fab599]">
-                        Sócio Fundador · FADILESTE
-                      </p>
-                    </div>
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <p className="font-serif text-base sm:text-lg font-bold text-white">
+                      Dra. Michelle Morato
+                    </p>
+                    <p className="text-[10px] uppercase tracking-wider text-[#dfba6a] font-semibold">
+                      Advogada Fundadora · Especialista em Família
+                    </p>
                   </div>
                 </div>
 
-                <div className="mt-3 flex items-center justify-between border-t border-[#c96a56]/25 px-2 pt-2.5">
+                <div className="mt-3 flex items-center justify-between border-t border-[#c59a3f]/25 px-2 pt-2.5">
                   <div className="flex items-center gap-2">
-                    <div className="relative size-7 shrink-0 overflow-hidden rounded-md border border-[#c96a56]/40 bg-[#0b0708]">
-                      <Image
-                        src={LOGO_SYMBOL_SRC}
-                        alt="Monograma Carvalho & Perígolo"
-                        fill
-                        unoptimized
-                        className="object-contain p-1"
-                      />
+                    <div className="flex gap-0.5 text-[#dfba6a]">
+                      {Array.from({ length: 5 }, (_, i) => (
+                        <Star key={i} size={12} className="fill-[#dfba6a] text-[#dfba6a]" />
+                      ))}
                     </div>
-                    <div>
-                      <p className="font-serif text-xs font-bold text-white">
-                        Carvalho & Perígolo Advogados
-                      </p>
-                      <p className="text-[9px] text-[#cfc1ba]">
-                        Av. Gov. Valadares, 151 · Centro, Simonésia - MG
-                      </p>
-                    </div>
+                    <span className="text-[11px] font-bold text-white">
+                      5,0 ★ (41 avaliações)
+                    </span>
                   </div>
-                  <span className="grid size-8 shrink-0 place-items-center rounded-lg border border-[#c96a56]/60 bg-[#0b0708] text-[#fab599]">
-                    <Scale size={15} />
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#dfba6a]">
+                    Google Meu Negócio
                   </span>
                 </div>
               </div>
-
-              {/* Floating authority badge */}
-              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#c96a56]/50 bg-[#0b0708]/92 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#fab599] shadow-md backdrop-blur-md sm:-left-4">
-                SEDE EM SIMONÉSIA · ATENDIMENTO EM TODO O BRASIL
-              </div>
-
-              {/* Floating Google 5.0 Star Rating */}
-              <a
-                href={GOOGLE_SEARCH_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#c96a56]/60 bg-[#130c0e]/95 p-3 shadow-xl backdrop-blur-md transition-all hover:border-[#e48e78] hover:bg-[#1a1013] sm:-right-4"
-              >
-                <div className="flex items-center gap-2">
-                  <GoogleIcon size={16} />
-                  <div className="flex items-center gap-1.5">
-                    <div className="flex gap-0.5 text-[#e48e78]">
-                      <Star size={12} className="fill-[#e48e78] text-[#e48e78]" />
-                    </div>
-                    <span className="font-serif text-sm font-bold text-white">
-                      5,0
-                    </span>
-                    <span className="text-[9px] uppercase tracking-wider text-[#fab599]">
-                      / 5,0
-                    </span>
-                  </div>
-                </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#ded4cf]">
-                  19 Avaliações no Google (100% 5★)
-                </p>
-              </a>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner - Authority Metrics */}
-        <section
-          aria-label="Credenciais e Destaques"
-          className="border-b border-[#c96a56]/25 bg-[#130c0e]"
-        >
-          <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
-            {[
-              [
-                "5,0 ★ no Google",
-                "nota máxima unânime em 19 avaliações reais reconhecendo ética e competência",
-              ],
-              [
-                "Especialização FGV & FADILESTE",
-                "domínio técnico e aprofundado em Direito Notarial, Registral e Público",
-              ],
-              [
-                "Atendimento Humanizado",
-                "atenção aos detalhes, escuta empática e acompanhamento próximo em cada fase",
-              ],
-              [
-                "Simonésia • Leste de MG",
-                "sede física estruturada no Centro e assessoria jurídica digital para todo o país",
-              ],
-            ].map(([value, label], index) => (
-              <div
-                key={label}
-                className={
-                  index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#c96a56]/25"
-                    : "flex items-center gap-4 sm:justify-center"
-                }
-              >
-                <span className="font-serif text-xl font-semibold text-[#fab599] sm:text-2xl">
-                  {value}
-                </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#ded4cf]">
-                  {label}
-                </span>
-              </div>
-            ))}
+        {/* Barra de Credibilidade & Números de Destaque */}
+        <section className="border-b border-[#c59a3f]/25 bg-[#0b1e17] py-8 text-[#fbfaf6]">
+          <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-5 sm:px-8 lg:grid-cols-4 lg:px-12">
+            <div className="border-l-2 border-[#dfba6a] pl-4">
+              <p className="font-serif text-2xl font-bold sm:text-3xl text-white">
+                5,0 ★
+              </p>
+              <p className="mt-0.5 text-xs text-[#ded9cf]">
+                Nota máxima no Google
+              </p>
+            </div>
+            <div className="border-l-2 border-[#dfba6a] pl-4">
+              <p className="font-serif text-2xl font-bold sm:text-3xl text-white">
+                41+
+              </p>
+              <p className="mt-0.5 text-xs text-[#ded9cf]">
+                Depoimentos reais e verificados
+              </p>
+            </div>
+            <div className="border-l-2 border-[#dfba6a] pl-4">
+              <p className="font-serif text-2xl font-bold sm:text-3xl text-white">
+                100%
+              </p>
+              <p className="mt-0.5 text-xs text-[#ded9cf]">
+                Acolhimento e dedicação integral
+              </p>
+            </div>
+            <div className="border-l-2 border-[#dfba6a] pl-4">
+              <p className="font-serif text-2xl font-bold sm:text-3xl text-white">
+                Híbrido
+              </p>
+              <p className="mt-0.5 text-xs text-[#ded9cf]">
+                Presencial em Contagem & Online
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* DOBRA 2 [MODO CLARO] - Os Sócios Fundadores - Alabaster Cream & Metallic Rose-Bronze */}
+        {/* DOBRA 2 [MODO CLARO] - Sobre a Dra. Michelle Morato - Alabaster & Esmeralda Nobre */}
         <section
-          id="socios"
-          className="scroll-mt-24 border-y border-[#dfbeaa]/40 bg-[#fcf8f6] py-20 text-[#1a1114] sm:py-28 lg:py-32"
+          id="sobre"
+          className="scroll-mt-24 border-y border-[#dfba6a]/40 bg-[#fbf9f4] py-20 text-[#071510] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -862,155 +866,101 @@ export default function Home() {
               variants={reveal}
               className="text-center max-w-3xl mx-auto"
             >
-              <div className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#964239] shadow-xs">
-                <span className="size-2 shrink-0 rounded-full bg-[#964239]" />
-                <span>OS SÓCIOS FUNDADORES</span>
+              <div className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#c59a3f]/50 bg-[#f5f0e6] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#17573d] shadow-xs">
+                <span className="size-2 shrink-0 rounded-full bg-[#17573d]" />
+                <span>ADVOCACIA DE FAMÍLIA COM ALTO GABARITO</span>
               </div>
-              <h2 className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#1a1114] sm:text-4xl lg:text-[3.25rem]">
-                Excelência acadêmica, vocação para a justiça e{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#964239] via-[#c96a56] to-[#6e2524]">
-                  compromisso absoluto com cada cliente.
+              <h2 className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#071510] sm:text-4xl lg:text-[3.25rem]">
+                Estratégia jurídica, sensibilidade humana e{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#17573d] via-[#2b8a62] to-[#705018]">
+                  resolução ágil para o seu momento.
                 </span>
               </h2>
-              <p className="mt-4 text-[15px] leading-7 text-[#544349]">
-                Conheça a trajetória e os princípios que movem a <strong className="font-bold text-[#1a1114]">{FIRM_NAME}</strong>, combinando especialização notarial de ponta com um atendimento pautado pelo respeito e pela transparência.
+              <p className="mt-4 text-[15px] leading-7 text-[#3f4f46]">
+                Conheça os pilares de atuação da <strong className="font-bold text-[#071510]">{LAWYER_NAME}</strong> à frente da <strong className="font-bold text-[#071510]">{FIRM_NAME}</strong>, onde cada cliente é ouvido com atenção genuína e cada demanda é tratada com discrição absoluta e excelência técnica.
               </p>
             </motion.div>
 
-            {/* Duo Founders Cards */}
-            <div className="mt-14 grid gap-10 lg:grid-cols-2">
-              {/* Dra. Mônica Perígolo Magalhães */}
+            {/* Profile Presentation Card */}
+            <div className="mt-14 max-w-5xl mx-auto">
               <motion.article
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.7 }}
-                className="group flex flex-col justify-between rounded-2xl border-2 border-[#dfbeaa] bg-white p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#c96a56] hover:shadow-2xl sm:p-9"
+                className="group flex flex-col justify-between rounded-2xl border-2 border-[#dfba6a]/60 bg-white p-7 shadow-xl transition-all duration-300 hover:border-[#17573d] sm:p-10"
               >
-                <div>
-                  <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-                    <div className="relative aspect-[4/5] w-full sm:w-[190px] shrink-0 overflow-hidden rounded-xl border-2 border-[#c96a56]/30 bg-[#f7ede6] shadow-md">
-                      <Image
-                        src={FOTO_MONICA_SRC}
-                        alt="Dra. Mônica Perígolo Magalhães"
-                        fill
-                        unoptimized
-                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                    <div>
-                      <span className="inline-block rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#964239]">
-                        Sócia Fundadora
-                      </span>
-                      <h3 className="mt-2 font-serif text-2xl font-bold leading-tight text-[#1a1114] sm:text-[1.75rem]">
-                        Dra. Mônica Perígolo Magalhães
-                      </h3>
-                      <p className="mt-1 text-xs font-semibold text-[#964239]">
-                        Especialista em Direito Público & Direito Notarial e Registral (FGV)
-                      </p>
-                      <div className="mt-3 space-y-1.5 text-xs text-[#544349]">
-                        <p className="flex items-center gap-1.5">
-                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
-                          <span>Graduada em Direito pelo Instituto Vianna Jr (2014)</span>
-                        </p>
-                        <p className="flex items-center gap-1.5">
-                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
-                          <span>Pós-graduada pela Fundação Getúlio Vargas — FGV (2016)</span>
-                        </p>
-                        <p className="flex items-center gap-1.5">
-                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
-                          <span>Atuação em Direito Notarial, Sucessões e Família</span>
-                        </p>
-                      </div>
+                <div className="grid gap-8 lg:grid-cols-[1fr_1.35fr] lg:items-center">
+                  <div className="relative aspect-[3.8/5] w-full shrink-0 overflow-hidden rounded-xl border-2 border-[#dfba6a]/50 bg-[#f5f0e6] shadow-md">
+                    <Image
+                      src={FOTO_MICHELLE_SEATED_SRC}
+                      alt="Dra. Michelle Morato — Atendimento Humanizado e Estratégico"
+                      fill
+                      unoptimized
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-white">
+                      <p className="font-serif text-sm font-bold">Dra. Michelle Morato</p>
+                      <p className="text-[10px] text-amber-200 uppercase tracking-wider">Atendimento Presencial no Eldorado · Contagem</p>
                     </div>
                   </div>
 
-                  <blockquote className="mt-6 rounded-xl border-l-4 border-[#c96a56] bg-[#fcf8f6] p-4 text-[13px] italic leading-relaxed text-[#2c1d22]">
-                    &ldquo;Escolhi esta profissão quando cursava a 7ª série, estudando a divisão dos três poderes. Tamanho é o meu amor e prontidão em defesa das causas que acredito. Deus preparou para eu ser auxiliadora do direito dos homens. O pilar é que: <strong>&lsquo;Enquanto houver vontade de lutar haverá esperança de vencer&rsquo; (Santo Agostinho).</strong>&rdquo;
-                  </blockquote>
-                </div>
-
-                <div className="mt-6 border-t border-[#dfbeaa]/40 pt-4">
-                  <a
-                    href={getWhatsAppUrl(
-                      "Olá, Dra. Mônica Perígolo! Gostaria de consultar sobre um caso com a senhora."
-                    )}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcf8f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1114] transition-all hover:border-[#964239] hover:bg-[#1a1114] hover:text-white"
-                  >
-                    <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar com a Dra. Mônica Perígolo
+                  <div>
+                    <span className="inline-block rounded-md border border-[#dfba6a] bg-[#f5f0e6] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#17573d]">
+                      Advogada Fundadora
                     </span>
-                    <ArrowUpRight size={15} />
-                  </a>
-                </div>
-              </motion.article>
+                    <h3 className="mt-2 font-serif text-2xl font-bold leading-tight text-[#071510] sm:text-[1.85rem]">
+                      Dra. Michelle Morato
+                    </h3>
+                    <p className="mt-1 text-xs font-semibold text-[#17573d]">
+                      Especialista em Direito de Família e Sucessões
+                    </p>
 
-              {/* Dr. Isaac Augusto de Carvalho */}
-              <motion.article
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.7, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-2xl border-2 border-[#dfbeaa] bg-white p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#c96a56] hover:shadow-2xl sm:p-9"
-              >
-                <div>
-                  <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-                    <div className="relative aspect-[4/5] w-full sm:w-[190px] shrink-0 overflow-hidden rounded-xl border-2 border-[#c96a56]/30 bg-[#f7ede6] shadow-md">
-                      <Image
-                        src={FOTO_ISAAC_SRC}
-                        alt="Dr. Isaac Augusto de Carvalho"
-                        fill
-                        unoptimized
-                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                    <div>
-                      <span className="inline-block rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#964239]">
-                        Sócio Fundador
-                      </span>
-                      <h3 className="mt-2 font-serif text-2xl font-bold leading-tight text-[#1a1114] sm:text-[1.75rem]">
-                        Dr. Isaac Augusto de Carvalho
-                      </h3>
-                      <p className="mt-1 text-xs font-semibold text-[#964239]">
-                        Especialista em Direito Notarial e Registral (FADILESTE)
+                    <p className="mt-4 text-[14px] leading-relaxed text-[#3f4f46]">
+                      Com vasta experiência prática em Direito de Família, Dra. Michelle é descrita por seus clientes como uma profissional ponderada, cortês, extremamente competente e ágil. Seu trabalho se diferencia pela capacidade de traduzir a linguagem complexa do direito para termos claros e compreensíveis, dando a você segurança e discernimento para tomar as melhores decisões em relação aos seus filhos e ao seu patrimônio.
+                    </p>
+
+                    <div className="mt-5 space-y-2 text-xs text-[#2b3a32]">
+                      <p className="flex items-center gap-2">
+                        <CheckCircle2 size={15} className="text-[#17573d] shrink-0" />
+                        <span><strong>Estratégia com Acolhimento:</strong> Mediação equilibrada para evitar desgastes desnecessários.</span>
                       </p>
-                      <div className="mt-3 space-y-1.5 text-xs text-[#544349]">
-                        <p className="flex items-center gap-1.5">
-                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
-                          <span>Graduado em Direito pela Doctum Manhuaçu (2014)</span>
-                        </p>
-                        <p className="flex items-center gap-1.5">
-                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
-                          <span>Pós-graduado pela FADILESTE (2020)</span>
-                        </p>
-                        <p className="flex items-center gap-1.5">
-                          <CheckCircle2 size={13} className="text-[#964239] shrink-0" />
-                          <span>Apontado por clientes como o advogado mais atualizado da região</span>
-                        </p>
-                      </div>
+                      <p className="flex items-center gap-2">
+                        <CheckCircle2 size={15} className="text-[#17573d] shrink-0" />
+                        <span><strong>Celeridade Comprovada:</strong> Conclusão de demandas em dias através de acordos bem estruturados.</span>
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <CheckCircle2 size={15} className="text-[#17573d] shrink-0" />
+                        <span><strong>Preço Justo e Transparência:</strong> Honorários éticos, contratação clara e acompanhamento direto.</span>
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <CheckCircle2 size={15} className="text-[#17573d] shrink-0" />
+                        <span><strong>Atendimento Híbrido:</strong> Presencial em Contagem (MG) ou 100% online por videoconferência e WhatsApp.</span>
+                      </p>
                     </div>
-                  </div>
 
-                  <blockquote className="mt-6 rounded-xl border-l-4 border-[#c96a56] bg-[#fcf8f6] p-4 text-[13px] italic leading-relaxed text-[#2c1d22]">
-                    &ldquo;Cursar direito foi como um sonho. Além de dar continuidade ao legado do meu pai, sempre me vi defendendo o direito do próximo, podendo auxiliar a outrem a partir do meu conhecimento. É gratificante. <strong>Nenhuma outra profissão me realizaria tanto.</strong>&rdquo;
-                  </blockquote>
+                    <blockquote className="mt-6 rounded-xl border-l-4 border-[#17573d] bg-[#f5f0e6] p-4 text-[13px] italic leading-relaxed text-[#071510]">
+                      &ldquo;O Direito de Família não trata apenas de leis e patrimônio, trata de vidas, sentimentos e recomeços. Por isso, nossa missão é unir <strong>estratégia jurídica de alta precisão com um acolhimento profundamente humano</strong>.&rdquo;
+                      <footer className="mt-2 font-sans text-[11px] font-bold not-italic uppercase tracking-wider text-[#17573d]">
+                        — Dra. Michelle Morato
+                      </footer>
+                    </blockquote>
+                  </div>
                 </div>
 
-                <div className="mt-6 border-t border-[#dfbeaa]/40 pt-4">
+                <div className="mt-8 border-t border-[#dfba6a]/40 pt-5">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Isaac Carvalho! Gostaria de consultar sobre um caso com o senhor."
+                      "Olá, Dra. Michelle Morato! Gostaria de uma consulta com a senhora sobre o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcf8f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1114] transition-all hover:border-[#964239] hover:bg-[#1a1114] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfba6a] bg-[#f5f0e6] px-5 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#071510] transition-all hover:border-[#17573d] hover:bg-[#071510] hover:text-white"
                   >
-                    <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar com o Dr. Isaac Carvalho
+                    <span className="inline-flex items-center gap-2.5">
+                      <WhatsAppIcon size={16} /> Conversar Diretamente com a Dra. Michelle Morato
                     </span>
-                    <ArrowUpRight size={15} />
+                    <ArrowUpRight size={16} />
                   </a>
                 </div>
               </motion.article>
@@ -1018,223 +968,218 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 3 [MODO ESCURO] - Pilares de Atuação / Serviços Especializados */}
+        {/* DOBRA 3 [MODO ESCURO] - Áreas de Atuação Especializadas com Modais Interativos */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#c96a56]/25 bg-[#0f090c] py-20 sm:py-28 lg:py-32"
-        >
-          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={reveal}
-              className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
-            >
-              <Heading
-                theme="dark"
-                eyebrow="PILARES DE ATUAÇÃO JURÍDICA ESPECIALIZADA"
-                description="Soluções preventivas e contenciosas com alto rigor técnico notarial, linguagem clara e foco na resolução prática do seu problema."
-              >
-                Áreas de especialidade para proteger seus direitos em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fab599] via-[#e48e78] to-[#fff5f0]">
-                  Simonésia, Leste de Minas Gerais e em todo o Brasil.
-                </span>
-              </Heading>
-              <p className="max-w-[280px] pb-1 text-xs leading-6 text-[#9c8e87]">
-                Clique em uma área de atuação abaixo para conferir o detalhamento completo dos serviços e solicitar atendimento no WhatsApp.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.12 }}
-              variants={stagger}
-              className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
-            >
-              {practiceAreas.map((area, index) => {
-                const Icon = area.icon;
-                return (
-                  <motion.article
-                    key={area.id}
-                    variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#c96a56]/30 bg-[#150d10] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#e48e78] hover:shadow-gold sm:p-8"
-                  >
-                    <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#c96a56]/40 bg-[#0b0708] text-[#fab599] shadow-xs transition-colors group-hover:bg-[#c96a56] group-hover:text-[#0b0708] group-hover:border-[#fdeade]">
-                        <Icon size={22} strokeWidth={1.5} />
-                      </span>
-                      <span className="font-serif text-2xl text-[#c96a56]/40 group-hover:text-[#fab599]">
-                        0{index + 1}
-                      </span>
-                    </div>
-
-                    <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#c96a56]/30 bg-[#0b0708] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#fab599] shadow-xs">
-                        {area.tag}
-                      </span>
-                      <h3 className="mt-3 font-serif text-[1.42rem] leading-tight text-white group-hover:text-[#fab599] transition-colors">
-                        {area.title}
-                      </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#ded4cf]">
-                        {area.summary}
-                      </p>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#fab599] hover:text-white cursor-pointer"
-                    >
-                      Ver detalhes e atuação{" "}
-                      <ArrowRight
-                        size={14}
-                        className="transition-transform group/link:translate-x-1"
-                      />
-                    </button>
-                  </motion.article>
-                );
-              })}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* DOBRA 4 [MODO CLARO] - Diferenciais + Instagram - Linen Rose Cream */}
-        <section
-          id="diferenciais"
-          className="scroll-mt-24 border-t border-[#dfbeaa]/40 bg-[#f7f0eb] py-20 text-[#1a1114] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c59a3f]/25 bg-[#071510] py-20 text-[#fbfaf6] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                theme="light"
-                eyebrow="RIGOR TÉCNICO, ÉTICA & ATENDIMENTO PERSONALIZADO"
-                description="Quando o seu patrimônio, sua família ou seus direitos estão em jogo, você merece advogados que combinem conhecimento acadêmico de excelência com escuta atenta e respeito."
+                theme="dark"
+                eyebrow="PILAREs DE ATUAÇÃO · DIREITO DE FAMÍLIA"
+                description="Soluções jurídicas estruturadas para proteger o que é mais valioso: sua dignidade, seus filhos e os bens construídos pela sua família."
               >
-                Por que escolher a{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#964239] via-[#c96a56] to-[#6e2524]">
-                  Carvalho & Perígolo Advogados?
+                Especialidades dedicadas a{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#dfba6a] via-[#f5e3b5] to-[#c59a3f]">
+                  pacificar conflitos e assegurar seus direitos.
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá! Gostaria de conversar com a equipe da Carvalho & Perígolo Advogados."
+                  "Olá, Dra. Michelle! Gostaria de consultar sobre uma área de atuação da Morato Advocacia."
                 )}
                 target="_blank"
                 size="md"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                <WhatsAppIcon size={16} className="text-[#0b0708]" /> Falar no WhatsApp
+                <WhatsAppIcon size={16} className="text-[#071510]" /> Falar no WhatsApp
+              </GlowingButton>
+            </div>
+
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {practiceAreas.map((area, index) => {
+                const IconComponent = area.icon;
+                return (
+                  <motion.div
+                    key={area.id}
+                    initial={{ opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    transition={{ duration: 0.5, delay: index * 0.08 }}
+                    onClick={() => setActiveArea(area)}
+                    className="group relative flex flex-col justify-between rounded-xl border border-[#c59a3f]/30 bg-[#0d211a] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#dfba6a] hover:bg-[#122b22] hover:shadow-xl cursor-pointer"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <div className="grid size-12 place-items-center rounded-lg border border-[#c59a3f]/40 bg-[#071510] text-[#dfba6a] transition-colors group-hover:border-[#dfba6a] group-hover:bg-[#17573d] group-hover:text-white">
+                          <IconComponent size={22} />
+                        </div>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#9e978c] group-hover:text-[#dfba6a]">
+                          0{index + 1}
+                        </span>
+                      </div>
+                      <h3 className="mt-5 font-serif text-xl font-bold leading-snug text-white group-hover:text-[#f5e3b5]">
+                        {area.title}
+                      </h3>
+                      <p className="mt-1 text-[11px] font-semibold text-[#dfba6a]">
+                        {area.tag}
+                      </p>
+                      <p className="mt-3 text-xs leading-6 text-[#ded9cf]">
+                        {area.summary}
+                      </p>
+                    </div>
+
+                    <div className="mt-6 flex items-center justify-between border-t border-[#c59a3f]/20 pt-4 text-xs font-semibold text-[#dfba6a]">
+                      <span>Ver detalhes do serviço</span>
+                      <ArrowRight
+                        size={14}
+                        className="transition-transform group-hover:translate-x-1"
+                      />
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* DOBRA 4 [MODO CLARO] - Diferenciais + Instagram Spotlight */}
+        <section
+          id="diferenciais"
+          className="scroll-mt-24 border-t border-[#dfba6a]/40 bg-[#f5f0e6] py-20 text-[#071510] sm:py-28 lg:py-32"
+        >
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+              <Heading
+                theme="light"
+                eyebrow="POR QUE ESCOLHER A MORATO ADVOCACIA"
+                description="Quando o futuro dos seus filhos e a sua paz de espírito estão em jogo, você merece uma advogada que combine capacidade técnica de ponta com respeito e empatia."
+              >
+                Diferenciais que geram{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#17573d] via-[#2b8a62] to-[#705018]">
+                  segurança, agilidade e alívio para você.
+                </span>
+              </Heading>
+              <GlowingButton
+                href={getWhatsAppUrl(
+                  "Olá, Dra. Michelle! Gostaria de conversar com a senhora sobre o meu caso."
+                )}
+                target="_blank"
+                size="md"
+                variant="gold"
+                className="rounded-lg shadow-sm"
+              >
+                <WhatsAppIcon size={16} className="text-[#071510]" /> Falar no WhatsApp
               </GlowingButton>
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Domínio Notarial e Registral de Ponta */}
+              {/* Card 1: Estratégia Jurídica com Acolhimento */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dfbeaa]/70 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c96a56] hover:shadow-xl sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#dfba6a]/70 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#17573d] hover:shadow-xl sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#964239]">
-                      <Building2 size={14} /> Especialistas Notariais & Registrais
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfba6a] bg-[#fbf9f4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#17573d]">
+                      <HeartHandshake size={14} /> Atendimento Humanizado
                     </span>
-                    <span className="text-xs font-semibold text-[#964239]">
-                      FGV & FADILESTE
+                    <span className="text-xs font-semibold text-[#17573d]">
+                      Estratégia com Acolhimento
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1a1114] sm:text-[1.75rem]">
-                    Especialização Cartorária & Imobiliária
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#071510] sm:text-[1.75rem]">
+                    Compreensão Real do Seu Momento
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#544349]">
-                    Regularizar um imóvel ou conduzir um inventário exige domínio minucioso das normas da Corregedoria e da Lei de Registros Públicos. Na Carvalho & Perígolo, os dois sócios possuem pós-graduação na área, permitindo destravar escrituras, usucapiões e partilhas com máxima celeridade e total segurança jurídica.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#3f4f46]">
+                    Questões de família exigem uma abordagem que vai muito além de petições e prazos processuais. Na Morato Advocacia, cada caso é acolhido com empatia e respeito. Nosso foco é proteger a integridade emocional dos envolvidos, resguardar os interesses das crianças e buscar soluções equilibradas, sem alimentar desgastes desnecessários.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2c1d22]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#1c2822]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
-                      <span>Regularizações extrajudiciais ágeis direto em Cartório de Registro de Imóveis</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#17573d]" />
+                      <span>Escuta atenta e individualizada em cada etapa da demanda</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
-                      <span>Inventários rápidos em cartório e blindagem sucessória familiar</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#17573d]" />
+                      <span>Postura mediadora e sensata para viabilizar acordos rápidos</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
-                      <span>Assessoria em Direito Público com especialização pela FGV</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#17573d]" />
+                      <span>Firmeza técnica inegociável na defesa dos seus direitos e filhos</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#dfbeaa]/40 pt-4">
+                <div className="mt-7 border-t border-[#dfba6a]/40 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá! Gostaria de consultar sobre Regularização de Imóveis ou Inventário na Carvalho & Perígolo."
+                      "Olá, Dra. Michelle! Gostaria de conversar com a senhora sobre o meu momento familiar."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcf8f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1114] transition-all hover:border-[#964239] hover:bg-[#1a1114] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfba6a] bg-[#fbf9f4] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#071510] transition-all hover:border-[#17573d] hover:bg-[#071510] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar sobre Imóveis ou Inventário
+                      <WhatsAppIcon size={15} /> Conversar com a Dra. Michelle Morato
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Ética, Atualização & Atendimento Humanizado */}
+              {/* Card 2: Clareza, Agilidade & Preço Justo */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dfbeaa]/70 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c96a56] hover:shadow-xl sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#dfba6a]/70 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#17573d] hover:shadow-xl sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#964239]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado & Confiável
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfba6a] bg-[#fbf9f4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#17573d]">
+                      <Scale size={14} /> Linguagem Clara & Preço Justo
                     </span>
-                    <span className="text-xs font-semibold text-[#964239]">
-                      5,0 ★ no Google
+                    <span className="text-xs font-semibold text-[#17573d]">
+                      5,0 ★ no Google (41 Avaliações)
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1a1114] sm:text-[1.75rem]">
-                    Transparência, Respeito e Proximidade
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#071510] sm:text-[1.75rem]">
+                    Transparência e Resolução sem Juridiquês
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#544349]">
-                    Avaliações espontâneas de clientes destacam a ética, o aperfeiçoamento contínuo e a simpatia de toda a equipe. Aqui seu caso é tratado com zelo pessoal pelos próprios sócios, sem juridiquês hermético e com canal de comunicação ágil pelo WhatsApp para você acompanhar cada etapa.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#3f4f46]">
+                    Como destacado nos depoimentos dos clientes, a Dra. Michelle faz questão de simplificar a linguagem complexa do direito, explicando cada fase do processo com total clareza. Além disso, atua com agilidade resolutiva — conseguindo em dias o que muitos pensavam levar meses — sempre com honorários transparentes e preço justo.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2c1d22]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#1c2822]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
-                      <span>Reconhecido no Google como o escritório mais atualizado da região</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#17573d]" />
+                      <span>Comunicação direta e constante pelo WhatsApp sobre o processo</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
-                      <span>Atendimento empático desde o primeiro contato até o desfecho</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#17573d]" />
+                      <span>Agilidade e proatividade para destravar procedimentos cartorários e judiciais</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#964239]" />
-                      <span>Sede estruturada em Simonésia e consultoria online com segurança</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#17573d]" />
+                      <span>Contratação ética, sem surpresas e com facilidades de pagamento</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#dfbeaa]/40 pt-4">
+                <div className="mt-7 border-t border-[#dfba6a]/40 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá! Gostaria de consultar sobre atendimento jurídico com a Carvalho & Perígolo Advogados."
+                      "Olá, Dra. Michelle! Gostaria de consultar sobre valores e procedimentos do meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfbeaa] bg-[#fcf8f6] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1a1114] transition-all hover:border-[#964239] hover:bg-[#1a1114] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfba6a] bg-[#fbf9f4] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#071510] transition-all hover:border-[#17573d] hover:bg-[#071510] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Falar no WhatsApp com a Equipe
+                      <WhatsAppIcon size={15} /> Solicitar Análise do Meu Caso
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1248,14 +1193,14 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="mt-10 flex flex-col items-center justify-between gap-6 rounded-2xl border border-[#dfbeaa] bg-white p-6 shadow-md sm:p-8 md:flex-row"
+              className="mt-10 flex flex-col items-center justify-between gap-6 rounded-2xl border border-[#dfba6a] bg-white p-6 shadow-md sm:p-8 md:flex-row"
             >
               <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
-                <div className="relative size-16 shrink-0 rounded-full border-2 border-[#c96a56] p-0.5 shadow-md">
-                  <div className="relative size-full overflow-hidden rounded-full bg-[#0b0708]">
+                <div className="relative size-16 shrink-0 rounded-full border-2 border-[#17573d] p-0.5 shadow-md">
+                  <div className="relative size-full overflow-hidden rounded-full bg-[#071510]">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Carvalho & Perígolo no Instagram"
+                      alt="Morato Advocacia no Instagram"
                       fill
                       unoptimized
                       className="object-contain p-2"
@@ -1264,16 +1209,16 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
-                    <span className="font-serif text-lg font-bold text-[#1a1114]">{INSTAGRAM_HANDLE}</span>
-                    <span className="rounded-full border border-[#dfbeaa] bg-[#f7ede6] px-2.5 py-0.5 text-[10px] font-bold text-[#964239]">
+                    <span className="font-serif text-lg font-bold text-[#071510]">{INSTAGRAM_HANDLE}</span>
+                    <span className="rounded-full border border-[#dfba6a] bg-[#f5f0e6] px-2.5 py-0.5 text-[10px] font-bold text-[#17573d]">
                       Canal Oficial no Instagram
                     </span>
                   </div>
-                  <p className="mt-1 text-sm font-semibold text-[#1a1114]">
-                    Direito Notarial & Registral • Sucessões & Família • Direito Público • Previdenciário
+                  <p className="mt-1 text-sm font-semibold text-[#071510]">
+                    Divórcio • Alimentos • Guarda • Visitas • Partilha de Bens
                   </p>
-                  <p className="mt-1 text-xs text-[#544349]">
-                    Acompanhe publicações, esclarecimentos jurídicos práticos sobre regularização de imóveis, inventários, partilha de bens e decisões dos tribunais diretamente no perfil oficial.
+                  <p className="mt-1 text-xs text-[#3f4f46]">
+                    Acompanhe orientações práticas, esclarecimentos sobre direitos familiares, guarda e pensão alimentícia diretamente com a Dra. Michelle Morato.
                   </p>
                 </div>
               </div>
@@ -1281,36 +1226,36 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex shrink-0 items-center gap-2.5 rounded-lg border border-[#fdeade]/85 bg-gradient-to-r from-[#964239] via-[#fab599] to-[#964239] px-6 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0b0708] shadow-[0_4px_16px_rgba(201,106,86,0.35),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:scale-105 active:scale-100"
+                className="inline-flex shrink-0 items-center gap-2.5 rounded-lg border border-[#f5e3b5]/85 bg-gradient-to-r from-[#705018] via-[#dfba6a] to-[#705018] px-6 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#071510] shadow-[0_4px_16px_rgba(212,175,55,0.35),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:scale-105 active:scale-100"
               >
-                <InstagramIcon size={16} className="text-[#0b0708]" /> Seguir no Instagram <ArrowUpRight size={14} className="text-[#0b0708]" />
+                <InstagramIcon size={16} className="text-[#071510]" /> Seguir no Instagram <ArrowUpRight size={14} className="text-[#071510]" />
               </a>
             </motion.div>
           </div>
         </section>
 
         {/* DOBRA 5 [MODO ESCURO] - Método de Atendimento em 3 Etapas */}
-        <section className="relative overflow-hidden border-t border-[#c96a56]/25 bg-[#0b0708] py-20 text-[#fbf6f4] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c96a56]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#e48e78]/10 blur-3xl" />
+        <section className="relative overflow-hidden border-t border-[#c59a3f]/25 bg-[#071510] py-20 text-[#fbfaf6] sm:py-24 lg:py-28">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#17573d]/15 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#dfba6a]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 theme="dark"
                 eyebrow="COMO FUNCIONA O ATENDIMENTO"
-                description="Um processo transparente, sigiloso e eficiente para você ter tranquilidade do início à conclusão do seu caso."
+                description="Um processo seguro, confidencial e acolhedor para que você recupere sua tranquilidade desde o primeiro contato."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fab599] via-[#e48e78] to-[#fff5f0]">
-                  proteger seus direitos e o patrimônio da sua família.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#dfba6a] via-[#f5e3b5] to-[#c59a3f]">
+                  solucionar sua demanda com segurança e dignidade.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#c96a56]/35 bg-[#150d10] p-6 font-serif text-base italic leading-7 text-[#fbf6f4] shadow-card">
-                &ldquo;Trabalhamos com dedicação, responsabilidade e respeito. Nosso compromisso é prestar um atendimento pautado pela ética e pelo constante aperfeiçoamento profissional, buscando sempre a solução mais segura e justa para nossos clientes.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#fab599]">
-                  — Dra. Mônica Perígolo & Dr. Isaac Carvalho
+              <blockquote className="mt-8 rounded-xl border border-[#c59a3f]/35 bg-[#0d211a] p-6 font-serif text-base italic leading-7 text-[#fbfaf6] shadow-card">
+                &ldquo;Trabalhamos com acolhimento, transparência e responsabilidade ética. Nosso compromisso é encontrar a rota mais justa, rápida e segura para sua família recomeçar em paz.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#dfba6a]">
+                  — Dra. Michelle Morato
                 </footer>
               </blockquote>
             </div>
@@ -1320,23 +1265,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#c96a56]/25"
+              className="divide-y divide-[#c59a3f]/25"
             >
               {[
                 [
                   "01",
-                  "Contato Inicial & Escuta Atenta",
-                  "Envie uma mensagem pelo WhatsApp ou agende um atendimento presencial em Simonésia. Ouvimos sua demanda com empatia, analisamos os documentos e compreendemos seus objetivos.",
+                  "Acolhimento Inicial & Escuta Atenta",
+                  "Envie uma mensagem pelo WhatsApp ou agende uma reunião presencial em Contagem. Conversamos reservadamente sobre sua situação, analisamos documentos iniciais e compreendemos seus objetivos e preocupações.",
                 ],
                 [
                   "02",
-                  "Diagnóstico Registral & Estratégia sob Medida",
-                  "Apresentamos um parecer objetivo com as melhores alternativas — seja pela via extrajudicial em cartório ou pela via judicial —, indicando prazos realistas e custos envolvidos.",
+                  "Diagnóstico Estratégico & Plano de Ação",
+                  "Apresentamos com clareza os caminhos viáveis — priorizando acordos consensuais em cartório ou estruturando uma atuação judicial vigorosa —, indicando prazos realistas e investimentos envolvidos.",
                 ],
                 [
                   "03",
-                  "Atuação Diligente & Acompanhamento Contínuo",
-                  "Execução vigorosa e acompanhamento direto junto aos cartórios, órgãos públicos ou tribunais, com informações regulares e canal direto no WhatsApp para sanar todas as suas dúvidas.",
+                  "Condução Diligente & Comunicação Contínua",
+                  "Acompanhamento direto junto aos cartórios e Varas de Família, com atualizações periódicas no WhatsApp para que você nunca fique sem respostas sobre o andamento do seu processo.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1344,12 +1289,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#fab599]">
+                  <span className="font-serif text-2xl font-semibold text-[#dfba6a]">
                     {number}
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#ded4cf]">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#ded9cf]">
                       {description}
                     </p>
                   </div>
@@ -1362,141 +1307,112 @@ export default function Home() {
         {/* DOBRA 6 [MODO CLARO] - Avaliações / Depoimentos Reais no Google Meu Negócio */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#dfbeaa]/40 bg-[#fcf8f6] py-20 text-[#1a1114] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#dfba6a]/40 bg-[#fbf9f4] py-20 text-[#071510] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja a opinião de quem confiou suas causas à Carvalho & Perígolo Advogados em Simonésia - MG e em todo o Leste de Minas Gerais."
+                description="Veja os relatos espontâneos de clientes que confiaram suas causas familiares à Morato Advocacia em Contagem - MG e em todo o Brasil."
               >
                 Nota máxima 5,0 ★ com{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#964239] via-[#c96a56] to-[#6e2524]">
-                  19 avaliações no Google pela competência, ética e dedicação.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#17573d] via-[#2b8a62] to-[#705018]">
+                  41 avaliações no Google pela competência, ética e humanidade.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card in Light Mode */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#dfbeaa] bg-white p-5 shadow-md sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#dfbeaa]/80 bg-[#f7ede6] shadow-xs">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#dfba6a] bg-white p-5 shadow-md sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#dfba6a]/80 bg-[#f5f0e6] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#1a1114]">
+                    <span className="font-serif text-3xl font-bold leading-none text-[#071510]">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#c96a56]">
+                    <div className="flex gap-0.5 text-[#c59a3f]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#c96a56] text-[#c96a56]"
+                          className="fill-[#c59a3f] text-[#c59a3f]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#544349]">
-                    Carvalho & Perígolo Advogados
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#3f4f46]">
+                    41 avaliações verificadas no Google
                   </p>
-                  <a
-                    href={GOOGLE_SEARCH_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#964239] transition-colors hover:text-[#1a1114]"
-                  >
-                    19 avaliações no Google (100% 5★) <ArrowUpRight size={13} />
-                  </a>
+                  <p className="text-[10px] text-[#17573d] font-bold">
+                    Classificação Máxima Unânime
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Client Reviews Grid */}
-            <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {clientReviews.map((review) => (
-                <article
+            {/* Testimonials Grid with authentic reviews */}
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {clientReviews.map((review, i) => (
+                <motion.article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#dfbeaa]/70 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c96a56] hover:shadow-xl sm:p-8"
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.45, delay: (i % 3) * 0.08 }}
+                  className="flex flex-col justify-between rounded-xl border border-[#dfba6a]/70 bg-white p-6 shadow-sm transition-all hover:border-[#17573d] hover:shadow-lg"
                 >
                   <div>
-                    {/* Header: Stars + Badge */}
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#c96a56]">
-                        {Array.from({ length: review.rating }, (_, i) => (
+                    <div className="flex items-center justify-between">
+                      <span className="inline-block rounded-md border border-[#dfba6a] bg-[#f5f0e6] px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#17573d]">
+                        {review.badge}
+                      </span>
+                      <div className="flex gap-0.5 text-[#c59a3f]">
+                        {Array.from({ length: review.rating }, (_, j) => (
                           <Star
-                            key={i}
-                            size={14}
-                            className="fill-[#c96a56] text-[#c96a56]"
+                            key={j}
+                            size={12}
+                            className="fill-[#c59a3f] text-[#c59a3f]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#dfbeaa] bg-[#f7ede6] px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#964239] shadow-xs">
-                        {review.badge}
-                      </span>
                     </div>
 
-                    {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#2c1d22]">
+                    <p className="mt-4 text-[13px] leading-relaxed text-[#2b3a32]">
                       &ldquo;{review.content}&rdquo;
                     </p>
+                  </div>
 
-                    {/* Office response if exists */}
-                    {review.response && (
-                      <div className="mt-4 rounded-lg border-l-2 border-[#c96a56] bg-[#fcf8f6] p-3 text-[11px] leading-5 text-[#544349]">
-                        <p className="font-semibold text-[#964239]">Resposta da Carvalho & Perígolo:</p>
-                        <p className="mt-0.5 italic">{review.response}</p>
+                  <div className="mt-5 border-t border-[#dfba6a]/40 pt-3">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-serif text-sm font-bold text-[#071510]">
+                          {review.name}
+                        </p>
+                        <p className="text-[10px] text-[#55695f]">
+                          {review.reviewerTag}
+                        </p>
                       </div>
-                    )}
-                  </div>
-
-                  {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#dfbeaa]/40 pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#dfbeaa] bg-[#f7ede6] font-serif text-sm font-bold text-[#964239] shadow-xs">
-                      {review.name.charAt(0)}
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-bold text-[#1a1114]">
-                        {review.name}
-                      </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#857177]">
-                        {review.reviewerTag}
-                      </p>
+                      {review.timeAgo && (
+                        <span className="text-[10px] text-[#705018] font-medium">
+                          {review.timeAgo}
+                        </span>
+                      )}
                     </div>
                   </div>
-                </article>
+                </motion.article>
               ))}
             </div>
 
-            {/* Bottom Actions and Trust Tags in Light Mode */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#dfbeaa]/40 pt-8 sm:flex-row">
-              <div className="flex flex-wrap items-center gap-2">
-                {[
-                  "Advogados em Simonésia - MG",
-                  "Direito Notarial & Registral",
-                  "Especialização FGV & FADILESTE",
-                  "Regularização de Imóveis",
-                  "Inventário em Cartório & Sucessões",
-                  "Direito de Família & Previdenciário",
-                  "Nota Máxima 5,0 ★ no Google",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#dfbeaa] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#2c1d22] shadow-xs"
-                  >
-                    <CheckCircle2 size={13} className="text-[#964239]" />
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
+            <div className="mt-12 text-center">
               <a
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#964239] transition-colors hover:text-[#1a1114]"
+                className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#17573d] hover:text-[#071510] hover:underline"
               >
-                Ver Todas as 19 Avaliações no Google{" "}
+                <span>Ver todas as 41 avaliações no perfil do Google</span>
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1506,88 +1422,88 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 7 [MODO ESCURO] - Contato & Localização da Sede em Simonésia - MG */}
+        {/* DOBRA 7 [MODO ESCURO] - Contato & Localização da Sede em Contagem - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#c96a56]/25 bg-[#0b0708] py-20 text-[#fbf6f4] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#c59a3f]/25 bg-[#071510] py-20 text-[#fbfaf6] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 theme="dark"
                 eyebrow="CONTATO & AGENDAMENTO DE CONSULTA"
-                description="Entre em contato diretamente pelo WhatsApp para agendar um atendimento presencial na sede em Simonésia ou uma consulta jurídica online com sigilo e rapidez."
+                description="Entre em contato diretamente pelo WhatsApp para agendar um atendimento presencial na sede em Contagem (Eldorado) ou uma consulta jurídica online com sigilo e rapidez."
               >
                 Prontidão para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fab599] via-[#e48e78] to-[#fff5f0]">
-                  atender você com atenção e excelência técnica.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#dfba6a] via-[#f5e3b5] to-[#c59a3f]">
+                  acolher sua demanda com atenção e excelência técnica.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de agendar um atendimento na Carvalho & Perígolo Advogados."
+                    "Olá, Dra. Michelle Morato! Gostaria de agendar um atendimento na Morato Advocacia."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} className="text-[#0b0708]" /> Falar no WhatsApp com o Escritório
+                  <WhatsAppIcon size={17} className="text-[#071510]" /> Falar no WhatsApp com o Escritório
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#ded4cf]">
+                <p className="text-[11px] leading-5 text-[#ded9cf]">
                   Telefone e WhatsApp:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#ded4cf]">
+              <div className="mt-10 space-y-4 text-xs text-[#ded9cf]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#fab599]"
+                    className="mt-0.5 shrink-0 text-[#dfba6a]"
                   />
                   <div>
                     <p className="font-semibold text-white">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#fab599] font-bold">
-                      Segunda a Sexta-feira: a partir das 08:30
+                    <p className="mt-0.5 text-[#dfba6a] font-bold">
+                      Segunda a Sexta-feira: 08:30 às 18:00
                     </p>
-                    <p className="text-[11px] text-[#9c8e87]">
-                      Atendimento presencial em Simonésia - MG e consultas agendadas via WhatsApp
+                    <p className="text-[11px] text-[#9e978c]">
+                      Atendimento presencial no Eldorado (Contagem - MG) e consultas agendadas via WhatsApp
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#fab599]" />
+                  <Phone size={16} className="shrink-0 text-[#dfba6a]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#fab599]"
+                    className="font-medium text-white transition-colors hover:text-[#dfba6a]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#fab599]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#dfba6a]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#fab599] text-white"
+                    className="transition-colors hover:text-[#dfba6a] text-white"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#fab599]" />
+                  <Mail size={16} className="shrink-0 text-[#dfba6a]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#fab599] text-white"
+                    className="transition-colors hover:text-[#dfba6a] text-white"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1596,7 +1512,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#fab599]"
+                    className="mt-0.5 shrink-0 text-[#dfba6a]"
                   />
                   <div>
                     <span className="text-white">{ADDRESS_TEXT}</span>
@@ -1605,7 +1521,7 @@ export default function Home() {
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#fab599] hover:underline"
+                      className="mt-1 inline-flex items-center gap-1 font-semibold text-[#dfba6a] hover:underline"
                     >
                       Abrir no Google Maps <ArrowUpRight size={12} />
                     </a>
@@ -1615,101 +1531,88 @@ export default function Home() {
             </div>
 
             {/* Office Card with executive presentation */}
-            <div className="relative overflow-hidden rounded-xl border border-[#c96a56]/35 bg-[#150d10] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#964239] via-[#fab599] to-[#e48e78]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#c59a3f]/35 bg-[#0d211a] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#17573d] via-[#dfba6a] to-[#c59a3f]" />
 
               <div className="flex flex-col gap-2">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#fab599]">
-                  Sede em Simonésia - MG
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#dfba6a]">
+                  Sede no Eldorado · Contagem - MG
                 </p>
-                <div className="relative h-[40px] w-[185px] sm:h-[46px] sm:w-[215px]">
+                <div className="relative h-[42px] w-[190px] sm:h-[48px] sm:w-[220px]">
                   <Image
                     src={LOGO_HORIZONTAL_SRC}
-                    alt="Carvalho & Perígolo Advogados"
+                    alt="Morato Advocacia — Advogada de Família"
                     fill
                     unoptimized
-                    sizes="215px"
-                    className="object-contain object-left drop-shadow-[0_2px_10px_rgba(228,142,120,0.25)]"
+                    sizes="220px"
+                    className="object-contain object-left drop-shadow-[0_2px_10px_rgba(212,175,55,0.25)]"
                   />
                 </div>
               </div>
 
               {/* Office presentation visual */}
-              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#c96a56]/30 bg-[#0b0708] shadow-xs">
-                <div className="grid grid-cols-2 size-full">
-                  <div className="relative size-full border-r border-[#c96a56]/20">
-                    <Image
-                      src={FOTO_MONICA_SRC}
-                      alt="Dra. Mônica Perígolo Magalhães"
-                      fill
-                      unoptimized
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="relative size-full">
-                    <Image
-                      src={FOTO_ISAAC_SRC}
-                      alt="Dr. Isaac Augusto de Carvalho"
-                      fill
-                      unoptimized
-                      className="object-cover object-top"
-                    />
-                  </div>
-                </div>
+              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#c59a3f]/30 bg-[#071510] shadow-xs">
+                <Image
+                  src={FOTO_MICHELLE_SEATED_SRC}
+                  alt="Dra. Michelle Morato no escritório em Contagem"
+                  fill
+                  unoptimized
+                  className="object-cover object-top"
+                />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4 text-white">
                   <p className="text-xs font-semibold">Ambiente Acolhedor, Moderno e Reservado</p>
                   <p className="text-[10px] text-stone-300">{ADDRESS_TEXT}</p>
                 </div>
               </div>
 
-              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#ded4cf]">
+              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#ded9cf]">
                 <strong className="font-semibold text-white">
                   {FIRM_NAME}
                 </strong>
                 <br />
-                Dra. Mônica Perígolo Magalhães & Dr. Isaac Augusto de Carvalho
+                {LAWYER_NAME} — Especialista em Direito de Família
                 <br />
-                Atendimento presencial em Simonésia, Manhuaçu, Leste de Minas e consultoria online em todo o Brasil
+                Atendimento presencial em Contagem, Betim, Belo Horizonte e consultoria online em todo o Brasil
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#c96a56]/25 bg-[#0b0708] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#fab599]">
+              <div className="mt-6 rounded-lg border border-[#c59a3f]/25 bg-[#071510] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#dfba6a]">
                   Atendimento & Localização
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#ded4cf]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#ded9cf]">
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-semibold text-[#fab599]">
-                    Segunda a Sexta (a partir das 08:30)
+                  <span className="text-right font-semibold text-[#dfba6a]">
+                    Segunda a Sexta (08:30 às 18:00)
                   </span>
                   <span>WhatsApp & Consultas</span>
-                  <span className="text-right font-medium text-[#e48e78]">
+                  <span className="text-right font-medium text-[#c59a3f]">
                     {PHONE_DISPLAY}
                   </span>
                   <span>Endereço</span>
-                  <span className="text-right text-white">Av. Gov. Valadares, 151</span>
+                  <span className="text-right text-white">Av. João César de Oliveira, 1730 - Sl 104</span>
                   <span>Avaliações Google</span>
-                  <span className="text-right font-semibold text-[#fab599]">5,0 ★ (19 avaliações)</span>
-                  <span>Atuação Regional</span>
-                  <span className="text-right text-white">Simonésia, Leste de MG & Brasil</span>
+                  <span className="text-right font-semibold text-[#dfba6a]">5,0 ★ (41 avaliações)</span>
+                  <span>Atuação</span>
+                  <span className="text-right text-white">Contagem, Grande BH & Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#c96a56]/25" />
+              <div className="my-7 h-px bg-[#c59a3f]/25" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-[#9c8e87]">
-                  Atendimento sob estrito sigilo profissional e conformidade ética
+                <p className="text-xs text-[#9e978c]">
+                  Atendimento sob estrito sigilo profissional e conformidade ética da OAB
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de agendar um atendimento na Carvalho & Perígolo Advogados."
+                    "Olá, Dra. Michelle! Gostaria de agendar um atendimento na Morato Advocacia."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#c96a56]/50 bg-[#1a1013] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#e48e78] hover:bg-[#c96a56] hover:text-[#0b0708]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#c59a3f]/50 bg-[#122b22] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#dfba6a] hover:bg-[#c59a3f] hover:text-[#071510]"
                 >
                   <WhatsAppIcon size={14} /> Falar no WhatsApp <ArrowUpRight size={14} />
                 </a>
@@ -1719,68 +1622,68 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#c96a56]/25 bg-gradient-to-r from-[#0b0708] via-[#150d10] to-[#0b0708] px-5 py-14 text-[#fbf6f4] shadow-card sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#c59a3f]/25 bg-gradient-to-r from-[#071510] via-[#0f261e] to-[#071510] px-5 py-14 text-[#fbfaf6] shadow-card sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#fab599]">
-                <Sparkles size={13} /> CARVALHO & PERÍGOLO ADVOGADOS
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfba6a]">
+                <Sparkles size={13} /> MORATO ADVOCACIA · DRA. MICHELLE MORATO
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de orientação jurídica especializada para seu imóvel, sua família ou seu benefício?
+                Precisa de orientação jurídica especializada para seu divórcio, pensão, guarda ou partilha?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá! Gostaria de uma consulta jurídica com a Carvalho & Perígolo Advogados."
+                "Olá, Dra. Michelle! Gostaria de uma consulta jurídica com a senhora sobre o meu caso."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg border border-[#fdeade]/85 bg-gradient-to-r from-[#964239] via-[#fab599] to-[#964239] px-8 py-4 text-[11px] font-black uppercase tracking-[0.15em] text-[#0b0708] shadow-[0_8px_24px_-4px_rgba(201,106,86,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.85)] transition-all hover:-translate-y-0.5 hover:from-[#c96a56] hover:via-[#fff5f0] hover:to-[#c96a56] hover:shadow-[0_12px_32px_rgba(228,142,120,0.7)]"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg border border-[#f5e3b5]/85 bg-gradient-to-r from-[#705018] via-[#dfba6a] to-[#705018] px-8 py-4 text-[11px] font-black uppercase tracking-[0.15em] text-[#071510] shadow-[0_8px_24px_-4px_rgba(212,175,55,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.85)] transition-all hover:-translate-y-0.5 hover:from-[#c59a3f] hover:via-[#fff8e7] hover:to-[#c59a3f] hover:shadow-[0_12px_32px_rgba(223,186,106,0.7)]"
             >
-              <WhatsAppIcon size={17} className="text-[#0b0708]" /> Iniciar Atendimento{" "}
-              <ArrowUpRight size={15} className="text-[#0b0708]" />
+              <WhatsAppIcon size={17} className="text-[#071510]" /> Iniciar Atendimento{" "}
+              <ArrowUpRight size={15} className="text-[#071510]" />
             </a>
           </div>
         </section>
 
-        {/* Footer - Elegant Luxury Noir */}
-        <footer className="border-t border-[#c96a56]/25 bg-[#0b0708] px-5 py-14 text-[#fbf6f4] sm:px-8 lg:px-12">
+        {/* Footer - Elegant Luxury Emerald Noir */}
+        <footer className="border-t border-[#c59a3f]/25 bg-[#071510] px-5 py-14 text-[#fbfaf6] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Carvalho & Perígolo Advogados"
+                aria-label="Morato Advocacia"
                 className="inline-block transition-transform hover:scale-[1.01]"
               >
-                <div className="relative h-[44px] w-[205px] sm:h-[50px] sm:w-[235px] lg:h-[55px] lg:w-[255px]">
+                <div className="relative h-[46px] w-[215px] sm:h-[52px] sm:w-[245px] lg:h-[58px] lg:w-[270px]">
                   <Image
                     src={LOGO_HORIZONTAL_SRC}
-                    alt="Carvalho & Perígolo Advogados"
+                    alt="Morato Advocacia"
                     fill
                     unoptimized
-                    sizes="255px"
-                    className="object-contain object-left drop-shadow-[0_2px_12px_rgba(228,142,120,0.3)]"
+                    sizes="270px"
+                    className="object-contain object-left drop-shadow-[0_2px_12px_rgba(212,175,55,0.3)]"
                   />
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#9c8e87]">
-                ⚖️ Advocacia com rigor técnico notarial e registral, ética inabalável e atendimento humanizado. Dra. Mônica Perígolo Magalhães e Dr. Isaac Augusto de Carvalho em Simonésia - MG e com consultoria online para todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#9e978c]">
+                ⚖️ Estratégia jurídica com acolhimento. Especialista em Direito de Família, Divórcio, Alimentos, Guarda, Visitas e Partilha de Bens. Dra. Michelle Morato em Contagem - MG e com consultoria online para todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#fab599]">
-                Dra. Mônica Perígolo (FGV) & Dr. Isaac Carvalho (FADILESTE)
+              <p className="mt-3 text-[11px] font-semibold text-[#dfba6a]">
+                Dra. Michelle Morato · Advogada de Família
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#fab599]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfba6a]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#ded4cf]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#ded9cf]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
-                <a className="footer-link" href="#socios">
-                  Os Sócios Fundadores
+                <a className="footer-link" href="#sobre">
+                  Dra. Michelle Morato
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
@@ -1798,13 +1701,13 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#fab599]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfba6a]">
                 Contato & Atendimento
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#ded4cf]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#ded9cf]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de atendimento com a Carvalho & Perígolo Advogados."
+                    "Olá, Dra. Michelle! Gostaria de atendimento com a Morato Advocacia."
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -1841,16 +1744,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </a>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#fab599] font-semibold">
-                  <Clock size={14} className="shrink-0 text-[#e48e78]" /> Segunda a Sexta, a partir das 08:30
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#dfba6a] font-semibold">
+                  <Clock size={14} className="shrink-0 text-[#c59a3f]" /> Segunda a Sexta, 08:30 às 18:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#c96a56]/25 pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#c59a3f]/25 pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} CARVALHO & PERÍGOLO ADVOGADOS. Todos os direitos reservados.
+              © {new Date().getFullYear()} MORATO ADVOCACIA · DRA. MICHELLE MORATO. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1865,21 +1768,21 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá! Gostaria de atendimento pelo WhatsApp com a Carvalho & Perígolo Advogados."
+              "Olá, Dra. Michelle! Gostaria de conversar com a senhora pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Carvalho & Perígolo Advogados"
-            className="group relative flex size-14 items-center justify-center rounded-full border-2 border-[#e48e78]/80 bg-gradient-to-b from-[#1a1013] via-[#130c0e] to-[#0b0708] text-[#fccfb1] shadow-[0_8px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(201,106,86,0.35)] transition-all duration-300 hover:scale-110 hover:border-[#fdeade] hover:shadow-[0_10px_35px_rgba(228,142,120,0.6)] focus:outline-none focus:ring-4 focus:ring-[#e48e78]/40"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Michelle Morato"
+            className="group relative flex size-14 items-center justify-center rounded-full border-2 border-[#dfba6a]/80 bg-gradient-to-b from-[#122b22] via-[#0d211a] to-[#071510] text-[#f5e3b5] shadow-[0_8px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(212,175,55,0.35)] transition-all duration-300 hover:scale-110 hover:border-[#ffffff] hover:shadow-[0_10px_35px_rgba(223,186,106,0.6)] focus:outline-none focus:ring-4 focus:ring-[#dfba6a]/40"
           >
             {/* Live pulsating status beacon */}
             <span className="absolute -top-0.5 -right-0.5 flex size-3.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#e48e78] opacity-75"></span>
-              <span className="relative inline-flex size-3.5 rounded-full border-2 border-[#0b0708] bg-[#fdeade]"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dfba6a] opacity-75"></span>
+              <span className="relative inline-flex size-3.5 rounded-full border-2 border-[#071510] bg-[#f5e3b5]"></span>
             </span>
-            <WhatsAppIcon size={26} className="text-[#fdeade] transition-transform duration-300 group-hover:scale-110" />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg border border-[#c96a56]/60 bg-[#0b0708]/95 px-3.5 py-1.5 text-xs font-semibold text-[#fbf6f4] shadow-2xl backdrop-blur-md transition-opacity group-hover:block">
-              <span className="text-[#fab599]">Atendimento no WhatsApp</span> · Carvalho & Perígolo
+            <WhatsAppIcon size={26} className="text-[#f5e3b5] transition-transform duration-300 group-hover:scale-110" />
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg border border-[#c59a3f]/60 bg-[#071510]/95 px-3.5 py-1.5 text-xs font-semibold text-[#fbfaf6] shadow-2xl backdrop-blur-md transition-opacity group-hover:block">
+              <span className="text-[#dfba6a]">Atendimento no WhatsApp</span> · Dra. Michelle Morato
             </span>
           </a>
         </aside>
@@ -1903,31 +1806,31 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#c96a56]/40 bg-[#130c0e] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#fbf6f4]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#c59a3f]/40 bg-[#0d211a] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#fbfaf6]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#c96a56]/30 bg-[#1a1013] text-[#fbf6f4] transition-colors hover:border-[#e48e78] hover:text-[#fab599] cursor-pointer"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#c59a3f]/30 bg-[#122b22] text-[#fbfaf6] transition-colors hover:border-[#dfba6a] hover:text-[#dfba6a] cursor-pointer"
                 >
                   <X size={18} />
                 </button>
 
                 <div className="flex items-center gap-3 pr-12">
-                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#c96a56]/40 bg-[#0b0708] p-1 shadow-xs">
+                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#c59a3f]/40 bg-[#071510] p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Brasão Carvalho & Perígolo Advogados"
+                      alt="Brasão Morato Advocacia"
                       fill
                       sizes="40px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">ADVOCACIA ESPECIALIZADA</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#e48e78] uppercase">
-                      {FIRM_NAME} · Simonésia - MG
+                    <p className="eyebrow-light">ADVOCACIA DE FAMÍLIA</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#c59a3f] uppercase">
+                      {FIRM_NAME} · Contagem - MG
                     </p>
                   </div>
                 </div>
@@ -1939,21 +1842,21 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#ded4cf]">
+                <p className="mt-5 text-sm leading-7 text-[#ded9cf]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#c96a56]/25 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#fab599]">
+                <div className="mt-6 border-t border-[#c59a3f]/25 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfba6a]">
                     Atuação e Procedimentos Adotados pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-[#ded4cf]"
+                        className="flex items-center gap-3 text-sm text-[#ded9cf]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#e48e78]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#dfba6a]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1968,12 +1871,12 @@ export default function Home() {
                     variant="gold"
                     className="rounded-lg shadow-md"
                   >
-                    <WhatsAppIcon size={16} className="text-[#0b0708]" /> Consultar sobre esta demanda
+                    <WhatsAppIcon size={16} className="text-[#071510]" /> Consultar sobre esta demanda
                   </GlowingButton>
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-[#9c8e87] transition-colors hover:text-white cursor-pointer"
+                    className="px-5 py-3 text-xs font-semibold text-[#9e978c] transition-colors hover:text-white cursor-pointer"
                   >
                     Fechar
                   </button>
